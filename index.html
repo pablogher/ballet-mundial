@@ -49,6 +49,42 @@ nav a.nav-aud:hover,nav a.nav-aud.active{color:#fff;background:rgba(196,135,110,
 .bp{background:rgba(201,168,76,.15);color:#7a5c10}.bn{background:rgba(122,158,142,.15);color:#2e6e57}.br2{background:rgba(196,135,110,.15);color:#7a3820}
 .hl-title{font-size:1.05rem;font-weight:700}.hl-co{font-size:.82rem;color:var(--mocha)}.hl-desc{font-size:.86rem;color:#555;line-height:1.52}
 
+/* CALENDARIO */
+.cal-section{background:var(--warm);border-bottom:1px solid rgba(201,168,76,.25);padding:48px 24px}
+.cal-layout{display:grid;grid-template-columns:1.55fr 1fr;gap:26px;align-items:start;margin-top:14px}
+.cal-panel{background:var(--card-bg);border-radius:var(--radius);box-shadow:0 4px 20px var(--shadow);padding:22px 22px 26px}
+.cal-top{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px;gap:10px}
+.cal-month{font-size:1.15rem;letter-spacing:.04em}.cal-month strong{color:var(--mocha)}
+.cal-hint{font-family:sans-serif;font-size:.68rem;letter-spacing:.04em;color:var(--dusty)}
+.cal-legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.cal-chip{display:inline-flex;align-items:center;gap:7px;font-family:sans-serif;font-size:.72rem;letter-spacing:.03em;padding:6px 13px;border-radius:100px;border:1px solid rgba(0,0,0,.08);background:#fff;cursor:pointer;color:var(--mocha);transition:opacity .2s;user-select:none}
+.cal-chip .cdot{width:9px;height:9px;border-radius:50%}
+.cal-chip.off{opacity:.4}
+.cd-fun{background:var(--gold)}.cd-aud{background:var(--sage)}.cd-con{background:var(--rose)}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.cal-dow{text-align:center;font-family:sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dusty);padding:2px 0 6px}
+.cal-cell{aspect-ratio:1/1;border-radius:9px;background:var(--cream);border:1px solid rgba(0,0,0,.05);display:flex;flex-direction:column;align-items:center;padding:6px 2px 3px;position:relative;font-size:.92rem;color:var(--charcoal)}
+.cal-cell.empty{background:transparent;border:none}
+.cal-cell.has{cursor:pointer;transition:transform .15s,box-shadow .2s,background .2s}
+.cal-cell.has:hover{transform:translateY(-2px);box-shadow:0 4px 14px var(--shadow);background:#fff}
+.cal-cell.today{outline:2px solid var(--gold);outline-offset:-2px}
+.cal-cell.sel{background:var(--midnight);color:var(--cream);border-color:var(--midnight)}
+.cal-dnum{line-height:1}
+.cal-dots{display:flex;gap:3px;margin-top:auto;margin-bottom:2px;flex-wrap:wrap;justify-content:center}
+.cal-dots span{width:6px;height:6px;border-radius:50%}
+.cal-detail{background:var(--card-bg);border-radius:var(--radius);box-shadow:0 4px 20px var(--shadow);padding:22px;min-height:240px}
+.cal-detail-date{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-family:sans-serif;margin-bottom:4px}
+.cal-detail-h{font-size:1.15rem;font-weight:400;margin-bottom:14px}
+.cal-ev{display:flex;gap:11px;padding:11px 0;border-bottom:1px solid var(--warm)}
+.cal-ev:last-child{border-bottom:none}
+.cal-ev-bar{width:4px;border-radius:4px;flex-shrink:0}
+.cal-ev-bar.fun{background:var(--gold)}.cal-ev-bar.aud{background:var(--sage)}.cal-ev-bar.con{background:var(--rose)}
+.cal-ev-cat{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;font-family:sans-serif;color:var(--dusty);margin-bottom:2px}
+.cal-ev-t{font-size:.92rem;font-weight:700;line-height:1.3;color:var(--midnight)}
+.cal-ev-co{font-size:.8rem;color:var(--mocha);margin-top:2px}
+.cal-empty-msg{color:var(--dusty);font-size:.88rem;font-style:italic;padding-top:6px;line-height:1.6}
+@media(max-width:760px){.cal-layout{grid-template-columns:1fr}}
+
 /* REGION */
 .reg{max-width:1160px;margin:0 auto;padding:52px 24px}
 .reg+.reg{border-top:1px solid rgba(0,0,0,.07)}
@@ -188,6 +224,7 @@ footer a{color:var(--gold);text-decoration:none}
 <!-- ═══════════ NAV ═══════════ -->
 <nav id="main-nav">
   <a href="#highlights">✦ Destacados</a>
+  <a href="#calendario">📅 Junio 2026</a>
   <a href="#europa">Europa</a>
   <a href="#norteamerica">Norteamérica</a>
   <a href="#latinoamerica">América Latina</a>
@@ -269,6 +306,29 @@ footer a{color:var(--gold);text-decoration:none}
       <div class="links-row"><a href="https://teatrocolon.org.ar/produccion/alices-adventures-in-wonderland/" target="_blank" class="btn-link btn-prog">📖 Teatro Colón</a></div>
     </div>
 
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ CALENDARIO ═══════════ -->
+<section class="cal-section" id="calendario">
+<div class="sec-inner">
+  <p class="sec-label">Agenda del mes</p>
+  <h2 class="sec-heading">Calendario · Junio 2026</h2>
+  <div class="cal-legend" id="cal-legend">
+    <span class="cal-chip" data-cat="fun"><span class="cdot cd-fun"></span>Estrenos y funciones</span>
+    <span class="cal-chip" data-cat="aud"><span class="cdot cd-aud"></span>Audiciones</span>
+    <span class="cal-chip" data-cat="con"><span class="cdot cd-con"></span>Concursos</span>
+  </div>
+  <div class="cal-layout">
+    <div class="cal-panel">
+      <div class="cal-top">
+        <span class="cal-month">Junio <strong>2026</strong></span>
+        <span class="cal-hint">Tocá un día marcado ▸</span>
+      </div>
+      <div class="cal-grid" id="cal-grid"></div>
+    </div>
+    <div class="cal-detail" id="cal-detail"></div>
   </div>
 </div>
 </section>
@@ -1547,6 +1607,104 @@ document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
     if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
   });
 });
+</script>
+
+<script>
+// ═══ CALENDARIO JUNIO 2026 ═══
+(function(){
+  const EV = {
+    1:[{c:'aud',t:'Cierre de video — programas de verano NY',co:'Ellison Ballet · Nueva York'},
+       {c:'aud',t:'Cierre de postulación · temporada 26/27',co:'Ballet Illicite · Francia'}],
+    2:[{c:'fun',t:'Living Legacies',co:'Vienna State Ballet · Wiener Staatsoper'}],
+    4:[{c:'fun',t:'Panamá Ballet Fest (hasta el 7)',co:'Ballet Nacional de Cuba · Panamá'}],
+    5:[{c:'fun',t:'La Fille mal gardée (hasta el 9)',co:'The Royal Ballet · Londres'},
+       {c:'fun',t:'Giant Steps — última función',co:'Royal Danish Ballet · Copenhague'}],
+    7:[{c:'fun',t:'An Evening with the Stars — última función',co:'Houston Ballet'},
+       {c:'con',t:'Cierre de inscripción',co:'Grand Prix de La Habana 2026'}],
+    9:[{c:'fun',t:'Living Legacies',co:'Vienna State Ballet'},
+       {c:'fun',t:'Einblicke — Fokus John Cranko Schule',co:'Stuttgart Ballet'}],
+    10:[{c:'fun',t:'Dornröschen (La Bella Durmiente) · 19:00',co:'Stuttgart Ballet'}],
+    11:[{c:'fun',t:'Giselle (hasta el 21)',co:'Houston Ballet'}],
+    12:[{c:'fun',t:'Next Generation Festival (hasta 4 jul)',co:'The Royal Ballet · Linbury Theatre'}],
+    13:[{c:'fun',t:'MADDADDAM — Wayne McGregor (hasta el 21)',co:'National Ballet of Canada'},
+        {c:'fun',t:'Noverre: Jóvenes Coreógrafos (13–14)',co:'Stuttgart Ballet'}],
+    14:[{c:'aud',t:'Audición del Ballet',co:'Teatro alla Scala · Milán'},
+        {c:'aud',t:'Cierre de postulación',co:'Humanhood Dance Company'}],
+    15:[{c:'aud',t:'Cierre de preselección (ballet)',co:'BYU · EE.UU.'}],
+    17:[{c:'fun',t:'La Bayadère — Nureyev (hasta 14 jul)',co:'Paris Opéra Ballet · Bastille'},
+        {c:'fun',t:'Swan Lake (hasta el 27)',co:'American Ballet Theatre · Nueva York'}],
+    18:[{c:'fun',t:'Coppélia — Ratmansky',co:'Teatro alla Scala · Milán'}],
+    19:[{c:'fun',t:'Hamlet — Leo Mujić (estreno)',co:'Queensland Ballet · Brisbane'},
+        {c:'fun',t:'The Tokyo Ballet',co:'Sapporo · Japón'},
+        {c:'fun',t:'Funciones de fin de semana (19–20)',co:'Korean National Ballet · Seúl'}],
+    20:[{c:'fun',t:'Nuevas creaciones — A. Peña / M. Moura (hasta el 28)',co:'Balé da Cidade de São Paulo'},
+        {c:'fun',t:'Living Legacies',co:'Vienna State Ballet'}],
+    21:[{c:'fun',t:'MADDADDAM — última función',co:'National Ballet of Canada'},
+        {c:'fun',t:'Living Legacies',co:'Vienna State Ballet'}],
+    23:[{c:'fun',t:'Copland Dance Episodes — Justin Peck (hasta 2 jul)',co:'The Australian Ballet · Melbourne'}],
+    25:[{c:'fun',t:'Coppélia — Ratmansky',co:'Teatro alla Scala · Milán'},
+        {c:'fun',t:'Programa A (25–26)',co:'New York City Ballet · gira Los Ángeles'},
+        {c:'fun',t:'Einblicke — Cranko Schule',co:'Stuttgart Ballet'}],
+    26:[{c:'fun',t:'Don Quixote — Nureyev (hasta 17 jul)',co:'Teatro alla Scala · Milán'},
+        {c:'fun',t:'Grabación para cine — La Bayadère',co:'Paris Opéra Ballet'}],
+    27:[{c:'fun',t:'Programa B',co:'New York City Ballet · Los Ángeles'}],
+    28:[{c:'aud',t:'Audición',co:'New English Ballet Theatre · Londres'}],
+    29:[{c:'fun',t:'Don Quixote — estreno de nueva puesta',co:'American Ballet Theatre · Met, NY'},
+        {c:'fun',t:'Gala Ballet 2026 — estrenos Rhapsody + Within the Golden Hour',co:'Vienna State Ballet'},
+        {c:'fun',t:'Grabación para cine — La Bayadère',co:'Paris Opéra Ballet'}]
+  };
+  const CATNAME={fun:'Estreno / Función',aud:'Audición',con:'Concurso'};
+  const COLOR={fun:'var(--gold)',aud:'var(--sage)',con:'var(--rose)'};
+  const DOW=['Lun','Mar','Mié','Jue','Vie','Sáb','Dom'];
+  const TODAY=8; // 8 de junio de 2026
+  const grid=document.getElementById('cal-grid');
+  const detail=document.getElementById('cal-detail');
+  const legend=document.getElementById('cal-legend');
+  if(!grid)return;
+  const active={fun:true,aud:true,con:true};
+  let selected=null;
+
+  const vis=d=>(EV[d]||[]).filter(e=>active[e.c]);
+
+  function buildGrid(){
+    grid.innerHTML='';
+    DOW.forEach(d=>{const h=document.createElement('div');h.className='cal-dow';h.textContent=d;grid.appendChild(h);});
+    // 1 de junio de 2026 cae lunes -> sin celdas vacías iniciales
+    for(let d=1;d<=30;d++){
+      const cell=document.createElement('div');
+      cell.className='cal-cell';
+      const num=document.createElement('span');num.className='cal-dnum';num.textContent=d;cell.appendChild(num);
+      if(d===TODAY)cell.classList.add('today');
+      const evs=vis(d);
+      if(evs.length){
+        cell.classList.add('has');
+        const dots=document.createElement('div');dots.className='cal-dots';
+        [...new Set(evs.map(e=>e.c))].forEach(c=>{const s=document.createElement('span');s.style.background=COLOR[c];dots.appendChild(s);});
+        cell.appendChild(dots);
+        cell.addEventListener('click',()=>select(d));
+      }
+      if(d===selected)cell.classList.add('sel');
+      grid.appendChild(cell);
+    }
+  }
+  function select(d){selected=d;buildGrid();renderDetail(d);}
+  function renderDetail(d){
+    if(!d){detail.innerHTML='<p class="cal-detail-date">Junio 2026</p><h3 class="cal-detail-h">Elegí un día</h3><p class="cal-empty-msg">Tocá un día marcado en el calendario para ver los estrenos, funciones, audiciones y concursos de esa fecha. Usá los filtros de arriba para mostrar u ocultar categorías.</p>';return;}
+    const evs=vis(d);
+    let html='<p class="cal-detail-date">'+d+' de junio de 2026</p>';
+    html+='<h3 class="cal-detail-h">'+(evs.length?evs.length+(evs.length===1?' evento':' eventos'):'Sin eventos visibles')+'</h3>';
+    if(!evs.length)html+='<p class="cal-empty-msg">No hay eventos en esta fecha con los filtros activos.</p>';
+    evs.forEach(e=>{html+='<div class="cal-ev"><div class="cal-ev-bar '+e.c+'"></div><div><div class="cal-ev-cat">'+CATNAME[e.c]+'</div><div class="cal-ev-t">'+e.t+'</div><div class="cal-ev-co">'+e.co+'</div></div></div>';});
+    detail.innerHTML=html;
+  }
+  legend.querySelectorAll('.cal-chip').forEach(chip=>{
+    chip.addEventListener('click',()=>{const c=chip.dataset.cat;active[c]=!active[c];chip.classList.toggle('off',!active[c]);buildGrid();renderDetail(selected);});
+  });
+
+  buildGrid();
+  const upcoming=Object.keys(EV).map(Number).filter(d=>d>=TODAY).sort((a,b)=>a-b);
+  select(upcoming.length?upcoming[0]:Object.keys(EV).map(Number).sort((a,b)=>a-b)[0]);
+})();
 </script>
 </body>
 </html>
