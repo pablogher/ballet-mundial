@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reporte Mundial de Ballet — 8 de junio de 2026</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#f8f5f0;--warm:#f2ece4;--charcoal:#2a2522;--mocha:#7c6355;
+  --gold:#c9a84c;--dusty:#9e8e84;--rose:#c4876e;--sage:#7a9e8e;
+  --midnight:#1e1a16;--card-bg:#ffffff;--shadow:rgba(42,37,34,.12);
+  --radius:14px;--arg:#1a6bb5;--arg2:#75aadb;
+}
+body{font-family:'Georgia','Times New Roman',serif;background:var(--cream);color:var(--charcoal);line-height:1.7}
+
+/* HEADER */
+header{background:var(--midnight);color:var(--cream);text-align:center;padding:60px 24px 48px;position:relative;overflow:hidden}
+header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% -10%,rgba(201,168,76,.22) 0%,transparent 65%);pointer-events:none}
+.h-orn{font-size:1.8rem;letter-spacing:.5em;color:var(--gold);margin-bottom:14px;display:block}
+header h1{font-size:clamp(2rem,4.5vw,3.4rem);font-weight:400;letter-spacing:.08em;line-height:1.15;margin-bottom:10px}
+header h1 span{color:var(--gold)}
+.h-sub{font-size:.88rem;color:var(--dusty);letter-spacing:.18em;text-transform:uppercase;margin-top:6px}
+.h-date{display:inline-block;margin-top:20px;padding:6px 26px;border:1px solid rgba(201,168,76,.4);border-radius:100px;font-size:.82rem;letter-spacing:.12em;color:var(--gold)}
+
+/* NAV */
+nav{background:var(--midnight);border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:center;gap:0;flex-wrap:wrap;position:sticky;top:0;z-index:200}
+nav a{color:var(--dusty);text-decoration:none;padding:13px 18px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;transition:color .2s,background .2s;white-space:nowrap}
+nav a:hover,nav a.active{color:var(--gold);background:rgba(201,168,76,.08)}
+nav a.active{border-bottom:2px solid var(--gold)}
+nav a.nav-arg{color:var(--arg2)}
+nav a.nav-arg:hover,nav a.nav-arg.active{color:#fff;background:rgba(26,107,181,.18)}
+nav a.nav-pablo{color:#e8cfa0}
+nav a.nav-pablo:hover,nav a.nav-pablo.active{color:#fff;background:rgba(201,168,76,.15)}
+
+/* HIGHLIGHTS */
+.highlights{background:var(--warm);border-bottom:1px solid rgba(201,168,76,.25);padding:48px 24px}
+.sec-inner{max-width:1160px;margin:0 auto}
+.sec-label{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;font-family:sans-serif}
+.sec-heading{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:400;margin-bottom:30px}
+.hl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px}
+.hl-card{background:var(--card-bg);border-radius:var(--radius);padding:20px 20px 18px;box-shadow:0 2px 14px var(--shadow);border-left:4px solid var(--gold);display:flex;flex-direction:column;gap:8px}
+.hl-card.np{border-left-color:var(--sage)}.hl-card.br{border-left-color:var(--rose)}
+.badge{display:inline-block;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border-radius:100px;font-family:sans-serif;font-weight:600;width:fit-content}
+.bp{background:rgba(201,168,76,.15);color:#7a5c10}.bn{background:rgba(122,158,142,.15);color:#2e6e57}.br2{background:rgba(196,135,110,.15);color:#7a3820}
+.hl-title{font-size:1.05rem;font-weight:700}.hl-co{font-size:.82rem;color:var(--mocha)}.hl-desc{font-size:.86rem;color:#555;line-height:1.52}
+
+/* REGION */
+.reg{max-width:1160px;margin:0 auto;padding:52px 24px}
+.reg+.reg{border-top:1px solid rgba(0,0,0,.07)}
+.reg-hdr{display:flex;align-items:center;gap:18px;margin-bottom:34px}
+.reg-icon{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0}
+.ri-eu{background:rgba(100,120,200,.12)}.ri-na{background:rgba(201,168,76,.15)}.ri-la{background:rgba(196,135,110,.15)}.ri-as{background:rgba(122,158,142,.15)}.ri-ar{background:rgba(26,107,181,.12)}
+.reg-title{font-size:clamp(1.3rem,2.5vw,1.9rem);font-weight:400}
+.reg-title span{display:block;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dusty);margin-bottom:2px}
+
+/* COMPANY GRID */
+.co-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px}
+.co-card{background:var(--card-bg);border-radius:var(--radius);box-shadow:0 4px 20px var(--shadow);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.co-card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(42,37,34,.16)}
+
+/* CARD IMAGE */
+.card-img{width:100%;height:160px;object-fit:cover;display:block;background:linear-gradient(135deg,#2a2522 0%,#4a3d35 100%)}
+.card-img-wrap{position:relative;overflow:hidden;height:160px;background:linear-gradient(135deg,var(--midnight) 0%,#3a2e26 100%)}
+.card-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.co-card:hover .card-img-wrap img{transform:scale(1.04)}
+.card-img-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.55));padding:14px 16px 10px}
+.card-img-overlay .co-country{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75);font-family:sans-serif}
+
+/* CARD HEADER */
+.card-hdr{padding:16px 20px 14px;background:var(--midnight);color:var(--cream)}
+.card-hdr h3{font-size:1rem;font-weight:400;letter-spacing:.04em;margin-bottom:3px}
+.card-hdr h3 a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,.35);transition:border-color .2s}
+.card-hdr h3 a:hover{border-color:var(--gold)}
+.card-loc{font-size:.75rem;color:var(--dusty);letter-spacing:.1em;text-transform:uppercase}
+.card-body{padding:18px 20px;flex:1;display:flex;flex-direction:column;gap:12px}
+.tag-row{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:.68rem;padding:3px 9px;border-radius:100px;font-family:sans-serif;letter-spacing:.05em}
+.tw{background:rgba(201,168,76,.18);color:#7a5e10}.tn{background:rgba(122,158,142,.18);color:#2e6e57}
+.tc{background:rgba(100,120,200,.12);color:#3a4a9a}.tco{background:rgba(196,135,110,.15);color:#7a3820}
+.tar{background:rgba(26,107,181,.15);color:#0d4a8a}
+.info-lbl{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dusty);font-family:sans-serif;margin-bottom:2px}
+.info-val{font-size:.9rem;color:var(--charcoal);line-height:1.52}
+.info-val strong{color:var(--midnight)}
+.info-val.italic{color:var(--mocha);font-style:italic}
+.div{height:1px;background:var(--warm);margin:2px 0}
+.stars{color:var(--gold);letter-spacing:2px}
+.price{display:inline-flex;align-items:center;gap:6px;background:var(--warm);border-radius:100px;padding:5px 14px;font-size:.8rem;color:var(--mocha)}
+.price::before{content:'🎟️';font-size:.85rem}
+
+/* LINKS ROW */
+.links-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.btn-link{display:inline-flex;align-items:center;gap:5px;padding:6px 14px;border-radius:100px;font-size:.75rem;font-family:sans-serif;text-decoration:none;transition:background .2s,opacity .2s;letter-spacing:.04em}
+.btn-web{background:var(--midnight);color:var(--cream)}.btn-web:hover{background:#2e2419}
+.btn-prog{background:rgba(201,168,76,.18);color:#6a4e0a;border:1px solid rgba(201,168,76,.3)}.btn-prog:hover{background:rgba(201,168,76,.28)}
+.btn-yt{background:#ff0000;color:#fff}.btn-yt:hover{opacity:.85}
+
+/* ═══ ARGENTINA SECTION ═══ */
+.arg-section{background:linear-gradient(180deg,#f0f4fa 0%,var(--cream) 100%)}
+.arg-banner{background:linear-gradient(135deg,#003087 0%,#1a6bb5 40%,#75aadb 70%,#003087 100%);padding:48px 24px;text-align:center;color:#fff;position:relative;overflow:hidden}
+.arg-banner::before{content:'☀';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:18rem;opacity:.04;pointer-events:none}
+.arg-banner h2{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:400;letter-spacing:.06em;margin-bottom:10px}
+.arg-banner p{font-size:.9rem;opacity:.8;letter-spacing:.12em;text-transform:uppercase}
+.arg-flag{font-size:2.5rem;margin-bottom:16px;display:block}
+.arg-stats{display:flex;justify-content:center;gap:36px;margin-top:24px;flex-wrap:wrap}
+.arg-stat{text-align:center}.arg-stat-n{font-size:2rem;font-weight:700;color:#ffe}
+.arg-stat-l{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;opacity:.75}
+
+/* ═══ PABLO SECTION ═══ */
+.pablo-section{background:var(--midnight);color:var(--cream);position:relative;overflow:hidden}
+.pablo-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(201,168,76,.1) 0%,transparent 60%);pointer-events:none}
+.pablo-hero{display:grid;grid-template-columns:1fr 2fr;gap:0;min-height:420px}
+.pablo-photo-col{position:relative;background:linear-gradient(160deg,#2e2419 0%,#1a1208 100%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:0 0 28px}
+.pablo-photo-wrap{width:100%;height:340px;overflow:hidden;position:relative}
+.pablo-photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.pablo-photo-placeholder{width:100%;height:340px;background:linear-gradient(160deg,#3a2e20 0%,#1e1510 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:rgba(255,255,255,.25)}
+.pablo-photo-placeholder svg{width:80px;height:80px;opacity:.3}
+.pablo-photo-label{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-family:sans-serif;color:rgba(201,168,76,.6);text-align:center;padding:0 16px}
+.pablo-info-col{padding:44px 44px 44px 40px;display:flex;flex-direction:column;justify-content:center;gap:20px}
+.pablo-label{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-family:sans-serif}
+.pablo-name{font-size:clamp(2rem,3.5vw,3rem);font-weight:400;line-height:1.1;margin-bottom:4px}
+.pablo-role{font-size:1rem;color:rgba(255,255,255,.6);letter-spacing:.08em}
+.pablo-bio{font-size:.95rem;color:rgba(255,255,255,.8);line-height:1.75;border-left:3px solid var(--gold);padding-left:18px}
+.pablo-socials{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.s-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:100px;font-size:.82rem;font-family:sans-serif;text-decoration:none;font-weight:500;transition:opacity .2s,transform .15s;letter-spacing:.04em}
+.s-btn:hover{opacity:.85;transform:translateY(-2px)}
+.s-li{background:#0a66c2;color:#fff}
+.s-ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff}
+.s-fb{background:#1877f2;color:#fff}
+.s-em{background:rgba(201,168,76,.2);color:var(--gold);border:1px solid rgba(201,168,76,.3)}
+
+/* PABLO BODY */
+.pablo-body{padding:52px 24px;max-width:1160px;margin:0 auto}
+.pablo-body-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.pablo-block{background:rgba(255,255,255,.05);border-radius:var(--radius);padding:28px 28px 24px;border:1px solid rgba(255,255,255,.07)}
+.pablo-block h4{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-family:sans-serif}
+.prod-item{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.prod-item:last-child{border-bottom:none}
+.prod-year{font-size:.82rem;color:var(--gold);white-space:nowrap;min-width:44px;padding-top:2px;font-family:sans-serif}
+.prod-info h5{font-size:.95rem;font-weight:400;margin-bottom:2px}
+.prod-info p{font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.5}
+.skill-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.skill-item{background:rgba(201,168,76,.08);border-radius:8px;padding:10px 14px;font-size:.85rem;color:rgba(255,255,255,.8);border:1px solid rgba(201,168,76,.15)}
+.skill-item strong{display:block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;font-family:sans-serif}
+.cert-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.25);border-radius:10px;padding:12px 16px;font-size:.85rem;color:rgba(255,255,255,.85);margin-bottom:10px;width:100%}
+.cert-badge svg{flex-shrink:0;color:var(--gold)}
+.pablo-photos-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:4px}
+.photo-slot{aspect-ratio:4/3;background:rgba(255,255,255,.05);border-radius:10px;border:1px dashed rgba(255,255,255,.15);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-size:.75rem;color:rgba(255,255,255,.3);font-family:sans-serif;text-align:center;padding:8px;cursor:pointer;transition:background .2s}
+.photo-slot:hover{background:rgba(255,255,255,.08)}
+.photo-slot svg{width:28px;height:28px;opacity:.25}
+.photo-slot img{width:100%;height:100%;object-fit:cover;border-radius:10px}
+
+/* FOOTER */
+footer{background:var(--midnight);color:var(--dusty);text-align:center;padding:36px 24px;font-size:.8rem;line-height:2}
+footer a{color:var(--gold);text-decoration:none}
+.ft-orn{color:var(--gold);font-size:1.4rem;display:block;margin-bottom:10px}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .pablo-hero{grid-template-columns:1fr}
+  .pablo-photo-col{display:none}
+  .pablo-body-grid{grid-template-columns:1fr}
+  .pablo-info-col{padding:36px 24px}
+}
+@media(max-width:600px){
+  .co-grid{grid-template-columns:1fr}
+  .hl-grid{grid-template-columns:1fr}
+  nav a{padding:9px 12px;font-size:.7rem}
+  .pablo-photos-row{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header>
+  <span class="h-orn">✦  ✦  ✦</span>
+  <h1>Reporte Mundial de <span>Ballet</span></h1>
+  <p class="h-sub">Temporadas activas · Semana del 8 de junio de 2026</p>
+  <span class="h-date">🗓 8 de junio de 2026</span>
+</header>
+
+<!-- ═══════════ NAV ═══════════ -->
+<nav id="main-nav">
+  <a href="#highlights">✦ Destacados</a>
+  <a href="#europa">Europa</a>
+  <a href="#norteamerica">Norteamérica</a>
+  <a href="#latinoamerica">América Latina</a>
+  <a href="#argentina" class="nav-arg">🇦🇷 Argentina</a>
+  <a href="#asia">Asia &amp; Oceanía</a>
+  <a href="#pablo" class="nav-pablo">★ Pablo Hernández</a>
+</nav>
+
+<!-- ═══════════ DESTACADOS ═══════════ -->
+<section class="highlights" id="highlights">
+<div class="sec-inner">
+  <p class="sec-label">Especial de la semana</p>
+  <h2 class="sec-heading">Estrenos Mundiales · Nuevas Producciones · Crítica Destacada</h2>
+  <div class="hl-grid">
+
+    <div class="hl-card">
+      <span class="badge bp">🌟 Estreno Mundial</span>
+      <div class="hl-title">Don Quixote — Nueva puesta en escena</div>
+      <div class="hl-co">American Ballet Theatre · Metropolitan Opera House, Nueva York</div>
+      <div class="hl-desc">Premiere el 29 de junio. Coreografía: Susan Jaffe y Susan Jones. Escenografía: Santo Loquasto. Catherine Hurlin (Kitri) · Isaac Hernández (Basilio). Natalia Osipova como invitada el 6 de julio.</div>
+      <div class="links-row"><a href="https://www.abt.org/ballet/don-quixote/" target="_blank" class="btn-link btn-prog">📖 Programa ABT</a><a href="https://www.abt.org/" target="_blank" class="btn-link btn-web">🌐 abt.org</a></div>
+    </div>
+
+    <div class="hl-card">
+      <span class="badge bp">🌟 Estreno Mundial</span>
+      <div class="hl-title">SISU — Alice Topp</div>
+      <div class="hl-co">Houston Ballet · Wortham Theater Center, Houston</div>
+      <div class="hl-desc">Triple bill "An Evening with the Stars". Hasta el 7 de junio. También: Dances at a Gathering (Robbins) y Tapestry (Stanton Welch).</div>
+      <div class="links-row"><a href="https://www.houstonballet.org/" target="_blank" class="btn-link btn-web">🌐 houstonballet.org</a></div>
+    </div>
+
+    <div class="hl-card">
+      <span class="badge bp">🌟 Estreno Mundial</span>
+      <div class="hl-title">Kismet — Jera Wolfe</div>
+      <div class="hl-co">National Ballet of Canada · Four Seasons Centre, Toronto</div>
+      <div class="hl-desc">Coreógrafa Métis canadiense. Explora el destino a través de la naturaleza. 29 mayo–4 junio.</div>
+      <div class="links-row"><a href="https://national.ballet.ca/productions/2526/new-work-by-jera-wolfe/" target="_blank" class="btn-link btn-prog">📖 Sobre la obra</a></div>
+    </div>
+
+    <div class="hl-card np">
+      <span class="badge bn">🆕 Estreno australiano</span>
+      <div class="hl-title">Hamlet — Leo Mujić</div>
+      <div class="hl-co">Queensland Ballet · Thomas Dixon Centre, Brisbane</div>
+      <div class="hl-desc">Premiere el 19 de junio. Música de Tchaikovsky y Saint-Saëns. Primera dir. temporada de Ivan Gil-Ortega.</div>
+      <div class="links-row"><a href="https://www.queenslandballet.com.au/performances/2026/hamlet" target="_blank" class="btn-link btn-prog">📖 Programa</a><a href="https://www.queenslandballet.com.au/" target="_blank" class="btn-link btn-web">🌐 Web</a></div>
+    </div>
+
+    <div class="hl-card np">
+      <span class="badge bn">🆕 Premiere Viena</span>
+      <div class="hl-title">Rhapsody (Ashton) + Within the Golden Hour (Wheeldon)</div>
+      <div class="hl-co">Vienna State Ballet · Wiener Staatsoper · 29 junio</div>
+      <div class="hl-desc">Tributo a Sir Frederick Ashton. Gala Ballet 2026 con Diamonds (Balanchine). Dos estrenos en una sola noche de gala.</div>
+      <div class="links-row"><a href="https://www.wiener-staatsoper.at/en/calendar/detail/ballett-gala-2026/2026-06-29/" target="_blank" class="btn-link btn-prog">📖 Detalles gala</a></div>
+    </div>
+
+    <div class="hl-card br">
+      <span class="badge br2">⭐ Mejor crítica</span>
+      <div class="hl-title">MADDADDAM — Wayne McGregor</div>
+      <div class="hl-co">National Ballet of Canada · 13–21 junio</div>
+      <div class="hl-desc"><span class="stars">★★★★</span> Globe and Mail: "Te dejará horrorizado, desconcertado y asombrado." Música: Max Richter. Basada en la trilogía de Atwood.</div>
+      <div class="links-row"><a href="https://national.ballet.ca/productions/2526/maddaddam/" target="_blank" class="btn-link btn-prog">📖 Producción</a></div>
+    </div>
+
+    <div class="hl-card br">
+      <span class="badge br2">⭐ 4 estrellas Bachtrack</span>
+      <div class="hl-title">Copland Dance Episodes — Justin Peck</div>
+      <div class="hl-co">The Australian Ballet · Arts Centre Melbourne · 23 jun–2 jul</div>
+      <div class="hl-desc">Primera vez fuera de NYC. Justin Peck, ganador del Tony Award. Bachtrack: "Ballet moderno gozoso de un pionero coreográfico."</div>
+      <div class="links-row"><a href="https://australianballet.com.au/" target="_blank" class="btn-link btn-web">🌐 australianballet.com.au</a></div>
+    </div>
+
+    <div class="hl-card br">
+      <span class="badge br2">⭐ Estreno argentino notable</span>
+      <div class="hl-title">Alice's Adventures in Wonderland — C. Wheeldon</div>
+      <div class="hl-co">Ballet Estable del Teatro Colón · Buenos Aires · 16–30 jul</div>
+      <div class="hl-desc">Estreno argentino de la creación del Royal Danish Ballet/Royal Swedish Ballet. Música: Joby Talbot. Dir. musical: David Briskin. Julio Bocca dirige la compañía.</div>
+      <div class="links-row"><a href="https://teatrocolon.org.ar/produccion/alices-adventures-in-wonderland/" target="_blank" class="btn-link btn-prog">📖 Teatro Colón</a></div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ EUROPA ═══════════ -->
+<section class="reg" id="europa">
+<div class="reg-hdr">
+  <div class="reg-icon ri-eu">🏰</div>
+  <h2 class="reg-title"><span>Región</span>Europa</h2>
+</div>
+<div class="co-grid">
+
+  <!-- Royal Ballet -->
+  <div class="co-card">
+    <div class="card-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Royal_Opera_House_Covent_Garden.jpg/600px-Royal_Opera_House_Covent_Garden.jpg" alt="Royal Opera House" loading="lazy" onerror="this.style.display='none'">
+      <div class="card-img-overlay"><span class="co-country">Londres · Reino Unido</span></div>
+    </div>
+    <div class="card-hdr">
+      <h3><a href="https://www.rbo.org.uk/" target="_blank">The Royal Ballet</a></h3>
+      <span class="card-loc">Royal Opera House · Covent Garden</span>
+    </div>
+    <div class="card-body">
+      <div class="tag-row"><span class="tag tc">Ashton clásico</span><span class="tag tn">Festival internacional</span></div>
+      <div><p class="info-lbl">Producción actual</p><p class="info-val"><strong>La Fille mal gardée</strong> — Frederick Ashton<br>5–9 junio 2026. Ballet campestre lleno de humor e inventiva coreográfica.</p></div>
+      <div><p class="info-lbl">Elenco</p><p class="info-val">Francesca Hayward (Lise) · Marcelino Sambé (Colas)</p></div>
+      <div class="div"></div>
+      <div><p class="info-lbl">Próximamente</p><p class="info-val">Royal Ballet Next Generation Festival 2026 — 12 jun. al 4 jul. (Linbury Theatre). 8 compañías juveniles de élite de todo el mundo.</p></div>
+      <div><p class="info-lbl">Crítica</p><p class="info-val italic">"Un ballet de puro sol: el más alegre y colorido de Ashton."</p></div>
+      <span class="price">Desde £28</span>
+      <div class="links-row">
+        <a href="https://www.rbo.org.uk/tickets-and-events/la-fille-mal-gardee-frederick-ashton-dates" target="_blank" class="btn-link btn-prog">📖 Programa de mano</a>
+        <a href="https://www.rbo.org.uk/" target="_blank" class="btn-link btn-web">🌐 rbo.org.uk</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Paris Opera Ballet -->
+  <div class="co-card">
+    <div class="card-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Bastille_Opera.jpg/600px-Bastille_Opera.jpg" alt="Opéra Bastille" loading="lazy" onerror="this.style.display='none'">
+      <div class="card-img-overlay"><span class="co-country">París · Francia</span></div>
+    </div>
+    <div class="card-hdr">
+      <h3><a href="https://www.operadeparis.fr/en/" target="_blank">Paris Opéra Ballet</a></h3>
+      <span class="card-loc">Opéra Bastille</span>
+    </div>
+    <div class="card-body">
+      <div class="tag-row"><span class="tag tc">Gran clásico</span><span class="tag tn">Transmisión mundial</span></div>
+      <div><p class="info-lbl">Producción — 17 jun al 14 jul</p><p class="info-val"><strong>La Bayadère</strong> — Coreografía Rudolf Nureyev (sobre Petipa). Música: L. Minkus. Funciones en junio: 17, 18, 20, 21, 23, 24, 26, 27, 29, 30.</p></div>
+      <div><p class="info-lbl">Evento especial</p><p class="info-val">Grabación para cine/TV los días 26 y 29 de junio (Bel Air Media / France Télévisions). Se transmitirá en cines del mundo y en Paris Opera Play.</p></div>
+      <div><p class="info-lbl">Sobre la producción</p><p class="info-val">La versión Nureyev (1992) es una joya del repertorio del POB. Los amores de Nikiya y Solor en una India imaginaria. Virtuosismo extremo y grandes cuadros de conjunto.</p></div>
+      <span class="price">€15–€195</span>
+      <div class="links-row">
+        <a href="https://www.operadeparis.fr/en/season-25-26/ballet/la-bayadere" target="_blank" class="btn-link btn-prog">📖 Programa La Bayadère</a>
+        <a href="https://www.operadeparis.fr/en/" target="_blank" class="btn-link btn-web">🌐 operadeparis.fr</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bolshoi -->
+  <div class="co-card">
+    <div class="card-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bolshoi_Theatre%2C_Moscow%2C_Russia.jpg/600px-Bolshoi_Theatre%2C_Moscow%2C_Russia.jpg" alt="Teatro Bolshoi" loading="lazy" onerror="this.style.display='none'">
+      <div class="card-img-overlay"><span class="co-country">Moscú · Rusia</span></div>
+    </div>
+    <div class="card-hdr">
+      <h3><a href="https://bolshoi.ru/en/" target="_blank">Bolshoi Ballet</a></h3>
+      <span class="card-loc">Teatro Bolshoi · Escenario Principal y Nuevo Escenario</span>
+    </div>
+    <div class="card-body">
+      <div class="tag-row"><span class="tag tc">Repertorio ruso</span></div>
+      <div><p class="info-lbl">Temporada junio 2026</p><p class="info-val">El Bolshoi opera en junio antes del cierre de verano en julio. Funciones en ambos escenarios con grandes clásicos: Swan Lake, La Bella Durmiente, Giselle, Romeo y Julieta. Repertorio de más de 50 títulos activos.</p></div>
+      <div><p class="info-lbl">Contexto</p><p class="info-val">La compañía es referente mundial desde 1776. Sus bailarines forman técnica de élite en la Academia Vaganova y la Academia Bolshoi.</p></div>
+      <span class="price">600–20 000 RUB</span>
+      <div class="links-row">
+        <a href="https://bolshoi.ru/en/season/ballet" target="_blank" class="btn-link btn-prog">📖 Temporada completa</a>
+        <a href="https://bolshoi.ru/en/" target="_blank" class="btn-link btn-web">🌐 bolshoi.ru</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stuttgart Ballet -->
+  <div class="co-card">
+    <div class="card-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Stuttgart-StaatstheaterOper.jpg/600px-Stuttgart-StaatstheaterOper.jpg" alt="Staatstheater Stuttgart" loading="lazy" onerror="this.style.display='none'">
+      <div class="card-img-overlay"><span class="co-country">Stuttgart · Alemania</span></div>
+    </div>
+    <div class="card-hdr">
+      <h3><a href="https://www.stuttgart-ballet.de/" target="_blank">Stuttgart Ballet</a></h3>
+      <span class="card-loc">Staatstheater Stuttgart · Opernhaus</span>
+    </div>
+    <div class="card-body">
+      <div class="tag-row"><span class="tag tc">Cranko Heritage</span><span class="tag tco">Nuevos coreógrafos</span></div>
+      <div><p class="info-lbl">Funciones de junio</p><p class="info-val">
+        <strong>Dornröschen</strong> (La Bella Durmiente) — 10 jun, 19:00<br>
+        <strong>Noverre: Jóvenes Coreógrafos</strong> — 13 y 14 jun (mat. + noche)<br>
+        <strong>Einblicke: Fokus John Cranko Schule</strong> — 9, 19, 25 jun
+      </p></div>
+      <div><p class="info-lbl">Noverre</p><p class="info-val">Plataforma histórica para coreógrafos emergentes de la escuela de John Cranko. Obras cortas de nuevos talentos.</p></div>
+      <span class="price">€15–€87</span>
+      <div class="links-row">
+        <a href="https://www.stuttgart-ballet.de/schedule/season-202526/" target="_blank" class="btn-link btn-prog">📖 Temporada 25/26</a>
+        <a href="https://www.stuttgart-ballet.de/" target="_blank" class="btn-link btn-web">🌐 stuttgart-ballet.de</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- La Scala -->
+  <div class="co-card">
+    <div class="card-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Teatro_alla_Scala%2C_2016.jpg/600px-Teatro_alla_Scala%2C_2016.jpg" alt="Teatro alla Scala" loading="lazy" onerror="this.style.display='none'">
+      <div class="card-img-overlay"><span class="co-country">Milán · Italia</span></div>
+    </div>
+    <div class="card-hdr">
+      <h3><a href="https://www.teatroallascala.org/en/" target="_blank">Ballet del Teatro alla Scala</a></h3>
+      <span class="card-loc">Teatro alla Scala · Milán</span>
+    </div>
+    <div class="card-body">
+      <div class="tag-row"><span class="tag tn">Nueva prod. Ratmansky</span><span class="tag tc">Nureyev</span></div>
+      <div><p class="info-lbl">Producción actual</p><p class="info-val"><strong>Coppélia</strong> — Coreografía: Alexei Ratmansky. 18 y 25 de junio, 20:00 h.</p></div>
+      <div><p class="info-lbl">Próxima producción</p><p class="info-val"><strong>Don Quixote</strong> — Coreografía: Rudolf Nureyev. Del 26 de junio al 17 de julio.</p></div>
+      <span class="price">€15–€250</span>
+      <div class="links-row">
+        <a href="https://www.teatroallascala.org/en/season/2025-2026/2025-2026-Season.html" target="_blank" class="btn-link btn-prog">📖 Temporada 2025-26</a>
+        <a href="https://www.teatroallascala.org/en/" target="_blank" class="btn-link btn-web">🌐 teatroallascala.org</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vienna State Ballet -->
+  <div class="co-card">
+    <div class="card-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wiener_Staatsoper_frontal_small.jpg/600px-Wiener_Staatsoper_frontal_small.jpg" alt="Wiener Staatsoper" loading="lazy" onerror="this.style.display='none'">
+      <div class="card-img-overlay"><span class="co-country">Viena · Austria</span></div>
+    </div>
+    <div class="card-hdr">
+      <h3><a href="https://www.wiener-staatsoper.at/en/" target="_blank">Vienna State Ballet</a></h3>
+      <span class="card-loc">Wiener Staatsoper · Viena</span>
+    </div>
+    <div class="card-body">
+      <div class="tag-row"><span class="tag tn">🆕 Premieres 29 jun</span><span class="tag tc">Tributo Ashton</span></div>
+      <div><p class="info-lbl">Producción — 2, 9, 20, 21 jun</p><p class="info-val"><strong>Living Legacies</strong> — "Mujeres famosas, caracteres fuertes, destinos trágicos." Cuatro ballets con grandes protagonistas femeninas.</p></div>
+      <div><p class="info-lbl">🌟 Gala Ballet 29 junio</p><p class="info-val">Premiere: <em>Rhapsody</em> (Ashton) · Premiere: <em>Within the Golden Hour</em> (Wheeldon) · <em>Diamonds</em> (Balanchine)</p></div>
+      <span class="price">€9–€235</span>
+      <div class="links-row">
+        <a href="https://www.wiener-staatsoper.at/en/calendar/detail/ballett-gala-2026/2026-06-29/" target="_blank" class="btn-link btn-prog">📖 Gala Ballet 2026</a>
+        <a href="https://www.wiener-staatsoper.at/en/" target="_blank" class="btn-link btn-web">🌐 wiener-staatsoper.at</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Royal Danish Ballet -->
+  <div class="co-card">
+    <div class="card-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Det_Kongelige_Teater.jpg/600px-Det_Kongelige_Teater.jpg" alt="Det Kongelige Teater" loading="lazy" onerror="this.style.display='none'">
+      <div class="card-img-overlay"><span class="co-country">Copenhague · Dinamarca</span></div>
+    </div>
+    <div class="card-hdr">
+      <h3><a href="https://www.kglteater.dk/en/" target="_blank">Royal Danish Ballet</a></h3>
+      <span class="card-loc">Det Kongelige Teater · Copenhague</span>
+    </div>
+    <div class="card-body">
+      <div class="tag-row"><span class="tag tc">Balanchine · Wheeldon</span></div>
+      <div><p class="info-lbl">Producción (hasta 5 jun)</p><p class="info-val"><strong>Giant Steps</strong> — Balanchine (Apollo) y Christopher Wheeldon. Cierre de temporada 2025-2026.</p></div>
+      <div><p class="info-lbl">Temporada 2025-26</p><p class="info-val">Incluyó estrenos mundiales de Ratmansky (<em>The Art of Fugue</em>) y Akram Khan (<em>Lady Macbeth</em>). Una de las temporadas más ricas en nuevas creaciones.</p></div>
+      <span class="price">195–1 095 DKK</span>
+      <div class="links-row">
+        <a href="https://www.kglteater.dk/en/calendar/" target="_blank" class="btn-link btn-web">🌐 kglteater.dk</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- ═══════════ NORTEAMÉRICA ═══════════ -->
+<section class="reg" id="norteamerica">
+<div class="reg-hdr">
+  <div class="reg-icon ri-na">🗽</div>
+  <h2 class="reg-title"><span>Región</span>Norteamérica</h2>
+</div>
+<div class="co-grid">
+
+  <!-- ABT -->
+  <div class="co-card">
+    <div class="card-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Metropolitan_Opera_House_at_Lincoln_Center.jpg/600px-Metropolitan_Opera_House_at_Lincoln_Center.jpg" alt="Metropolitan Opera House" loading="lazy" onerror="this.style.display='none'">
+      <div class="card-img-overlay"><span class="co-country">Nueva York · EE.UU.</span></div>
+    </div>
+    <div class="card-hdr">
+      <h3><a href="https://www.abt.org/" target="_blank">American Ballet Theatre</a></h3>
+      <span class="card-loc">Metropolitan Opera House · Lincoln Center</span>
+    </div>
+    <div class="card-body">
+      <div class="tag-row"><span class="tag tw">🌟 Estreno mundial 29 jun</span><span class="tag tc">Swan Lake</span></div>
+      <div><p class="info-lbl">Temporada verano — 17 jun al 18 jul</p><p class="info-val">37 funciones. 4 producciones de fondo completo.</p></div>
+      <div><p class="info-lbl">Swan Lake — 17–27 jun</p><p class="info-val">Coreografía: Kevin McKenzie. Apertura: <strong>Skylar Brandt</strong> (Odette/Odile) · <strong>Herman Cornejo</strong> (Siegfried)</p></div>
+      <div><p class="info-lbl">🌟 Don Quixote — estreno 29 jun</p><p class="info-val">Nueva puesta en escena: <strong>Susan Jaffe + Susan Jones</strong>. Escenografía/vestuario: Santo Loquasto. Iluminación: Natasha Katz.<br><strong>Catherine Hurlin</strong> (Kitri) · <strong>Isaac Hernández</strong> (Basilio). Artista invitada: <strong>Natalia Osipova</strong> — 6 jul.</p></div>
+      <span class="price">Desde $30</span>
+      <div class="links-row">
+        <a href="https://www.abt.org/events/swan-lake/" target="_blank" class="btn-link btn-prog">📖 Swan Lake</a>
+        <a href="https://www.abt.org/ballet/don-quixote/" target="_blank" class="btn-link btn-prog">📖 Don Quixote</a>
+        <a href="https://www.abt.org/" target="_blank" class="btn-link btn-web">🌐 abt.org</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NYCB -->
+  <div class="co-card">
+    <div class="card-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Lincoln_Center_from_above.jpg/600px-Lincoln_Center_from_above.jpg" alt="Lincoln Center" loading="lazy" onerror="this.style.display='none'">
+      <div class="card-img-overlay"><span class="co-country">Nueva York · EE.UU. / Los Ángeles en gira</span></div>
+    </div>
+    <div class="card-hdr">
+      <h3><a href="https://www.nycballet.com/" target="_blank">New York City Ballet</a></h3>
+      <span class="card-loc">En gira: The Music Center · Los Ángeles</span>
+    </div>
+    <div class="card-body">
+      <div class="tag-row"><span class="tag tc">Balanchine</span><span class="tag tco">Peck · Wheeldon</span></div>
+      <div><p class="info-lbl">Programa A — 25 y 26 jun, 19:30</p><p class="info-val"><em>Signs</em> (Reisen/Glass) · <em>Red Angels</em> (Dove) · <em>A Suite of Dances</em> (Robbins/Bach) · <em>The Times Are Racing</em> (J.Peck, 26 jun)</p></div>
+      <div><p class="info-lbl">Programa B — 27 jun, 14:00</p><p class="info-val"><em>Concerto Barocco</em> (Balanchine) · <em>Allegro Brillante</em> (Balanchine) · <em>This Bitter Earth</em> (Wheeldon) · <em>Concerto for Two Pianos</em> (Tiler Peck/Poulenc)</p></div>
+      <div><p class="info-lbl">Próxima temporada 26-27</p><p class="info-val">NYCB anunció 5 estrenos mundiales. Una de las programaciones más ambiciosas de su historia reciente.</p></div>
+      <div class="links-row">
+        <a href="https://www.nycballet.com/season-and-tickets/calendar" target="_blank" class="btn-link btn-web">🌐 nycballet.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- National Ballet Canada -->
+  <div class="co-card">
+    <div class="card-img-wrap" style="background:linear-gradient(135deg,#1a3a5c 0%,#2d5f8a 100%);height:160px;display:flex;align-items:center;justify-content:center">
+      <span style="font-size:3.5rem">🍁</span>
+      <div class="card-img-overlay"><span class="co-country">Toronto · Canadá</span></div>
+    </div>
+    <div class="card-hdr">
+      <h3><a href="https://national.ballet.ca/" target="_blank">National Ballet of Canada</a></h3>
+      <span class="card-loc">Four Seasons Centre · Toronto</span>
+    </div>
+    <div class="card-body">
+      <div class="tag-row"><span class="tag tco">Wayne McGregor</span><span class="tag tn">⭐ Mejor valorada</span></div>
+      <div><p class="info-lbl">🌟 MADDADDAM — 13–21 jun</p><p class="info-val">Coreografía: Wayne McGregor. Música: Max Richter. Basada en la trilogía de Margaret Atwood. Cierre de temporada 2025-26.</p></div>
+      <div><p class="info-lbl">Crítica</p><p class="info-val italic"><span class="stars">★★★★</span> Globe and Mail: "Te dejará horrorizado, desconcertado y asombrado." ArtReview: "Triunfo del diseño."</p></div>
+      <div><p class="info-lbl">También (mayo–jun)</p><p class="info-val">Estreno mundial <em>Kismet</em> (Jera Wolfe, 29 may–4 jun) · Gala MAD HOT BALLET (2 jun)</p></div>
+      <span class="price">Desde CAD $50</span>
+      <div class="links-row">
+        <a href="https://national.ballet.ca/productions/2526/maddaddam/" target="_blank" class="btn-link btn-prog">📖 MADDADDAM</a>
+        <a href="https://national.ballet.ca/" target="_blank" class="btn-link btn-web">🌐 national.ballet.ca</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Houston Ballet -->
+  <div class="co-card">
+    <div class="card-img-wrap" style="background:linear-gradient(135deg,#1c3d2e 0%,#2e6e55 100%);height:160px;display:flex;align-items:center;justify-content:center">
+      <span style="font-size:3rem">⭐</span>
+      <div class="card-img-overlay"><span class="co-country">Houston · EE.UU.</span></div>
+    </div>
+    <div class="card-hdr">
+      <h3><a href="https://www.houstonballet.org/" target="_blank">Houston Ballet</a></h3>
+      <span class="card-loc">Wortham Theater Center · Houston, TX</span>
+    </div>
+    <div class="card-body">
+      <div class="tag-row"><span class="tag tw">🌟 Estreno SISU</span><span class="tag tc">Giselle</span></div>
+      <div><p class="info-lbl">An Evening with the Stars — hasta 7 jun</p><p class="info-val"><strong>SISU</strong> (estreno mundial, Alice Topp) · <em>Dances at a Gathering</em> (Robbins/Chopin) · <em>Tapestry</em> (Welch/Mozart)</p></div>
+      <div><p class="info-lbl">Giselle — 11–21 jun</p><p class="info-val">Versión Stanton Welch (debut Houston 2016). Escenografía: Roberta Guidi di Bagno. Ballet romántico de 1841.</p></div>
+      <div class="links-row">
+        <a href="https://www.houstonballet.org/seasontickets/calendar/" target="_blank" class="btn-link btn-prog">📖 Calendario</a>
+        <a href="https://www.houstonballet.org/" target="_blank" class="btn-link btn-web">🌐 houstonballet.org</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- ═══════════ LATINOAMÉRICA ═══════════ -->
+<section class="reg" id="latinoamerica">
+<div class="reg-hdr">
+  <div class="reg-icon ri-la">🌎</div>
+  <h2 class="reg-title"><span>Región</span>América Latina (fuera de Argentina)</h2>
+</div>
+<div class="co-grid">
+
+  <!-- Ballet Nacional de Cuba -->
+  <div class="co-card">
+    <div class="card-img-wrap" style="background:linear-gradient(135deg,#1a3a6c 0%,#8b1a1a 100%);height:160px;display:flex;align-items:center;justify-content:center">
+      <span style="font-size:3rem">🇨🇺</span>
+      <div class="card-img-overlay"><span class="co-country">La Habana · Cuba</span></div>
+    </div>
+    <div class="card-hdr">
+      <h3><a href="http://www.balletcuba.cult.cu/" target="_blank">Ballet Nacional de Cuba</a></h3>
+      <span class="card-loc">Gran Teatro de La Habana / Gira: Panamá</span>
+    </div>
+    <div class="card-body">
+      <div class="tag-row"><span class="tag tc">Legado Alicia Alonso</span><span class="tag tco">Gira junio</span></div>
+      <div><p class="info-lbl">Panamá Ballet Fest 2026 — 4–7 jun</p><p class="info-val">Teatro Aurea "Baby" Torrijos · Ciudad de las Artes, Panamá.<br>Directora y 1ª bailarina: <strong>Viengsay Valdés</strong>.</p></div>
+      <div><p class="info-lbl">Programa</p><p class="info-val">Adagio de la Rosa (<em>La Bella Durmiente</em>, versión Alicia Alonso) · <em>Love Fear Loss</em> (R. Amarante) · Pas de deux de <em>Coppélia</em>, <em>Esmeralda</em> y <em>El Corsario</em></p></div>
+      <div><p class="info-lbl">Elenco</p><p class="info-val">Viengsay Valdés · Ányel Montero · Yankiel Vázquez · Alianed Moreno · Nadila Estrada · Alejandro Alderete</p></div>
+      <div class="links-row"><a href="http://www.balletcuba.cult.cu/" target="_blank" class="btn-link btn-web">🌐 balletcuba.cult.cu</a></div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- ═══════════ ARGENTINA ═══════════ -->
+<section id="argentina" class="arg-section">
+
+  <div class="arg-banner">
+    <span class="arg-flag">🇦🇷</span>
+    <h2>Ballet Argentino</h2>
+    <p>Compañías Profesionales de Danza · Temporada 2026</p>
+    <div class="arg-stats">
+      <div class="arg-stat"><div class="arg-stat-n">12+</div><div class="arg-stat-l">Compañías activas</div></div>
+      <div class="arg-stat"><div class="arg-stat-n">8</div><div class="arg-stat-l">Provincias representadas</div></div>
+      <div class="arg-stat"><div class="arg-stat-n">300+</div><div class="arg-stat-l">Bailarines profesionales</div></div>
+    </div>
+  </div>
+
+  <div class="reg" style="padding-top:44px">
+  <div class="co-grid">
+
+    <!-- Teatro Colón -->
+    <div class="co-card">
+      <div class="card-img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Teatro_Col%C3%B3n_-_Buenos_Aires_-_Arg_01.jpg/600px-Teatro_Col%C3%B3n_-_Buenos_Aires_-_Arg_01.jpg" alt="Teatro Colón" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-img-overlay"><span class="co-country">Buenos Aires · Ciudad Autónoma</span></div>
+      </div>
+      <div class="card-hdr">
+        <h3><a href="https://teatrocolon.org.ar/" target="_blank">Ballet Estable del Teatro Colón</a></h3>
+        <span class="card-loc">Teatro Colón · Buenos Aires</span>
+      </div>
+      <div class="card-body">
+        <div class="tag-row"><span class="tag tar">Compañía Principal</span><span class="tag tw">Estrenos 2026</span></div>
+        <div><p class="info-lbl">Director artístico</p><p class="info-val"><strong>Julio Bocca</strong> — leyenda viviente del ballet mundial. Segundo año como director.</p></div>
+        <div><p class="info-lbl">Artista invitada</p><p class="info-val"><strong>Marianela Núñez</strong> (primera bailarina del Royal Ballet de Londres) — primera y última producción de la temporada.</p></div>
+        <div class="div"></div>
+        <div><p class="info-lbl">Temporada 2026 completa</p><p class="info-val">
+          • <strong>Lago de los Cisnes</strong> — mar 11–22 (coreografía Raúl Candal)<br>
+          • <strong>Triple bill 20/21</strong> — may 7–17<br>
+          • <strong>Alice's Adventures in Wonderland</strong> — jul 16–30 (C. Wheeldon, estreno argentino)<br>
+          • <strong>Borges</strong> — sep 10–20 (ESTRENO MUNDIAL)<br>
+          • <strong>Manon</strong> — nov 5–16 (Kenneth MacMillan)<br>
+          • <strong>El Cascanueces</strong> — dic 17–30
+        </p></div>
+        <div><p class="info-lbl">Crítica</p><p class="info-val italic">"Una temporada auspiciosa que combina grandes invitadas, estrenos y clásicos imprescindibles." — La Nación</p></div>
+        <span class="price">Ver teatrocolon.org.ar · Tucumán 1171</span>
+        <div class="links-row">
+          <a href="https://teatrocolon.org.ar/temporada/temporada-2026/" target="_blank" class="btn-link btn-prog">📖 Temporada 2026</a>
+          <a href="https://teatrocolon.org.ar/wp-content/uploads/2025/12/Guia-Temporada_2026.pdf" target="_blank" class="btn-link btn-prog">📄 Guía PDF</a>
+          <a href="https://teatrocolon.org.ar/" target="_blank" class="btn-link btn-web">🌐 teatrocolon.org.ar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Teatro Argentino La Plata -->
+    <div class="co-card">
+      <div class="card-img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/La_Plata_Teatro_Argentino.JPG/600px-La_Plata_Teatro_Argentino.JPG" alt="Teatro Argentino La Plata" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-img-overlay"><span class="co-country">La Plata · Provincia de Buenos Aires</span></div>
+      </div>
+      <div class="card-hdr">
+        <h3><a href="https://teatroargentino.gba.gob.ar/" target="_blank">Ballet Estable del Teatro Argentino</a></h3>
+        <span class="card-loc">Teatro Argentino · La Plata</span>
+      </div>
+      <div class="card-body">
+        <div class="tag-row"><span class="tag tar">Compañía provincial</span><span class="tag tc">Entrada gratuita</span></div>
+        <div><p class="info-lbl">Director coreográfico</p><p class="info-val"><strong>Edgardo Trabalón</strong></p></div>
+        <div><p class="info-lbl">Producción 2026</p><p class="info-val"><strong>La Bayadère</strong> — coreografía Edgardo Trabalón. Música: Ludwig Minkus. Con el Ballet Estable y la Orquesta Estable del teatro. 4 funciones presentadas.</p></div>
+        <div><p class="info-lbl">Sobre el teatro</p><p class="info-val">Temporada 2026 con ballet, conciertos sinfónicos y propuestas experimentales. Inaugurado en 1890, es el teatro lírico más importante del interior del país. <strong>Entrada GRATUITA</strong> con reserva online.</p></div>
+        <span class="price">Entrada gratuita (reserva obligatoria)</span>
+        <div class="links-row">
+          <a href="https://www.gba.gob.ar/teatro_argentino/programacion" target="_blank" class="btn-link btn-prog">📖 Programación</a>
+          <a href="https://teatroargentino.gba.gob.ar/" target="_blank" class="btn-link btn-web">🌐 teatroargentino.gba.gob.ar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ballet Contemporáneo San Martín -->
+    <div class="co-card">
+      <div class="card-img-wrap" style="background:linear-gradient(135deg,#1a1a3a 0%,#3a2a5c 100%);height:160px;display:flex;align-items:center;justify-content:center">
+        <span style="font-size:2.8rem">💃</span>
+        <div class="card-img-overlay"><span class="co-country">Buenos Aires · Ciudad Autónoma</span></div>
+      </div>
+      <div class="card-hdr">
+        <h3><a href="https://complejoteatral.gob.ar/teatro-san-martin" target="_blank">Ballet Contemporáneo del Teatro San Martín</a></h3>
+        <span class="card-loc">Complejo Teatral de Buenos Aires · Teatro San Martín / Teatro Álvear</span>
+      </div>
+      <div class="card-body">
+        <div class="tag-row"><span class="tag tar">Contemporáneo</span><span class="tag tco">Entrada accesible</span></div>
+        <div><p class="info-lbl">Dirección</p><p class="info-val"><strong>Andrea Chinetti</strong> (directora) · <strong>Diego Poblete</strong> (codirector)</p></div>
+        <div><p class="info-lbl">Temporada 2026</p><p class="info-val"><strong>Rossini Cards</strong> — Mauro Bigonzetti (Italia) · <strong>Bailando en la oscuridad</strong> — Ana María Stekelman. Teatro Álvear. También funciones gratuitas en el Anfiteatro del Parque Centenario.</p></div>
+        <div><p class="info-lbl">Repertorio</p><p class="info-val"><em>Vibraciones</em> (Elizabeth Chapeaurouge) · <em>Cuatro estaciones de Buenos Aires</em> (Mauricio Wainrot, tributo a Piazzolla)</p></div>
+        <span class="price">Entradas accesibles o gratuitas</span>
+        <div class="links-row">
+          <a href="https://complejoteatral.gob.ar/danza" target="_blank" class="btn-link btn-prog">📖 Programación danza</a>
+          <a href="https://complejoteatral.gob.ar/" target="_blank" class="btn-link btn-web">🌐 complejoteatral.gob.ar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CNDC -->
+    <div class="co-card">
+      <div class="card-img-wrap" style="background:linear-gradient(135deg,#2a1a3a 0%,#5c3a7a 100%);height:160px;display:flex;align-items:center;justify-content:center">
+        <span style="font-size:2.8rem">🎭</span>
+        <div class="card-img-overlay"><span class="co-country">Buenos Aires · Nacional</span></div>
+      </div>
+      <div class="card-hdr">
+        <h3><a href="https://www.argentina.gob.ar/cultura/elencos/cndc" target="_blank">Compañía Nacional de Danza Contemporánea</a></h3>
+        <span class="card-loc">Teatro Nacional Cervantes / CCK · Buenos Aires</span>
+      </div>
+      <div class="card-body">
+        <div class="tag-row"><span class="tag tar">Elenco nacional</span><span class="tag tco">Danza contemporánea</span></div>
+        <div><p class="info-lbl">Dirección</p><p class="info-val"><strong>Gustavo Lesgart</strong> (director) · <strong>Marina Giancaspro</strong> (subdirectora). 21 bailarines.</p></div>
+        <div><p class="info-lbl">Actividad 2026</p><p class="info-val">Temporada en el Teatro Nacional Cervantes y giras nacionales (Córdoba, Santa Fe). En marzo actuó en <strong>Teatros del Canal de Madrid</strong> (España), presentando obras de Johan Inger como <em>Become</em>.</p></div>
+        <div><p class="info-lbl">Historia</p><p class="info-val">Fundada el 26 de febrero de 2009. Promueve interpretación, creación y experimentación en danza contemporánea, con alcance social y federal.</p></div>
+        <div class="links-row">
+          <a href="https://www.argentina.gob.ar/cultura/elencos/cndc" target="_blank" class="btn-link btn-web">🌐 argentina.gob.ar/cndc</a>
+          <a href="https://www.instagram.com/cndc.danza.contemporanea/" target="_blank" class="btn-link btn-prog">📷 Instagram</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ballet Folklórico Nacional -->
+    <div class="co-card">
+      <div class="card-img-wrap" style="background:linear-gradient(135deg,#3a2000 0%,#7a4500 100%);height:160px;display:flex;align-items:center;justify-content:center">
+        <span style="font-size:2.8rem">🪗</span>
+        <div class="card-img-overlay"><span class="co-country">Buenos Aires · Nacional</span></div>
+      </div>
+      <div class="card-hdr">
+        <h3><a href="https://www.argentina.gob.ar/cultura/elencos/bfn" target="_blank">Ballet Folklórico Nacional</a></h3>
+        <span class="card-loc">Centro Garrigós, Paz Soldán 5200 · Buenos Aires</span>
+      </div>
+      <div class="card-body">
+        <div class="tag-row"><span class="tag tar">Elenco nacional</span><span class="tag tc">Folklore argentino</span></div>
+        <div><p class="info-lbl">Dirección</p><p class="info-val"><strong>Glenda Casaretto</strong> (directora) · <strong>Fernando Muñoz</strong> (subdirector). 43 bailarines de todas las provincias.</p></div>
+        <div><p class="info-lbl">Producción 2026</p><p class="info-val"><strong>Latidos del suelo</strong> — presentado el 21 mayo en la Casa Rosada, ciclo "Paisajes sonoros". Recorre ritmos y danzas de todas las regiones del país.</p></div>
+        <div><p class="info-lbl">Historia</p><p class="info-val">Creado por <em>Santiago Ayala "El Chúcaro"</em> y Norma Viola a fines de los años 80. 43 bailarines representan el patrimonio cultural de todas las provincias argentinas.</p></div>
+        <div class="links-row">
+          <a href="https://www.argentina.gob.ar/cultura/elencos/bfn" target="_blank" class="btn-link btn-web">🌐 argentina.gob.ar/bfn</a>
+          <a href="https://www.facebook.com/bfnargentina/" target="_blank" class="btn-link btn-prog">📘 Facebook</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cadabra -->
+    <div class="co-card">
+      <div class="card-img-wrap" style="background:linear-gradient(135deg,#1a1a1a 0%,#3a0a3a 100%);height:160px;display:flex;align-items:center;justify-content:center">
+        <span style="font-size:2.8rem">✨</span>
+        <div class="card-img-overlay"><span class="co-country">Buenos Aires · Independiente</span></div>
+      </div>
+      <div class="card-hdr">
+        <h3><a href="https://www.instagram.com/grupocadabra/" target="_blank">Compañía Cadabra — Anabella Tuliano</a></h3>
+        <span class="card-loc">Buenos Aires · Compañía independiente</span>
+      </div>
+      <div class="card-body">
+        <div class="tag-row"><span class="tag tco">Contemporáneo independiente</span><span class="tag tn">Konex 2025</span></div>
+        <div><p class="info-lbl">Dirección</p><p class="info-val"><strong>Anabella Tuliano</strong> — fundadora (2011). Explora el movimiento fuera del eje, gravedad e inercia, con estética minimalista.</p></div>
+        <div><p class="info-lbl">Obras</p><p class="info-val"><em>Domésticame</em> · <em>Cadabra</em> · <em>Lo que tenía que ser</em>. Declarada de interés por la Legislatura porteña.</p></div>
+        <div><p class="info-lbl">Reconocimientos</p><p class="info-val">Festival Konex de Música Clásica 2025 · Nominaciones Teatro del Mundo · Invitada a galas internacionales en Paraguay, San Juan, Mendoza, Resistencia.</p></div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/grupocadabra/" target="_blank" class="btn-link btn-prog">📷 @grupocadabra</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ballet Oficial Córdoba -->
+    <div class="co-card">
+      <div class="card-img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Teatro_del_Libertador_General_San_Mart%C3%ADn%2C_C%C3%B3rdoba.jpg/600px-Teatro_del_Libertador_General_San_Mart%C3%ADn%2C_C%C3%B3rdoba.jpg" alt="Teatro del Libertador Córdoba" loading="lazy" onerror="this.style.display='none'">
+        <div class="card-img-overlay"><span class="co-country">Córdoba · Provincia de Córdoba</span></div>
+      </div>
+      <div class="card-hdr">
+        <h3><a href="https://cultura.cba.gov.ar/ballet-oficial-de-la-provincia/" target="_blank">Ballet Oficial de la Provincia de Córdoba</a></h3>
+        <span class="card-loc">Teatro del Libertador General San Martín · Córdoba</span>
+      </div>
+      <div class="card-body">
+        <div class="tag-row"><span class="tag tar">Compañía provincial</span><span class="tag tc">Neoclásico</span></div>
+        <div><p class="info-lbl">Temporada 2026</p><p class="info-val"><strong>Estaciones de amor</strong> — coreografía José Luis Lozano<br><strong>La noche de Walpurgis</strong> — Leonid Lavrosky. Funciones: mayo 9–12, 20:00 h.</p></div>
+        <div><p class="info-lbl">Sobre la compañía</p><p class="info-val">Compañía que fusiona las cualidades individuales de sus bailarines con un lenguaje neoclásico y variantes del ballet clásico.</p></div>
+        <span class="price">Autoentrada.com · Boletería: Av. Vélez Sarsfield 365</span>
+        <div class="links-row">
+          <a href="https://cultura.cba.gov.ar/ballet-oficial-de-la-provincia/" target="_blank" class="btn-link btn-web">🌐 cultura.cba.gov.ar</a>
+          <a href="https://www.instagram.com/bailarinesteatrodellibertador/" target="_blank" class="btn-link btn-prog">📷 Instagram</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ballet San Juan / Teatro del Bicentenario -->
+    <div class="co-card">
+      <div class="card-img-wrap" style="background:linear-gradient(135deg,#1a2a3a 0%,#2a4a6a 100%);height:160px;display:flex;align-items:center;justify-content:center">
+        <span style="font-size:2.8rem">⛰️</span>
+        <div class="card-img-overlay"><span class="co-country">San Juan · Provincia de San Juan</span></div>
+      </div>
+      <div class="card-hdr">
+        <h3><a href="https://www.teatrodelbicentenariosanjuan.org/" target="_blank">Programa de Danza — Teatro del Bicentenario</a></h3>
+        <span class="card-loc">Teatro del Bicentenario · San Juan</span>
+      </div>
+      <div class="card-body">
+        <div class="tag-row"><span class="tag tar">Programa de danza</span><span class="tag tn">Alianza Teatro Colón</span></div>
+        <div><p class="info-lbl">Responsable del programa</p><p class="info-val"><strong>Victoria Balanza</strong> — exbailarina del Ballet del Teatro San Martín. Coordina el programa de danza del teatro.</p></div>
+        <div><p class="info-lbl">Temporada 2026</p><p class="info-val">Décimo aniversario del teatro. Presenta una temporada emblemática que incluye visitas de grandes compañías nacionales e internacionales, entre ellas el Ballet Estable del Teatro Colón con <strong>Carmen</strong>.</p></div>
+        <div><p class="info-lbl">Alianza estratégica</p><p class="info-val">Acuerdo con el Teatro Colón para acceso a producciones de excelencia y promoción del intercambio artístico federal.</p></div>
+        <div class="links-row">
+          <a href="https://www.teatrodelbicentenariosanjuan.org/temporada2026/" target="_blank" class="btn-link btn-prog">📖 Temporada 2026</a>
+          <a href="https://www.teatrodelbicentenariosanjuan.org/" target="_blank" class="btn-link btn-web">🌐 Teatro del Bicentenario</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ballet Estable Tucumán -->
+    <div class="co-card">
+      <div class="card-img-wrap" style="background:linear-gradient(135deg,#1a2a00 0%,#3a5a10 100%);height:160px;display:flex;align-items:center;justify-content:center">
+        <span style="font-size:2.8rem">🌿</span>
+        <div class="card-img-overlay"><span class="co-country">Tucumán · Noroeste argentino</span></div>
+      </div>
+      <div class="card-hdr">
+        <h3><a href="https://enteculturaltucuman.gob.ar/ballet-estable-de-la-provincia/" target="_blank">Ballet Estable de la Provincia de Tucumán</a></h3>
+        <span class="card-loc">Teatro San Martín · Av. Sarmiento 601 · Tucumán</span>
+      </div>
+      <div class="card-body">
+        <div class="tag-row"><span class="tag tar">Compañía provincial</span><span class="tag tc">Desde 1959</span></div>
+        <div><p class="info-lbl">Directora artística</p><p class="info-val"><strong>Mercedes De Chazal</strong></p></div>
+        <div><p class="info-lbl">Temporada 2026</p><p class="info-val">La compañía presentó producciones con la Orquesta Estable de la Provincia. Trabajos conjuntos entre Ballet y Ballet Oficial de Salta: <strong>Carmen</strong>. El Cascanueces como cierre de temporada.</p></div>
+        <div><p class="info-lbl">Historia</p><p class="info-val">Fundado en 1959. Comparte el espacio con la Orquesta Estable y el Coro Estable de la Provincia.</p></div>
+        <div class="links-row">
+          <a href="https://enteculturaltucuman.gob.ar/" target="_blank" class="btn-link btn-web">🌐 enteculturaltucuman.gob.ar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ballet Salta -->
+    <div class="co-card">
+      <div class="card-img-wrap" style="background:linear-gradient(135deg,#3a1a00 0%,#7a3a10 100%);height:160px;display:flex;align-items:center;justify-content:center">
+        <span style="font-size:2.8rem">☀️</span>
+        <div class="card-img-overlay"><span class="co-country">Salta · Noroeste argentino</span></div>
+      </div>
+      <div class="card-hdr">
+        <h3><a href="https://culturasalta.gov.ar/" target="_blank">Ballet de la Provincia de Salta</a></h3>
+        <span class="card-loc">Casa de la Cultura, Caseros 460 · Salta</span>
+      </div>
+      <div class="card-body">
+        <div class="tag-row"><span class="tag tar">Compañía provincial</span><span class="tag tc">Baile de Graduados</span></div>
+        <div><p class="info-lbl">Dirección</p><p class="info-val"><strong>Laura Fiorucci</strong> — coreógrafa</p></div>
+        <div><p class="info-lbl">Apertura temporada 2026</p><p class="info-val"><strong>Baile de Graduados</strong> — música Johann Strauss II (arreglos Antal Doráti). Coreografía: Laura Fiorucci. 19–22 de marzo, Salón Juan Carlos Dávalos. 2 funciones educativas gratuitas + 3 funciones generales.</p></div>
+        <div><p class="info-lbl">Colaboración</p><p class="info-val">Proyecto conjunto con Ballet Estable de Tucumán para <strong>Carmen</strong> — colaboración interprovincial destacada.</p></div>
+        <div class="links-row">
+          <a href="https://www.balletsalta.com.ar/" target="_blank" class="btn-link btn-web">🌐 balletsalta.com.ar</a>
+          <a href="https://culturasalta.gov.ar/" target="_blank" class="btn-link btn-prog">📖 Cultura Salta</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ballet del Sur Bahía Blanca -->
+    <div class="co-card">
+      <div class="card-img-wrap" style="background:linear-gradient(135deg,#001a2a 0%,#003a5a 100%);height:160px;display:flex;align-items:center;justify-content:center">
+        <span style="font-size:2.8rem">🌊</span>
+        <div class="card-img-overlay"><span class="co-country">Bahía Blanca · Provincia de Buenos Aires</span></div>
+      </div>
+      <div class="card-hdr">
+        <h3><a href="https://teatromunicipal.bahia.gob.ar/categorias/ballet/" target="_blank">Ballet del Sur — Bahía Blanca</a></h3>
+        <span class="card-loc">Teatro Municipal · Bahía Blanca</span>
+      </div>
+      <div class="card-body">
+        <div class="tag-row"><span class="tag tar">Compañía municipal</span><span class="tag tn">Premio Konex 2019</span></div>
+        <div><p class="info-lbl">Historia</p><p class="info-val">Iniciada en 1956, reconocida oficialmente el 29 de marzo de 1961 por el Gobierno de la Provincia de Buenos Aires. Una de las compañías provinciales más longevas del país.</p></div>
+        <div><p class="info-lbl">Repertorio</p><p class="info-val">Obras clásicas y contemporáneas. Se presenta con la Orquesta Sinfónica del Sur. Premio Konex 2019 al mérito artístico.</p></div>
+        <div class="links-row">
+          <a href="https://teatromunicipal.bahia.gob.ar/categorias/ballet/" target="_blank" class="btn-link btn-web">🌐 Teatro Municipal BB</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ballet del Parque del Conocimiento Misiones -->
+    <div class="co-card">
+      <div class="card-img-wrap" style="background:linear-gradient(135deg,#0a2a0a 0%,#1a5a1a 100%);height:160px;display:flex;align-items:center;justify-content:center">
+        <span style="font-size:2.8rem">🌿</span>
+        <div class="card-img-overlay"><span class="co-country">Posadas · Misiones</span></div>
+      </div>
+      <div class="card-hdr">
+        <h3><a href="https://www.parquedelconocimiento.com/" target="_blank">Ballet del Parque del Conocimiento</a></h3>
+        <span class="card-loc">Parque del Conocimiento · Posadas, Misiones</span>
+      </div>
+      <div class="card-body">
+        <div class="tag-row"><span class="tag tar">Clásico + Folklórico</span><span class="tag tn">Academia de Moscú</span></div>
+        <div><p class="info-lbl">Directora</p><p class="info-val"><strong>Laura de Aira</strong> — Máster en Danza Clásica por el Gitis de Moscú. Dir. folklórico: <strong>Luis Marinoni</strong>.</p></div>
+        <div><p class="info-lbl">Actividad 2026</p><p class="info-val">Ballet Folklórico celebró una <strong>década de trayectoria</strong> con <em>Entrama</em> (marzo 2026). El ballet clásico tiene 20 años de historia. La Academia del Ballet de Moscú opera en el centro del edificio.</p></div>
+        <div><p class="info-lbl">Proyección</p><p class="info-val">Ha actuado en Misiones, Corrientes, Entre Ríos, Chaco, Buenos Aires y sur de Brasil. Premios 1° puesto en competencias interamericanas.</p></div>
+        <div class="links-row">
+          <a href="https://www.parquedelconocimiento.com/" target="_blank" class="btn-link btn-web">🌐 parquedelconocimiento.com</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buenos Aires Ballet -->
+    <div class="co-card">
+      <div class="card-img-wrap" style="background:linear-gradient(135deg,#1a0a3a 0%,#3a1a6a 100%);height:160px;display:flex;align-items:center;justify-content:center">
+        <span style="font-size:2.8rem">🌆</span>
+        <div class="card-img-overlay"><span class="co-country">Buenos Aires · Independiente</span></div>
+      </div>
+      <div class="card-hdr">
+        <h3><a href="https://www.instagram.com/babbuenosairesballet/" target="_blank">Buenos Aires Ballet (BAB)</a></h3>
+        <span class="card-loc">Teatro Avenida y otras sedes · Buenos Aires</span>
+      </div>
+      <div class="card-body">
+        <div class="tag-row"><span class="tag tc">Clásico independiente</span></div>
+        <div><p class="info-lbl">Temporada 2026</p><p class="info-val">Compañía independiente que amplía sus horizontes en 2026. Presencia en el Teatro Avenida con producciones de gran clásico. <strong>El Cascanueces</strong> durante las vacaciones de invierno.</p></div>
+        <div><p class="info-lbl">Sobre la compañía</p><p class="info-val">Una de las compañías independientes de ballet clásico más activas de Buenos Aires. Combina bailarines profesionales y jóvenes talentos.</p></div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/babbuenosairesballet/" target="_blank" class="btn-link btn-prog">📷 Instagram @BABBallet</a>
+          <a href="https://teatroavenida.com/ballet-en-buenos-aires/" target="_blank" class="btn-link btn-web">🎭 Teatro Avenida</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</section>
+
+<!-- ═══════════ ASIA & OCEANÍA ═══════════ -->
+<section class="reg" id="asia">
+<div class="reg-hdr">
+  <div class="reg-icon ri-as">🌏</div>
+  <h2 class="reg-title"><span>Región</span>Asia &amp; Oceanía</h2>
+</div>
+<div class="co-grid">
+
+  <!-- Australian Ballet -->
+  <div class="co-card">
+    <div class="card-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Sydney_Opera_House%2C_botanic_gardens_1.jpg/600px-Sydney_Opera_House%2C_botanic_gardens_1.jpg" alt="Sydney Opera House" loading="lazy" onerror="this.style.display='none'">
+      <div class="card-img-overlay"><span class="co-country">Melbourne / Sydney · Australia</span></div>
+    </div>
+    <div class="card-hdr">
+      <h3><a href="https://australianballet.com.au/" target="_blank">The Australian Ballet</a></h3>
+      <span class="card-loc">Arts Centre Melbourne / Sydney Opera House</span>
+    </div>
+    <div class="card-body">
+      <div class="tag-row"><span class="tag tn">⭐ 4 estrellas Bachtrack</span><span class="tag tc">Justin Peck</span></div>
+      <div><p class="info-lbl">Producción — 23 jun al 2 jul</p><p class="info-val"><strong>Copland Dance Episodes</strong> — Coreografía: Justin Peck (Tony Award). Primera vez fuera de Nueva York. Música de Aaron Copland.</p></div>
+      <div><p class="info-lbl">Crítica</p><p class="info-val italic"><span class="stars">★★★★</span> Bachtrack — "Ballet moderno gozoso de un pionero coreográfico."</p></div>
+      <div><p class="info-lbl">Otros títulos 2026</p><p class="info-val"><strong>Flora</strong> (con Bangarra Dance Theatre, Frances Rings, música William Barton) · <strong>Romeo y Julieta</strong> (John Cranko, gira)</p></div>
+      <span class="price">Desde AUD $65</span>
+      <div class="links-row">
+        <a href="https://australianballet.com.au/whats-on" target="_blank" class="btn-link btn-prog">📖 Programación</a>
+        <a href="https://australianballet.com.au/" target="_blank" class="btn-link btn-web">🌐 australianballet.com.au</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Queensland Ballet -->
+  <div class="co-card">
+    <div class="card-img-wrap" style="background:linear-gradient(135deg,#2a1000 0%,#5a2800 100%);height:160px;display:flex;align-items:center;justify-content:center">
+      <span style="font-size:2.8rem">🎭</span>
+      <div class="card-img-overlay"><span class="co-country">Brisbane · Australia</span></div>
+    </div>
+    <div class="card-hdr">
+      <h3><a href="https://www.queenslandballet.com.au/" target="_blank">Queensland Ballet</a></h3>
+      <span class="card-loc">Thomas Dixon Centre · Brisbane</span>
+    </div>
+    <div class="card-body">
+      <div class="tag-row"><span class="tag tn">🆕 Estreno australiano</span><span class="tag tco">Leo Mujić</span></div>
+      <div><p class="info-lbl">🌟 Hamlet — Estreno 19 jun</p><p class="info-val">Coreografía: <strong>Leo Mujić</strong>. Música: Tchaikovsky y Saint-Saëns. Vestuario: Manuela Paladin Šabanović. Funciones: 19 jun–18 jul. Dir. artístico: <strong>Ivan Gil-Ortega</strong> (primera temporada).</p></div>
+      <div><p class="info-lbl">Crítica anticipada</p><p class="info-val italic">"Mujić construye un espectáculo donde figuras en cuña acechan a Hamlet como demonios coreografiados."</p></div>
+      <span class="price">Desde AUD $59</span>
+      <div class="links-row">
+        <a href="https://www.queenslandballet.com.au/performances/2026/hamlet" target="_blank" class="btn-link btn-prog">📖 Hamlet</a>
+        <a href="https://www.queenslandballet.com.au/" target="_blank" class="btn-link btn-web">🌐 queenslandballet.com.au</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Korean National Ballet -->
+  <div class="co-card">
+    <div class="card-img-wrap" style="background:linear-gradient(135deg,#3a0000 0%,#8b2020 100%);height:160px;display:flex;align-items:center;justify-content:center">
+      <span style="font-size:2.8rem">🇰🇷</span>
+      <div class="card-img-overlay"><span class="co-country">Seúl · Corea del Sur</span></div>
+    </div>
+    <div class="card-hdr">
+      <h3><a href="https://www.korean-national-ballet.kr/en" target="_blank">Korean National Ballet</a></h3>
+      <span class="card-loc">National Ballet Center · Seúl</span>
+    </div>
+    <div class="card-body">
+      <div class="tag-row"><span class="tag tc">Clásico y contemporáneo</span></div>
+      <div><p class="info-lbl">Funciones junio 2026</p><p class="info-val">Funciones los fines de semana de junio (5–6, 12–13, 19–20). Repertorio clásico y obras contemporáneas.</p></div>
+      <div><p class="info-lbl">La compañía</p><p class="info-val">Principal compañía de ballet de Asia. Con sede en el National Ballet Center de Seúl. Repertorio de 60+ obras. Proyección internacional creciente.</p></div>
+      <div class="links-row"><a href="https://www.korean-national-ballet.kr/en" target="_blank" class="btn-link btn-web">🌐 korean-national-ballet.kr</a></div>
+    </div>
+  </div>
+
+  <!-- Tokyo Ballet -->
+  <div class="co-card">
+    <div class="card-img-wrap" style="background:linear-gradient(135deg,#1a0000 0%,#4a0010 100%);height:160px;display:flex;align-items:center;justify-content:center">
+      <span style="font-size:2.8rem">🗾</span>
+      <div class="card-img-overlay"><span class="co-country">Tokio · Japón</span></div>
+    </div>
+    <div class="card-hdr">
+      <h3><a href="https://thetokyoballet.com/en/" target="_blank">The Tokyo Ballet</a></h3>
+      <span class="card-loc">Tokio / Gira Sapporo</span>
+    </div>
+    <div class="card-body">
+      <div class="tag-row"><span class="tag tc">Repertorio europeo</span></div>
+      <div><p class="info-lbl">Actuación jun 2026</p><p class="info-val">19 de junio · 18:30 h<br><strong>Sapporo Cultural Arts Theater "hitaru"</strong> — Hokkaido.</p></div>
+      <div><p class="info-lbl">Contexto</p><p class="info-val">Principal compañía de ballet clásico de Japón. Reconocida por interpretaciones impecables del repertorio ruso y europeo. El New National Theatre Tokyo (NNTT) presenta temporada 2026-27 con múltiples nuevos títulos.</p></div>
+      <div class="links-row"><a href="https://thetokyoballet.com/en/" target="_blank" class="btn-link btn-web">🌐 thetokyoballet.com</a></div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- ═══════════ PABLO HERNÁNDEZ ═══════════ -->
+<section id="pablo" class="pablo-section">
+
+  <div class="pablo-hero">
+    <div class="pablo-photo-col">
+      <div class="pablo-photo-wrap">
+        <div class="pablo-photo-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        </div>
+      </div>
+      <p class="pablo-photo-label">Fotografía principal</p>
+    </div>
+    <div class="pablo-info-col">
+      <p class="pablo-label">Perfil profesional</p>
+      <h2 class="pablo-name">Pablo Hernández</h2>
+      <p class="pablo-role">Stage Manager · Maestro de Danza · Bailarín clásico</p>
+      <p class="pablo-bio">
+        Ex bailarín clásico formado en el <strong>Teatro Colón de Buenos Aires</strong> y en el <strong>American Ballet Theatre de Nueva York</strong>.
+        Maestro certificado ABT (Pre-Primary to Level 7 + partner work).
+        Actualmente se desempeña como <strong>Stage Manager del Ballet Contemporáneo del Teatro San Martín</strong>.
+        Su experiencia como bailarín le brinda una perspectiva única para traducir el lenguaje coreográfico a las necesidades escénico-técnicas.
+        Ha trabajado en producciones privadas y estatales en todas las etapas de la producción teatral.
+      </p>
+      <div class="pablo-socials">
+        <a href="https://www.linkedin.com/in/pablogher/" target="_blank" class="s-btn s-li">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://www.instagram.com/pablogher/" target="_blank" class="s-btn s-ig">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          @pablogher
+        </a>
+        <a href="https://www.facebook.com/pablogher" target="_blank" class="s-btn s-fb">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook
+        </a>
+        <a href="mailto:bamboloto@gmail.com" class="s-btn s-em">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          bamboloto@gmail.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="pablo-body">
+    <div class="pablo-body-grid">
+
+      <!-- Producciones como Stage Manager -->
+      <div class="pablo-block">
+        <h4>Producciones destacadas como Stage Manager</h4>
+        <div class="prod-item">
+          <div class="prod-year">2017</div>
+          <div class="prod-info">
+            <h5>Letter to a Man</h5>
+            <p>Mikhail Baryshnikov · Dirección: Robert Wilson<br>Teatro Coliseo · Buenos Aires<br><em>Producción local de alcance mundial</em></p>
+          </div>
+        </div>
+        <div class="prod-item">
+          <div class="prod-year">Act.</div>
+          <div class="prod-info">
+            <h5>Ballet Contemporáneo del Teatro San Martín</h5>
+            <p>Stage Manager en todas las producciones del elenco<br>Dir. Andrea Chinetti · Complejo Teatral de Buenos Aires</p>
+          </div>
+        </div>
+        <div class="prod-item">
+          <div class="prod-year">Var.</div>
+          <div class="prod-info">
+            <h5>Grupo Ars — Producción privada</h5>
+            <p>Asistente de Producción / Stage Manager<br>Producciones privadas y corporativas</p>
+          </div>
+        </div>
+        <div class="prod-item">
+          <div class="prod-year">2026</div>
+          <div class="prod-info">
+            <h5>Teatro Colón — Reconocimiento como Stage Manager</h5>
+            <p>El Teatro Colón publicó un reel en Instagram destacando su rol como Stage Manager.<br>
+            <a href="https://www.instagram.com/reel/DY3Ig4DAhYh/" target="_blank" style="color:var(--gold);font-size:.8rem">Ver en Instagram ↗</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formación y certificaciones -->
+      <div class="pablo-block">
+        <h4>Formación y Certificaciones</h4>
+        <div class="cert-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+          <div><strong style="display:block;font-size:.8rem;margin-bottom:2px">ABT Certified Teacher</strong>Pre-Primary through Level 7 + Partner Work · American Ballet Theatre, Nueva York</div>
+        </div>
+        <div class="cert-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          <div><strong style="display:block;font-size:.8rem;margin-bottom:2px">Formación en danza clásica</strong>Teatro Colón · Buenos Aires, Argentina</div>
+        </div>
+        <div class="cert-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          <div><strong style="display:block;font-size:.8rem;margin-bottom:2px">Formación avanzada</strong>American Ballet Theatre · Nueva York, EE.UU.</div>
+        </div>
+      </div>
+
+      <!-- Habilidades técnicas -->
+      <div class="pablo-block">
+        <h4>Competencias Profesionales</h4>
+        <div class="skill-grid">
+          <div class="skill-item"><strong>Stage Management</strong>Coordinación técnica y artística en producciones de ballet</div>
+          <div class="skill-item"><strong>Docencia</strong>Maestro ABT certificado, todos los niveles de ballet clásico</div>
+          <div class="skill-item"><strong>Lenguaje coreográfico</strong>Traducción de necesidades artísticas a requerimientos técnicos</div>
+          <div class="skill-item"><strong>Producción teatral</strong>Experiencia en entornos públicos y privados, todas las etapas</div>
+          <div class="skill-item"><strong>Ballet clásico</strong>Bailarín formado en las escuelas más exigentes del mundo</div>
+          <div class="skill-item"><strong>Gestión artística</strong>Producción ejecutiva y coordinación de elencos profesionales</div>
+        </div>
+      </div>
+
+      <!-- Galería de fotos -->
+      <div class="pablo-block">
+        <h4>Galería — Trabajos y clases</h4>
+        <div class="pablo-photos-row">
+          <div class="photo-slot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            <span>Foto en escena</span>
+          </div>
+          <div class="photo-slot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            <span>Clase de ballet</span>
+          </div>
+          <div class="photo-slot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            <span>Stage management</span>
+          </div>
+          <div class="photo-slot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            <span>Producción teatral</span>
+          </div>
+          <div class="photo-slot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            <span>Con el elenco</span>
+          </div>
+          <div class="photo-slot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            <span>Ensayos</span>
+          </div>
+        </div>
+        <p style="font-size:.75rem;color:rgba(255,255,255,.35);margin-top:12px;font-family:sans-serif">Para agregar fotos: reemplazá los slots con las URLs de tus imágenes en el código HTML</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <span class="ft-orn">✦</span>
+  <p>Reporte generado el <strong>8 de junio de 2026</strong> mediante investigación en fuentes públicas.</p>
+  <p style="margin-top:8px;font-size:.76rem">
+    Fuentes: <a href="https://bachtrack.com">Bachtrack</a> · <a href="https://pointemagazine.com">Pointe Magazine</a> · <a href="https://www.gramilano.com">Gramilano</a> · <a href="https://balletindance.com">Balletin Dance</a> · <a href="https://www.balletherald.com">Ballet Herald</a> · Sitios oficiales de cada teatro
+  </p>
+  <p style="margin-top:12px;font-size:.72rem;color:rgba(200,190,180,.35)">Elencos, precios y fechas pueden estar sujetos a cambios. Consultá los sitios oficiales de cada teatro.</p>
+</footer>
+
+<script>
+// Active nav on scroll
+const sects=document.querySelectorAll('section[id],div[id="highlights"]');
+const links=document.querySelectorAll('nav a');
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      links.forEach(l=>l.classList.remove('active'));
+      const a=document.querySelector(`nav a[href="#${e.target.id}"]`);
+      if(a)a.classList.add('active');
+    }
+  });
+},{threshold:.2,rootMargin:'-60px 0px 0px 0px'});
+sects.forEach(s=>obs.observe(s));
+
+// Smooth scroll
+document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+</script>
+</body>
+</html>
