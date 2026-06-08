@@ -60,7 +60,7 @@ nav a.nav-aud:hover,nav a.nav-aud.active{color:#fff;background:rgba(196,135,110,
 .cal-chip{display:inline-flex;align-items:center;gap:7px;font-family:sans-serif;font-size:.72rem;letter-spacing:.03em;padding:6px 13px;border-radius:100px;border:1px solid rgba(0,0,0,.08);background:#fff;cursor:pointer;color:var(--mocha);transition:opacity .2s;user-select:none}
 .cal-chip .cdot{width:9px;height:9px;border-radius:50%}
 .cal-chip.off{opacity:.4}
-.cd-fun{background:var(--gold)}.cd-aud{background:var(--sage)}.cd-con{background:var(--rose)}
+.cd-fun{background:var(--gold)}.cd-aud{background:var(--sage)}.cd-con{background:var(--rose)}.cd-arg{background:#3d9bd4}
 .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
 .cal-dow{text-align:center;font-family:sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dusty);padding:2px 0 6px}
 .cal-cell{aspect-ratio:1/1;border-radius:9px;background:var(--cream);border:1px solid rgba(0,0,0,.05);display:flex;flex-direction:column;align-items:center;padding:6px 2px 3px;position:relative;font-size:.92rem;color:var(--charcoal)}
@@ -78,10 +78,14 @@ nav a.nav-aud:hover,nav a.nav-aud.active{color:#fff;background:rgba(196,135,110,
 .cal-ev{display:flex;gap:11px;padding:11px 0;border-bottom:1px solid var(--warm)}
 .cal-ev:last-child{border-bottom:none}
 .cal-ev-bar{width:4px;border-radius:4px;flex-shrink:0}
-.cal-ev-bar.fun{background:var(--gold)}.cal-ev-bar.aud{background:var(--sage)}.cal-ev-bar.con{background:var(--rose)}
+.cal-ev-bar.fun{background:var(--gold)}.cal-ev-bar.aud{background:var(--sage)}.cal-ev-bar.con{background:var(--rose)}.cal-ev-bar.arg{background:#3d9bd4}
 .cal-ev-cat{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;font-family:sans-serif;color:var(--dusty);margin-bottom:2px}
 .cal-ev-t{font-size:.92rem;font-weight:700;line-height:1.3;color:var(--midnight)}
 .cal-ev-co{font-size:.8rem;color:var(--mocha);margin-top:2px}
+.cal-ev-loc{font-size:.72rem;color:var(--dusty);font-family:sans-serif;margin-top:3px;letter-spacing:.02em}
+.cal-ev-loc::before{content:'📍 '}
+.cal-ev-link{display:inline-block;margin-top:6px;font-family:sans-serif;font-size:.72rem;color:var(--mocha);text-decoration:none;border-bottom:1px solid rgba(201,168,76,.45);transition:color .2s,border-color .2s}
+.cal-ev-link:hover{color:#6a4e0a;border-color:var(--gold)}
 .cal-empty-msg{color:var(--dusty);font-size:.88rem;font-style:italic;padding-top:6px;line-height:1.6}
 @media(max-width:760px){.cal-layout{grid-template-columns:1fr}}
 
@@ -317,6 +321,7 @@ footer a{color:var(--gold);text-decoration:none}
   <h2 class="sec-heading">Calendario · Junio 2026</h2>
   <div class="cal-legend" id="cal-legend">
     <span class="cal-chip" data-cat="fun"><span class="cdot cd-fun"></span>Estrenos y funciones</span>
+    <span class="cal-chip" data-cat="arg"><span class="cdot cd-arg"></span>Argentina</span>
     <span class="cal-chip" data-cat="aud"><span class="cdot cd-aud"></span>Audiciones</span>
     <span class="cal-chip" data-cat="con"><span class="cdot cd-con"></span>Concursos</span>
   </div>
@@ -1613,55 +1618,61 @@ document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
 // ═══ CALENDARIO JUNIO 2026 ═══
 (function(){
   const EV = {
-    1:[{c:'aud',t:'Cierre de video — programas de verano NY',co:'Ellison Ballet · Nueva York'},
-       {c:'aud',t:'Cierre de postulación · temporada 26/27',co:'Ballet Illicite · Francia'}],
-    2:[{c:'fun',t:'Living Legacies',co:'Vienna State Ballet · Wiener Staatsoper'}],
-    4:[{c:'fun',t:'Panamá Ballet Fest (hasta el 7)',co:'Ballet Nacional de Cuba · Panamá'}],
-    5:[{c:'fun',t:'La Fille mal gardée (hasta el 9)',co:'The Royal Ballet · Londres'},
-       {c:'fun',t:'Giant Steps — última función',co:'Royal Danish Ballet · Copenhague'}],
-    7:[{c:'fun',t:'An Evening with the Stars — última función',co:'Houston Ballet'},
-       {c:'con',t:'Cierre de inscripción',co:'Grand Prix de La Habana 2026'}],
-    9:[{c:'fun',t:'Living Legacies',co:'Vienna State Ballet'},
-       {c:'fun',t:'Einblicke — Fokus John Cranko Schule',co:'Stuttgart Ballet'}],
-    10:[{c:'fun',t:'Dornröschen (La Bella Durmiente) · 19:00',co:'Stuttgart Ballet'}],
-    11:[{c:'fun',t:'Giselle (hasta el 21)',co:'Houston Ballet'}],
-    12:[{c:'fun',t:'Next Generation Festival (hasta 4 jul)',co:'The Royal Ballet · Linbury Theatre'}],
-    13:[{c:'fun',t:'MADDADDAM — Wayne McGregor (hasta el 21)',co:'National Ballet of Canada'},
-        {c:'fun',t:'Noverre: Jóvenes Coreógrafos (13–14)',co:'Stuttgart Ballet'}],
-    14:[{c:'aud',t:'Audición del Ballet',co:'Teatro alla Scala · Milán'},
-        {c:'aud',t:'Cierre de postulación',co:'Humanhood Dance Company'}],
-    15:[{c:'aud',t:'Cierre de preselección (ballet)',co:'BYU · EE.UU.'}],
-    17:[{c:'fun',t:'La Bayadère — Nureyev (hasta 14 jul)',co:'Paris Opéra Ballet · Bastille'},
-        {c:'fun',t:'Swan Lake (hasta el 27)',co:'American Ballet Theatre · Nueva York'}],
-    18:[{c:'fun',t:'Coppélia — Ratmansky',co:'Teatro alla Scala · Milán'}],
-    19:[{c:'fun',t:'Hamlet — Leo Mujić (estreno)',co:'Queensland Ballet · Brisbane'},
-        {c:'fun',t:'The Tokyo Ballet',co:'Sapporo · Japón'},
-        {c:'fun',t:'Funciones de fin de semana (19–20)',co:'Korean National Ballet · Seúl'}],
-    20:[{c:'fun',t:'Nuevas creaciones — A. Peña / M. Moura (hasta el 28)',co:'Balé da Cidade de São Paulo'},
-        {c:'fun',t:'Living Legacies',co:'Vienna State Ballet'}],
-    21:[{c:'fun',t:'MADDADDAM — última función',co:'National Ballet of Canada'},
-        {c:'fun',t:'Living Legacies',co:'Vienna State Ballet'}],
-    23:[{c:'fun',t:'Copland Dance Episodes — Justin Peck (hasta 2 jul)',co:'The Australian Ballet · Melbourne'}],
-    25:[{c:'fun',t:'Coppélia — Ratmansky',co:'Teatro alla Scala · Milán'},
-        {c:'fun',t:'Programa A (25–26)',co:'New York City Ballet · gira Los Ángeles'},
-        {c:'fun',t:'Einblicke — Cranko Schule',co:'Stuttgart Ballet'}],
-    26:[{c:'fun',t:'Don Quixote — Nureyev (hasta 17 jul)',co:'Teatro alla Scala · Milán'},
-        {c:'fun',t:'Grabación para cine — La Bayadère',co:'Paris Opéra Ballet'}],
-    27:[{c:'fun',t:'Programa B',co:'New York City Ballet · Los Ángeles'}],
-    28:[{c:'aud',t:'Audición',co:'New English Ballet Theatre · Londres'}],
-    29:[{c:'fun',t:'Don Quixote — estreno de nueva puesta',co:'American Ballet Theatre · Met, NY'},
-        {c:'fun',t:'Gala Ballet 2026 — estrenos Rhapsody + Within the Golden Hour',co:'Vienna State Ballet'},
-        {c:'fun',t:'Grabación para cine — La Bayadère',co:'Paris Opéra Ballet'}]
+    1:[{c:'aud',t:'Cierre de video — programas de verano NY',co:'Ellison Ballet',loc:'Nueva York, EE.UU.',u:'https://www.ellisonballet.org/auditiontour'},
+       {c:'aud',t:'Cierre de postulación · temporada 26/27',co:'Ballet Illicite',loc:'Francia',u:'https://www.danceauditionss.com/'}],
+    2:[{c:'fun',t:'Living Legacies',co:'Vienna State Ballet · Wiener Staatsoper',loc:'Viena, Austria',u:'https://www.wiener-staatsoper.at/en/'}],
+    4:[{c:'fun',t:'Panamá Ballet Fest (hasta el 7)',co:'Ballet Nacional de Cuba (en gira)',loc:'Ciudad de Panamá, Panamá',u:'http://www.balletcuba.cult.cu/'}],
+    5:[{c:'fun',t:'La Fille mal gardée (hasta el 9)',co:'The Royal Ballet · Royal Opera House',loc:'Londres, Reino Unido',u:'https://www.rbo.org.uk/tickets-and-events/la-fille-mal-gardee-frederick-ashton-dates'},
+       {c:'fun',t:'Giant Steps — última función',co:'Royal Danish Ballet',loc:'Copenhague, Dinamarca',u:'https://www.kglteater.dk/en/calendar/'}],
+    7:[{c:'fun',t:'An Evening with the Stars — última función',co:'Houston Ballet',loc:'Houston, EE.UU.',u:'https://www.houstonballet.org/'},
+       {c:'con',t:'Cierre de inscripción',co:'Grand Prix de La Habana 2026',loc:'La Habana, Cuba',u:'https://www.prensa-latina.cu/2026/05/04/convocan-en-cuba-a-gran-concurso-internacional-de-ballet/'}],
+    9:[{c:'fun',t:'Living Legacies',co:'Vienna State Ballet',loc:'Viena, Austria',u:'https://www.wiener-staatsoper.at/en/'},
+       {c:'fun',t:'Einblicke — Fokus John Cranko Schule',co:'Stuttgart Ballet',loc:'Stuttgart, Alemania',u:'https://www.stuttgart-ballet.de/schedule/season-202526/'}],
+    10:[{c:'arg',t:'🇦🇷 Carmina Burana — ESTRENO · 21 h',co:'Ballet del Teatro del Bicentenario · versión de Mauricio Wainrot',loc:'San Juan, Argentina',u:'https://www.teatrodelbicentenariosanjuan.org/temporada2026/'},
+        {c:'fun',t:'Dornröschen (La Bella Durmiente) · 19:00',co:'Stuttgart Ballet',loc:'Stuttgart, Alemania',u:'https://www.stuttgart-ballet.de/schedule/season-202526/'}],
+    11:[{c:'fun',t:'Giselle (hasta el 21)',co:'Houston Ballet',loc:'Houston, EE.UU.',u:'https://www.houstonballet.org/'}],
+    12:[{c:'fun',t:'Next Generation Festival (hasta 4 jul)',co:'The Royal Ballet · Linbury Theatre',loc:'Londres, Reino Unido',u:'https://www.rbo.org.uk/'}],
+    13:[{c:'fun',t:'MADDADDAM — Wayne McGregor (hasta el 21)',co:'National Ballet of Canada',loc:'Toronto, Canadá',u:'https://national.ballet.ca/productions/2526/maddaddam/'},
+        {c:'fun',t:'Noverre: Jóvenes Coreógrafos (13–14)',co:'Stuttgart Ballet',loc:'Stuttgart, Alemania',u:'https://www.stuttgart-ballet.de/schedule/season-202526/'}],
+    14:[{c:'aud',t:'Audición del Ballet',co:'Teatro alla Scala',loc:'Milán, Italia',u:'https://www.teatroallascala.org/en/'},
+        {c:'aud',t:'Cierre de postulación',co:'Humanhood Dance Company',loc:'Reino Unido / España',u:'https://humanhooddancecompany.net/auditions'}],
+    15:[{c:'aud',t:'Cierre de preselección (ballet)',co:'Brigham Young University (BYU)',loc:'Provo, EE.UU.',u:'https://dance.byu.edu/audition-requirements'}],
+    17:[{c:'fun',t:'La Bayadère — Nureyev (hasta 14 jul)',co:'Paris Opéra Ballet · Bastille',loc:'París, Francia',u:'https://www.operadeparis.fr/en/season-25-26/ballet/la-bayadere'},
+        {c:'fun',t:'Swan Lake (hasta el 27)',co:'American Ballet Theatre · Metropolitan Opera House',loc:'Nueva York, EE.UU.',u:'https://www.abt.org/events/swan-lake/'}],
+    18:[{c:'fun',t:'Coppélia — Ratmansky',co:'Ballet del Teatro alla Scala',loc:'Milán, Italia',u:'https://www.teatroallascala.org/en/season/2025-2026/2025-2026-Season.html'}],
+    19:[{c:'fun',t:'Hamlet — Leo Mujić (estreno)',co:'Queensland Ballet · Thomas Dixon Centre',loc:'Brisbane, Australia',u:'https://www.queenslandballet.com.au/performances/2026/hamlet'},
+        {c:'fun',t:'The Tokyo Ballet',co:'Sapporo Cultural Arts Theater',loc:'Sapporo, Japón',u:'https://thetokyoballet.com/en/'},
+        {c:'fun',t:'Funciones de fin de semana (19–20)',co:'Korean National Ballet',loc:'Seúl, Corea del Sur',u:'https://www.korean-national-ballet.kr/en'}],
+    20:[{c:'fun',t:'Nuevas creaciones — A. Peña / M. Moura (hasta el 28)',co:'Balé da Cidade de São Paulo · Theatro Municipal',loc:'São Paulo, Brasil',u:'https://theatromunicipal.org.br/'},
+        {c:'fun',t:'Living Legacies',co:'Vienna State Ballet',loc:'Viena, Austria',u:'https://www.wiener-staatsoper.at/en/'}],
+    21:[{c:'fun',t:'MADDADDAM — última función',co:'National Ballet of Canada',loc:'Toronto, Canadá',u:'https://national.ballet.ca/productions/2526/maddaddam/'},
+        {c:'fun',t:'Living Legacies',co:'Vienna State Ballet',loc:'Viena, Austria',u:'https://www.wiener-staatsoper.at/en/'}],
+    23:[{c:'fun',t:'Copland Dance Episodes — Justin Peck (hasta 2 jul)',co:'The Australian Ballet · Arts Centre Melbourne',loc:'Melbourne, Australia',u:'https://australianballet.com.au/'}],
+    25:[{c:'arg',t:'🇦🇷 Giselle — Ballet Oficial de Córdoba',co:'Teatro del Libertador · con la Orquesta Sinfónica de Córdoba',loc:'Córdoba, Argentina',u:'https://cultura.cba.gov.ar/ballet-oficial-de-la-provincia/'},
+        {c:'fun',t:'Coppélia — Ratmansky',co:'Ballet del Teatro alla Scala',loc:'Milán, Italia',u:'https://www.teatroallascala.org/en/season/2025-2026/2025-2026-Season.html'},
+        {c:'fun',t:'Programa A (25–26)',co:'New York City Ballet (en gira)',loc:'Los Ángeles, EE.UU.',u:'https://www.nycballet.com/'},
+        {c:'fun',t:'Einblicke — Cranko Schule',co:'Stuttgart Ballet',loc:'Stuttgart, Alemania',u:'https://www.stuttgart-ballet.de/schedule/season-202526/'}],
+    26:[{c:'arg',t:'🇦🇷 Giselle — Ballet Oficial de Córdoba',co:'Teatro del Libertador',loc:'Córdoba, Argentina',u:'https://cultura.cba.gov.ar/ballet-oficial-de-la-provincia/'},
+        {c:'fun',t:'Don Quixote — Nureyev (hasta 17 jul)',co:'Ballet del Teatro alla Scala',loc:'Milán, Italia',u:'https://www.teatroallascala.org/en/season/2025-2026/2025-2026-Season.html'},
+        {c:'fun',t:'Grabación para cine — La Bayadère',co:'Paris Opéra Ballet · Bastille',loc:'París, Francia',u:'https://www.operadeparis.fr/en/season-25-26/ballet/la-bayadere'}],
+    27:[{c:'arg',t:'🇦🇷 Giselle — Ballet Oficial de Córdoba',co:'Teatro del Libertador',loc:'Córdoba, Argentina',u:'https://cultura.cba.gov.ar/ballet-oficial-de-la-provincia/'},
+        {c:'fun',t:'Programa B',co:'New York City Ballet (en gira)',loc:'Los Ángeles, EE.UU.',u:'https://www.nycballet.com/'}],
+    28:[{c:'arg',t:'🇦🇷 Giselle — Ballet Oficial de Córdoba',co:'Teatro del Libertador',loc:'Córdoba, Argentina',u:'https://cultura.cba.gov.ar/ballet-oficial-de-la-provincia/'},
+        {c:'aud',t:'Audición',co:'New English Ballet Theatre',loc:'Londres, Reino Unido',u:'https://balletplaces.com/auditions/'}],
+    29:[{c:'fun',t:'Don Quixote — estreno de nueva puesta',co:'American Ballet Theatre · Metropolitan Opera House',loc:'Nueva York, EE.UU.',u:'https://www.abt.org/ballet/don-quixote/'},
+        {c:'fun',t:'Gala Ballet 2026 — estrenos Rhapsody + Within the Golden Hour',co:'Vienna State Ballet',loc:'Viena, Austria',u:'https://www.wiener-staatsoper.at/en/calendar/detail/ballett-gala-2026/2026-06-29/'},
+        {c:'fun',t:'Grabación para cine — La Bayadère',co:'Paris Opéra Ballet · Bastille',loc:'París, Francia',u:'https://www.operadeparis.fr/en/season-25-26/ballet/la-bayadere'}],
+    30:[{c:'arg',t:'🇦🇷 Giselle — Ballet Oficial de Córdoba (última de junio)',co:'Teatro del Libertador',loc:'Córdoba, Argentina',u:'https://cultura.cba.gov.ar/ballet-oficial-de-la-provincia/'}]
   };
-  const CATNAME={fun:'Estreno / Función',aud:'Audición',con:'Concurso'};
-  const COLOR={fun:'var(--gold)',aud:'var(--sage)',con:'var(--rose)'};
+  const CATNAME={fun:'Estreno / Función',arg:'Función en Argentina',aud:'Audición',con:'Concurso'};
+  const COLOR={fun:'var(--gold)',arg:'#3d9bd4',aud:'var(--sage)',con:'var(--rose)'};
   const DOW=['Lun','Mar','Mié','Jue','Vie','Sáb','Dom'];
   const TODAY=8; // 8 de junio de 2026
   const grid=document.getElementById('cal-grid');
   const detail=document.getElementById('cal-detail');
   const legend=document.getElementById('cal-legend');
   if(!grid)return;
-  const active={fun:true,aud:true,con:true};
+  const active={fun:true,arg:true,aud:true,con:true};
   let selected=null;
 
   const vis=d=>(EV[d]||[]).filter(e=>active[e.c]);
@@ -1669,7 +1680,6 @@ document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
   function buildGrid(){
     grid.innerHTML='';
     DOW.forEach(d=>{const h=document.createElement('div');h.className='cal-dow';h.textContent=d;grid.appendChild(h);});
-    // 1 de junio de 2026 cae lunes -> sin celdas vacías iniciales
     for(let d=1;d<=30;d++){
       const cell=document.createElement('div');
       cell.className='cal-cell';
@@ -1694,7 +1704,15 @@ document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
     let html='<p class="cal-detail-date">'+d+' de junio de 2026</p>';
     html+='<h3 class="cal-detail-h">'+(evs.length?evs.length+(evs.length===1?' evento':' eventos'):'Sin eventos visibles')+'</h3>';
     if(!evs.length)html+='<p class="cal-empty-msg">No hay eventos en esta fecha con los filtros activos.</p>';
-    evs.forEach(e=>{html+='<div class="cal-ev"><div class="cal-ev-bar '+e.c+'"></div><div><div class="cal-ev-cat">'+CATNAME[e.c]+'</div><div class="cal-ev-t">'+e.t+'</div><div class="cal-ev-co">'+e.co+'</div></div></div>';});
+    evs.forEach(e=>{
+      html+='<div class="cal-ev"><div class="cal-ev-bar '+e.c+'"></div><div>';
+      html+='<div class="cal-ev-cat">'+CATNAME[e.c]+'</div>';
+      html+='<div class="cal-ev-t">'+e.t+'</div>';
+      html+='<div class="cal-ev-co">'+e.co+'</div>';
+      if(e.loc)html+='<div class="cal-ev-loc">'+e.loc+'</div>';
+      if(e.u)html+='<a class="cal-ev-link" href="'+e.u+'" target="_blank" rel="noopener">Más información ↗</a>';
+      html+='</div></div>';
+    });
     detail.innerHTML=html;
   }
   legend.querySelectorAll('.cal-chip').forEach(chip=>{
