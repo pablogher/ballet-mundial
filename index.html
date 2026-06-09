@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reporte Mundial de Ballet — 8 de junio de 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -24,7 +27,7 @@ header h1 span{color:var(--gold)}
 .h-date{display:inline-block;margin-top:20px;padding:6px 26px;border:1px solid rgba(201,168,76,.4);border-radius:100px;font-size:.82rem;letter-spacing:.12em;color:var(--gold)}
 
 /* NAV */
-nav{background:var(--midnight);border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:center;gap:0;flex-wrap:wrap;position:sticky;top:0;z-index:200}
+nav{background:var(--midnight);border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:center;gap:0;flex-wrap:wrap;position:sticky;top:0;z-index:200;font-family:'Poppins',sans-serif}
 nav a{color:var(--dusty);text-decoration:none;padding:13px 18px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;transition:color .2s,background .2s;white-space:nowrap}
 nav a:hover,nav a.active{color:var(--gold);background:rgba(201,168,76,.08)}
 nav a.active{border-bottom:2px solid var(--gold)}
@@ -213,6 +216,25 @@ footer a{color:var(--gold);text-decoration:none}
   nav a{padding:9px 12px;font-size:.7rem}
   .pablo-photos-row{grid-template-columns:repeat(2,1fr)}
 }
+/* ---- avatares de iniciales en tarjetas de cuentas ---- */
+.inf-card{flex-direction:row;align-items:center;gap:13px}
+.inf-text{display:flex;flex-direction:column;gap:3px;min-width:0}
+.inf-avatar{flex:0 0 auto;width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-weight:700;font-size:1rem;color:#fff;letter-spacing:.01em}
+.ri-coig{background:rgba(201,168,76,.14)}
+nav a.nav-coig{color:#cdb98f}
+nav a.nav-coig:hover,nav a.nav-coig.active{color:#fff;background:rgba(201,168,76,.12)}
+/* ---- nav: transición para ocultar/mostrar ---- */
+nav{transition:transform .3s ease}
+#nav-mobile-bar{display:none}
+@media (max-width:760px){
+  #nav-mobile-bar{display:flex;width:100%;align-items:center;justify-content:space-between;gap:10px;padding:10px 16px;box-sizing:border-box}
+  #nav-mobile-bar .nav-current{color:var(--gold);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1 1 auto}
+  #nav-toggle{flex:0 0 auto;background:rgba(201,168,76,.12);color:#e8cfa0;border:1px solid rgba(201,168,76,.35);border-radius:20px;padding:6px 13px;font-size:.62rem;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap;cursor:pointer;font-family:inherit}
+  nav{flex-wrap:wrap}
+  nav a{display:none;width:100%;text-align:left;border-top:1px solid rgba(255,255,255,.05);box-sizing:border-box}
+  nav.expanded a{display:block}
+  nav.nav-hidden{transform:translateY(-100%)}
+}
 </style>
 </head>
 <body>
@@ -237,6 +259,7 @@ footer a{color:var(--gold);text-decoration:none}
   <a href="#estudiantes" class="nav-est">🎓 Estudiantes</a>
   <a href="#audiciones" class="nav-aud">📋 Audiciones</a>
   <a href="#influencers" class="nav-inf">📸 Dancers on IG</a>
+  <a href="#companias-ig" class="nav-coig">🏛️ IG de compañías</a>
   <a href="#pablo" class="nav-pablo">PH</a>
 </nav>
 
@@ -253,6 +276,14 @@ footer a{color:var(--gold);text-decoration:none}
       <div class="hl-co">Ballet del Teatro del Bicentenario · San Juan, Argentina</div>
       <div class="hl-desc">Estreno el 10 de junio a las 21 h. La célebre versión coreográfica de Mauricio Wainrot sobre la cantata escénica de Carl Orff, una de las obras patrimoniales del teatro. Dirección: Victoria Balanza.</div>
       <div class="links-row"><a href="https://www.teatrodelbicentenariosanjuan.org/temporada2026/" target="_blank" class="btn-link btn-prog">📖 Temporada 2026</a><a href="https://www.teatrodelbicentenariosanjuan.org/" target="_blank" class="btn-link btn-web">🌐 Teatro del Bicentenario</a></div>
+    </div>
+
+    <div class="hl-card np">
+      <span class="badge bn">🇦🇷 Estreno · 12 de junio · entrada gratuita</span>
+      <div class="hl-title">Ballet Contemporáneo del Teatro San Martín</div>
+      <div class="hl-co">Hall Alfredo Alcón · Teatro San Martín · Buenos Aires</div>
+      <div class="hl-desc">Estreno con entrada libre y gratuita el viernes 12 de junio, en el Hall Alfredo Alcón del Teatro San Martín, el espacio de la compañía para creaciones de cámara y nuevas obras.</div>
+      <div class="links-row"><a href="https://complejoteatral.gob.ar/" target="_blank" class="btn-link btn-web">🌐 Complejo Teatral de Buenos Aires</a></div>
     </div>
 
     <div class="hl-card">
@@ -1488,7 +1519,7 @@ footer a{color:var(--gold);text-decoration:none}
   <a class="inf-card" href="https://www.instagram.com/__melissahamilton/" target="_blank" rel="noopener"><span class="inf-name">Melissa Hamilton</span><span class="inf-meta">The Royal Ballet · Reino Unido</span><span class="inf-handle">@__melissahamilton</span></a>
 </div>
 
-<h3 class="inf-sub">10 cuentas argentinas más activas esta semana</h3>
+<h3 class="inf-sub">11 cuentas argentinas más activas esta semana</h3>
 <p class="inf-subnote">Argentinos que brillan en las grandes compañías del mundo y en el Teatro Colón. Una lista breve y verificada que iré ampliando: si sos bailarín y querés sumarte —o sumar a un colega—, la sugerencia es bienvenida.</p>
 <div class="inf-grid">
   <a class="inf-card ar" href="https://www.instagram.com/marianelanunezofficial/" target="_blank" rel="noopener"><span class="inf-name">Marianela Núñez</span><span class="inf-meta">The Royal Ballet · Londres</span><span class="inf-handle">@marianelanunezofficial</span></a>
@@ -1501,8 +1532,31 @@ footer a{color:var(--gold);text-decoration:none}
   <a class="inf-card ar" href="https://www.instagram.com/juliurmenyi/" target="_blank" rel="noopener"><span class="inf-name">Julieta Urmenyi</span><span class="inf-meta">Ballet Estable del Teatro Colón · Bs. As.</span><span class="inf-handle">@juliurmenyi</span></a>
   <a class="inf-card ar" href="https://www.instagram.com/jonatan.lujan.art/" target="_blank" rel="noopener"><span class="inf-name">Jonatan Luján</span><span class="inf-meta">Metropolitan Opera Ballet / NJ Ballet · EE.UU.</span><span class="inf-handle">@jonatan.lujan.art</span></a>
   <a class="inf-card ar" href="https://www.instagram.com/natiuska19/" target="_blank" rel="noopener"><span class="inf-name">Natalia Pelayo</span><span class="inf-meta">Ballet Estable del Teatro Colón · Bs. As.</span><span class="inf-handle">@natiuska19</span></a>
+  <a class="inf-card ar" href="https://www.instagram.com/_miss_wil/" target="_blank" rel="noopener"><span class="inf-name">Wilma Giglio</span><span class="inf-meta">Royal Danish Ballet · Copenhague</span><span class="inf-handle">@_miss_wil</span></a>
 </div>
 
+</section>
+
+<section class="reg" id="companias-ig">
+<div class="reg-hdr">
+  <div class="reg-icon ri-coig">🏛️</div>
+  <h2 class="reg-title"><span>Para seguir</span>IG de compañías</h2>
+</div>
+<p class="info-val" style="max-width:820px;margin:-14px 0 18px;color:var(--mocha)">Cuentas oficiales de algunas de las principales compañías de ballet del mundo. Verifiqué cada usuario; sigo sumando a medida que confirmo más cuentas oficiales.</p>
+<div class="inf-grid">
+  <a class="inf-card ar" href="https://www.instagram.com/balletteatrocolon/" target="_blank" rel="noopener"><span class="inf-name">Ballet del Teatro Colón</span><span class="inf-meta">Buenos Aires, Argentina</span><span class="inf-handle">@balletteatrocolon</span></a>
+  <a class="inf-card" href="https://www.instagram.com/royalballetandopera/" target="_blank" rel="noopener"><span class="inf-name">The Royal Ballet</span><span class="inf-meta">Londres, Reino Unido</span><span class="inf-handle">@royalballetandopera</span></a>
+  <a class="inf-card" href="https://www.instagram.com/balletoperadeparis/" target="_blank" rel="noopener"><span class="inf-name">Ballet de la Ópera de París</span><span class="inf-meta">París, Francia</span><span class="inf-handle">@balletoperadeparis</span></a>
+  <a class="inf-card" href="https://www.instagram.com/abtofficial/" target="_blank" rel="noopener"><span class="inf-name">American Ballet Theatre</span><span class="inf-meta">Nueva York, EE.UU.</span><span class="inf-handle">@abtofficial</span></a>
+  <a class="inf-card" href="https://www.instagram.com/nycballet/" target="_blank" rel="noopener"><span class="inf-name">New York City Ballet</span><span class="inf-meta">Nueva York, EE.UU.</span><span class="inf-handle">@nycballet</span></a>
+  <a class="inf-card" href="https://www.instagram.com/sfballet/" target="_blank" rel="noopener"><span class="inf-name">San Francisco Ballet</span><span class="inf-meta">San Francisco, EE.UU.</span><span class="inf-handle">@sfballet</span></a>
+  <a class="inf-card" href="https://www.instagram.com/houstonballet/" target="_blank" rel="noopener"><span class="inf-name">Houston Ballet</span><span class="inf-meta">Houston, EE.UU.</span><span class="inf-handle">@houstonballet</span></a>
+  <a class="inf-card" href="https://www.instagram.com/englishnationalballet/" target="_blank" rel="noopener"><span class="inf-name">English National Ballet</span><span class="inf-meta">Londres, Reino Unido</span><span class="inf-handle">@englishnationalballet</span></a>
+  <a class="inf-card" href="https://www.instagram.com/ausballet/" target="_blank" rel="noopener"><span class="inf-name">The Australian Ballet</span><span class="inf-meta">Melbourne, Australia</span><span class="inf-handle">@ausballet</span></a>
+  <a class="inf-card" href="https://www.instagram.com/nationalballet/" target="_blank" rel="noopener"><span class="inf-name">National Ballet of Canada</span><span class="inf-meta">Toronto, Canadá</span><span class="inf-handle">@nationalballet</span></a>
+  <a class="inf-card" href="https://www.instagram.com/hamburgballet/" target="_blank" rel="noopener"><span class="inf-name">Hamburg Ballett</span><span class="inf-meta">Hamburgo, Alemania</span><span class="inf-handle">@hamburgballet</span></a>
+  <a class="inf-card" href="https://www.instagram.com/wienerstaatsballett/" target="_blank" rel="noopener"><span class="inf-name">Wiener Staatsballett</span><span class="inf-meta">Viena, Austria</span><span class="inf-handle">@wienerstaatsballett</span></a>
+</div>
 </section>
 
 <section id="pablo" class="pablo-section">
@@ -1705,7 +1759,8 @@ document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
     10:[{c:'arg',t:'🇦🇷 Carmina Burana — ESTRENO · 21 h',co:'Ballet del Teatro del Bicentenario · versión de Mauricio Wainrot',loc:'San Juan, Argentina',u:'https://www.teatrodelbicentenariosanjuan.org/temporada2026/'},
         {c:'fun',t:'Dornröschen (La Bella Durmiente) · 19:00',co:'Stuttgart Ballet',loc:'Stuttgart, Alemania',u:'https://www.stuttgart-ballet.de/schedule/season-202526/'}],
     11:[{c:'fun',t:'Giselle (hasta el 21)',co:'Houston Ballet',loc:'Houston, EE.UU.',u:'https://www.houstonballet.org/'}],
-    12:[{c:'fun',t:'Next Generation Festival (hasta 4 jul)',co:'The Royal Ballet · Linbury Theatre',loc:'Londres, Reino Unido',u:'https://www.rbo.org.uk/'}],
+    12:[{c:'arg',t:'🇦🇷 Estreno — Ballet Contemporáneo del Teatro San Martín · entrada gratuita',co:'Hall Alfredo Alcón · Teatro San Martín',loc:'Buenos Aires, Argentina',u:'https://complejoteatral.gob.ar/'},
+        {c:'fun',t:'Next Generation Festival (hasta 4 jul)',co:'The Royal Ballet · Linbury Theatre',loc:'Londres, Reino Unido',u:'https://www.rbo.org.uk/'}],
     13:[{c:'fun',t:'MADDADDAM — Wayne McGregor (hasta el 21)',co:'National Ballet of Canada',loc:'Toronto, Canadá',u:'https://national.ballet.ca/productions/2526/maddaddam/'},
         {c:'fun',t:'Noverre: Jóvenes Coreógrafos (13–14)',co:'Stuttgart Ballet',loc:'Stuttgart, Alemania',u:'https://www.stuttgart-ballet.de/schedule/season-202526/'}],
     14:[{c:'aud',t:'Audición del Ballet',co:'Teatro alla Scala',loc:'Milán, Italia',u:'https://www.teatroallascala.org/en/'},
@@ -1796,6 +1851,74 @@ document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
   buildGrid();
   const upcoming=Object.keys(EV).map(Number).filter(d=>d>=TODAY).sort((a,b)=>a-b);
   select(upcoming.length?upcoming[0]:Object.keys(EV).map(Number).sort((a,b)=>a-b)[0]);
+})();
+</script>
+<script>
+/* ===== Avatares con iniciales en tarjetas de cuentas (.inf-card) ===== */
+(function(){
+  var palette=['#7c6355','#c9a84c','#7a9e8e','#c4876e','#3d9bd4','#9e8e84','#6b8f7d','#b08a3e'];
+  var stop={'the':1,'la':1,'el':1,'los':1,'las':1,'de':1,'del':1,'of':1,'and':1,'y':1};
+  function initials(name){
+    name=(name||'').replace(/^@/,'');
+    var parts=name.split(/[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+/).filter(function(w){return w && !stop[w.toLowerCase()];});
+    if(parts.length===0)return '·';
+    if(parts.length===1)return parts[0].slice(0,2).toUpperCase();
+    return (parts[0][0]+parts[1][0]).toUpperCase();
+  }
+  function hash(s){var h=0;for(var i=0;i<s.length;i++){h=(h*31+s.charCodeAt(i))>>>0;}return h;}
+  document.querySelectorAll('.inf-card').forEach(function(card){
+    if(card.querySelector('.inf-avatar'))return;
+    var nameEl=card.querySelector('.inf-name');
+    if(!nameEl)return;
+    var nm=nameEl.textContent;
+    var av=document.createElement('span');
+    av.className='inf-avatar';
+    av.textContent=initials(nm);
+    av.style.background=palette[hash(nm)%palette.length];
+    var txt=document.createElement('span');
+    txt.className='inf-text';
+    while(card.firstChild){txt.appendChild(card.firstChild);}
+    card.appendChild(av);
+    card.appendChild(txt);
+  });
+})();
+
+/* ===== Nav móvil: ocultar al bajar, mostrar al subir; pestaña actual + "mostrar todas" ===== */
+(function(){
+  var nav=document.getElementById('main-nav');
+  if(!nav)return;
+  var bar=document.createElement('div'); bar.id='nav-mobile-bar';
+  var cur=document.createElement('span'); cur.className='nav-current'; cur.textContent='Secciones';
+  var btn=document.createElement('button'); btn.id='nav-toggle'; btn.type='button'; btn.textContent='Mostrar todas las pestañas';
+  bar.appendChild(cur); bar.appendChild(btn);
+  nav.insertBefore(bar, nav.firstChild);
+
+  function collapse(){ nav.classList.remove('expanded'); btn.textContent='Mostrar todas las pestañas'; }
+  btn.addEventListener('click', function(){
+    var ex=nav.classList.toggle('expanded');
+    btn.textContent = ex ? 'Ocultar pestañas' : 'Mostrar todas las pestañas';
+  });
+  function updateCurrent(){
+    var a=nav.querySelector('a.active');
+    cur.textContent = a ? a.textContent.trim() : 'Secciones';
+  }
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ collapse(); setTimeout(updateCurrent,450); });
+  });
+  var lastY=window.scrollY||0, ticking=false;
+  window.addEventListener('scroll', function(){
+    if(ticking)return; ticking=true;
+    requestAnimationFrame(function(){
+      var y=window.scrollY||0;
+      if(window.innerWidth<=760){
+        if(y>lastY && y>120){ nav.classList.add('nav-hidden'); collapse(); }
+        else { nav.classList.remove('nav-hidden'); }
+      } else { nav.classList.remove('nav-hidden'); }
+      updateCurrent();
+      lastY=y; ticking=false;
+    });
+  }, {passive:true});
+  updateCurrent();
 })();
 </script>
 </body>
