@@ -250,6 +250,8 @@ nav{transition:transform .3s ease}
   nav a{display:none;width:100%;text-align:left;border-top:1px solid rgba(255,255,255,.05);box-sizing:border-box}
   nav.expanded a{display:block}
   nav.nav-hidden{transform:translateY(-100%)}
+  nav.expanded{max-height:100vh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+  nav.expanded #nav-mobile-bar{position:sticky;top:0;background:var(--midnight);z-index:2}
 }
 </style>
 </head>
@@ -2447,6 +2449,7 @@ document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
     if(ticking)return; ticking=true;
     requestAnimationFrame(function(){
       var y=window.scrollY||0;
+      if(nav.classList.contains('expanded')){ lastY=y; ticking=false; return; }
       if(window.innerWidth<=760){
         if(y>lastY && y>120){ nav.classList.add('nav-hidden'); collapse(); }
         else { nav.classList.remove('nav-hidden'); }
