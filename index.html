@@ -264,21 +264,53 @@ nav{transition:transform .3s ease}
 </header>
 
 <!-- ═══════════ NAV ═══════════ -->
+<style>
+@media (min-width:761px){
+  .nav-group{position:relative;display:flex}
+  .nav-gbtn{background:none;border:none;color:#cdb98f;font-family:'Poppins',sans-serif;font-size:.78rem;letter-spacing:.02em;padding:14px 16px;cursor:pointer;display:inline-flex;align-items:center;gap:5px}
+  .nav-gbtn:hover,.nav-group:hover .nav-gbtn,.nav-group.open .nav-gbtn{color:#fff;background:rgba(201,168,76,.12)}
+  .nav-group:has(a.active) .nav-gbtn{color:var(--gold)}
+  .nav-dd{position:absolute;top:100%;left:0;min-width:214px;background:var(--midnight);border:1px solid rgba(255,255,255,.08);border-top:2px solid var(--gold);box-shadow:0 12px 28px rgba(0,0,0,.45);flex-direction:column;display:none;z-index:300;padding:6px 0}
+  .nav-group:hover .nav-dd,.nav-group.open .nav-dd{display:flex}
+  .nav-dd a{display:block;width:100%;white-space:nowrap}
+}
+@media (max-width:760px){
+  nav .nav-group{display:contents}
+  nav .nav-gbtn{display:none}
+  nav .nav-dd{display:contents}
+}
+</style>
 <nav id="main-nav">
   <a href="#highlights">✦ Destacados</a>
-  <a href="#calendario">📅 Junio 2026</a>
-  <a href="#calendario-julio">📅 Julio 2026</a>
-  <a href="#europa">Europa</a>
-  <a href="#norteamerica">Norteamérica</a>
-  <a href="#latinoamerica">América Latina</a>
-  <a href="#argentina" class="nav-arg">🇦🇷 Argentina</a>
-  <a href="#asia">Asia &amp; Oceanía</a>
+  <div class="nav-group">
+    <button type="button" class="nav-gbtn">📅 Calendario ▾</button>
+    <div class="nav-dd">
+      <a href="#calendario">📅 Junio 2026</a>
+      <a href="#calendario-julio">📅 Julio 2026</a>
+    </div>
+  </div>
+  <div class="nav-group">
+    <button type="button" class="nav-gbtn">🌍 Regiones ▾</button>
+    <div class="nav-dd">
+      <a href="#europa">Europa</a>
+      <a href="#norteamerica">Norteamérica</a>
+      <a href="#latinoamerica">América Latina</a>
+      <a href="#argentina" class="nav-arg">🇦🇷 Argentina</a>
+      <a href="#asia">Asia &amp; Oceanía</a>
+    </div>
+  </div>
   <a href="#estudiantes" class="nav-est">🎓 Estudiantes</a>
   <a href="#audiciones" class="nav-aud">📋 Audiciones</a>
-  <a href="#influencers" class="nav-inf">📸 Dancers on IG</a>
-  <a href="#companias-ig" class="nav-coig">🏛️ IG de compañías</a>
-  <a href="#critica" class="nav-coig">📰 Crítica</a>
-  <a href="#aclamados" class="nav-coig">⭐ 20 Bailarines</a>
+  <div class="nav-group">
+    <button type="button" class="nav-gbtn">📸 Gente &amp; medios ▾</button>
+    <div class="nav-dd">
+      <a href="#influencers" class="nav-inf">📸 Dancers on IG</a>
+      <a href="#companias-ig" class="nav-coig">🏛️ IG de compañías</a>
+      <a href="#critica" class="nav-coig">📰 Crítica</a>
+      <a href="#aclamados" class="nav-coig">⭐ 20 Bailarines</a>
+      <a href="#disenadores" class="nav-coig">🎨 Diseñadores</a>
+    </div>
+  </div>
   <a href="#pablo" class="nav-pablo">¿Quién Soy?</a>
 </nav>
 
@@ -1914,6 +1946,156 @@ nav{transition:transform .3s ease}
 </div>
 </section>
 
+<section class="reg" id="disenadores">
+<div class="reg-hdr">
+  <div class="reg-icon ri-coig">🎨</div>
+  <h2 class="reg-title"><span>Detrás de escena</span>20 diseñadores de escena para ballet</h2>
+</div>
+<p class="acl-intro">Los grandes nombres detrás de lo que se ve en el escenario: <strong>escenógrafos</strong>, <strong>iluminadores</strong> y <strong>diseñadores de vestuario</strong> —tres oficios distintos— entre los más aclamados por la crítica. La selección se apoya en datos verificables (premios como el Benois de la Danse, los Tony, los Olivier o el Knight of Illumination, y cargos en grandes compañías). Una advertencia honesta: la agenda mes a mes de un diseñador es difícil de fijar (su trabajo está “en repertorio” durante meses), así que en cada ficha figura su actividad más actual y verificable. Un cruce cercano: Bob Crowley (escenografía/vestuario) y Natasha Katz (iluminación) firman <em>Alice</em>, la producción que el Colón estrena en julio. Es, como toda lista de este tipo, discutible.</p>
+<div class="acl-grid">
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">01</span><span><span class="acl-name">Bob Crowley</span><span class="acl-role">Escenografía y vestuario</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Irlandés (Cork, 1952), formado en la Bristol Old Vic. Uno de los diseñadores teatrales más premiados del mundo (varios Tony y Olivier). En ballet firmó la escenografía y el vestuario de dos creaciones de Christopher Wheeldon: <em>Alice’s Adventures in Wonderland</em> y <em>The Winter’s Tale</em>.</p></div>
+    <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Su <em>Alice</em> —naipes, jardines y delirio victoriano— es justamente la producción que el Ballet Estable del Teatro Colón estrena en julio de 2026, además de seguir en repertorio en el Royal Ballet y el National Ballet of Canada.</p></div>
+    <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Reverenciado por su imaginación teatral y su capacidad para construir mundos: su diseño narra y emociona sin tapar la danza.</p></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Bob_Crowley" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://teatrocolon.org.ar/produccion/alices-adventures-in-wonderland/" target="_blank" rel="noopener" class="btn-link btn-web">🎭 Alice (Teatro Colón)</a></div>
+  </div>
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">02</span><span><span class="acl-name">John Macfarlane</span><span class="acl-role">Escenografía y vestuario</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Escocés (Glasgow), considerado “uno de los grandes diseñadores de escena de su generación”. Diseñó el <em>Swan Lake</em>, <em>Giselle</em> y <em>Frankenstein</em> del Royal Ballet, y el célebre <em>Nutcracker</em> del Birmingham Royal Ballet.</p></div>
+    <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Sus producciones siguen en repertorio en el Royal Ballet y el Birmingham Royal Ballet; su <em>Swan Lake</em> es de los montajes más vistos del mundo.</p></div>
+    <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Laureado del Benois de la Danse (2015 y 2019). Se elogia su “claroscuro” pictórico, de una sensualidad sombría que huye de toda dulzura decorativa.</p></div>
+    <div class="links-row"><a href="https://celfgallery.com/artists/50-john-macfarlane/" target="_blank" rel="noopener" class="btn-link btn-web">📖 Bio (Celf Gallery)</a><a href="https://www.rbo.org.uk/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ The Royal Ballet</a></div>
+  </div>
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">03</span><span><span class="acl-name">Jérôme Kaplan</span><span class="acl-role">Escenografía y vestuario</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Francés (París, 1964), formado en L’École de la Rue Blanche. Descubrió la danza junto a Jean-Christophe Maillot y es hoy el escenógrafo de cabecera de <strong>Alexei Ratmansky</strong>.</p></div>
+    <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Trabaja con el Pacific Northwest Ballet, el Northern Ballet, el Dutch National Ballet y el Bayerisches Staatsballett, en clásicos releídos con elegancia contemporánea.</p></div>
+    <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Valorado por su sofisticación cromática y por reinventar el gran repertorio sin traicionar su espíritu.</p></div>
+    <div class="links-row"><a href="https://www.pnb.org/artists/jerome-kaplan/" target="_blank" rel="noopener" class="btn-link btn-web">📖 Bio (PNB)</a><a href="https://northernballet.com/biography/jerome-kaplan" target="_blank" rel="noopener" class="btn-link btn-web">📖 Bio (Northern Ballet)</a></div>
+  </div>
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">04</span><span><span class="acl-name">Santo Loquasto</span><span class="acl-role">Escenografía y vestuario</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Estadounidense, uno de los grandes diseñadores del teatro y la danza norteamericanos, ganador de premios Tony. Colaborador histórico de <strong>Jerome Robbins</strong>, <strong>Twyla Tharp</strong> y del ABT.</p></div>
+    <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Su trabajo sigue en el repertorio del ABT y otras compañías; también una larga trayectoria en cine (Woody Allen) y Broadway.</p></div>
+    <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Admirado por su versatilidad y por una elegancia que pasa inadvertida de tan justa: el diseño al servicio de la obra.</p></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Santo_Loquasto" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://www.abt.org/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ American Ballet Theatre</a></div>
+  </div>
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">05</span><span><span class="acl-name">Richard Hudson</span><span class="acl-role">Escenografía</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Británico (nacido en Zimbabue), ganador del Tony por <em>El Rey León</em>. En ballet es conocido por su escenografía para el <em>Nutcracker</em> de <strong>Alexei Ratmansky</strong> en el ABT.</p></div>
+    <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Sus producciones de ballet permanecen en repertorio; combina danza, ópera y teatro a nivel internacional.</p></div>
+    <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Elogiado por su economía visual y su sentido del color y la perspectiva, capaz de evocar mundos con pocos elementos.</p></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Richard_Hudson_(designer)" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://www.abt.org/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ American Ballet Theatre</a></div>
+  </div>
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">06</span><span><span class="acl-name">Michael Levine</span><span class="acl-role">Escenografía y vestuario</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Canadiense, uno de los escenógrafos más respetados de ópera y ballet de su país, vinculado al National Ballet of Canada.</p></div>
+    <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Diseña danza y ópera en Norteamérica y Europa, con una estética despojada y conceptual.</p></div>
+    <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Reconocido por su rigor conceptual y por imágenes escénicas de gran fuerza poética.</p></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Michael_Levine_(designer)" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://national.ballet.ca/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ National Ballet of Canada</a></div>
+  </div>
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">07</span><span><span class="acl-name">Jürgen Rose</span><span class="acl-role">Escenografía y vestuario</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Alemán, figura legendaria del diseño escénico europeo. Autor de la escenografía y el vestuario de dos pilares de <strong>John Cranko</strong>: <em>Onegin</em> y <em>La fierecilla domada</em>, emblemas del Stuttgart Ballet.</p></div>
+    <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Sus diseños para los ballets de Cranko siguen montándose en las grandes compañías del mundo, más de medio siglo después.</p></div>
+    <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Venerado por la elegancia atemporal de sus producciones: un clasicismo que no envejece, inseparable de las obras que viste.</p></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/J%C3%BCrgen_Rose" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://www.stuttgart-ballet.de/en/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ Stuttgart Ballet</a></div>
+  </div>
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">08</span><span><span class="acl-name">Jennifer Tipton</span><span class="acl-role">Iluminación</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Estadounidense (1937), una de las iluminadoras más respetadas de la danza y el teatro. Llegó a la luz desde la danza misma; colaboró con Baryshnikov, Twyla Tharp, Jerome Robbins y Paul Taylor.</p></div>
+    <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Sigue iluminando danza tras más de cincuenta años de carrera; presente en el repertorio del ABT desde 1971.</p></div>
+    <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Dos premios Tony y la “beca de los genios” MacArthur (2008). The New York Times destacó la impecabilidad de su gusto y su precisión casi cerebral.</p></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Jennifer_Tipton" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://www.macfound.org/fellows/class-of-2008/jennifer-tipton" target="_blank" rel="noopener" class="btn-link btn-web">👤 MacArthur Foundation</a></div>
+  </div>
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">09</span><span><span class="acl-name">Brandon Stirling Baker</span><span class="acl-role">Iluminación</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Estadounidense (1987), director de iluminación del Boston Ballet. Diseñó más de treinta estrenos para el coreógrafo <strong>Justin Peck</strong> y trabaja con William Forsythe y compañías de todo el mundo.</p></div>
+    <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Su luz se ve hoy en el NYCB, ABT, San Francisco Ballet, Dutch National Ballet y más; suele firmar los estrenos de Peck (como los que el NYCB lleva a Saratoga en julio de 2026).</p></div>
+    <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Premio Knight of Illumination (2019) y nominación al Tony 2024 por <em>Illinoise</em>. La voz más visible de su generación en iluminación de ballet.</p></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Brandon_Stirling_Baker" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://www.balletx.org/collaborators/brandon-stirling-baker/" target="_blank" rel="noopener" class="btn-link btn-web">👤 Bio (BalletX)</a></div>
+  </div>
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">10</span><span><span class="acl-name">Natasha Katz</span><span class="acl-role">Iluminación</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Estadounidense, iluminadora con múltiples premios Tony. En ballet firmó la luz de <em>Alice’s Adventures in Wonderland</em> y <em>The Winter’s Tale</em> de Christopher Wheeldon.</p></div>
+    <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Alterna Broadway con la danza; su iluminación de <em>Alice</em> acompaña la producción que el Teatro Colón estrena en julio de 2026.</p></div>
+    <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Admirada por su manejo del color y de la atmósfera, capaz de transformar el espacio escénico de un cuadro a otro.</p></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Natasha_Katz" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://teatrocolon.org.ar/produccion/alices-adventures-in-wonderland/" target="_blank" rel="noopener" class="btn-link btn-web">🎭 Alice (Teatro Colón)</a></div>
+  </div>
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">11</span><span><span class="acl-name">Lucy Carter</span><span class="acl-role">Iluminación</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Británica, iluminadora de referencia y colaboradora histórica del coreógrafo <strong>Wayne McGregor</strong> (<em>Chroma</em>, <em>Woolf Works</em>, <em>Infra</em> en el Royal Ballet).</p></div>
+    <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Su trabajo con McGregor y otros creadores se mantiene en repertorio en el Royal Ballet y compañías internacionales; también diseña ópera.</p></div>
+    <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Reconocida con el premio Olivier; se destaca su luz escultórica, casi coreográfica, parte inseparable de la dramaturgia.</p></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Lucy_Carter" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://www.rbo.org.uk/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ The Royal Ballet</a></div>
+  </div>
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">12</span><span><span class="acl-name">Brad Fields</span><span class="acl-role">Iluminación</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Estadounidense, durante años iluminador y director de iluminación del American Ballet Theatre, responsable de la luz de buena parte de su repertorio clásico de gran formato.</p></div>
+    <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Su iluminación acompaña la temporada de verano del ABT en el Metropolitan Opera House.</p></div>
+    <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Valorado por su dominio de la gran escala: la luz que sostiene los grandes títulos sin llamar la atención sobre sí misma.</p></div>
+    <div class="links-row"><a href="https://www.abt.org/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ American Ballet Theatre</a></div>
+  </div>
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">13</span><span><span class="acl-name">James F. Ingalls</span><span class="acl-role">Iluminación</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Estadounidense, uno de los iluminadores más prestigiosos de la danza, colaborador frecuente de <strong>Mark Morris</strong> y de numerosas compañías de ballet y ópera.</p></div>
+    <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Sigue diseñando para danza y ópera en los principales escenarios de Estados Unidos y del mundo.</p></div>
+    <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Admirado por la sutileza y la musicalidad de su luz, siempre al servicio del movimiento.</p></div>
+    <div class="links-row"><a href="https://markmorrisdancegroup.org/" target="_blank" rel="noopener" class="btn-link btn-web">👤 Bio (Mark Morris Dance Group)</a></div>
+  </div>
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">14</span><span><span class="acl-name">Marc Happel</span><span class="acl-role">Vestuario</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Director de vestuario del New York City Ballet desde 2006. Cuida el enorme repertorio Balanchine/Robbins y es el artífice técnico de la <em>Fall Fashion Gala</em>, donde traduce a la escena la alta costura.</p></div>
+    <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Prepara cada temporada del NYCB y la Gala anual; colaboró con más de treinta diseñadores de moda y firmó vestuarios propios para estrenos recientes.</p></div>
+    <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Celebrado por tender el puente entre la pasarela y el escenario —donde el vestuario debe, además, poder bailar—; autor del libro <em>New York City Ballet: Choreography &amp; Couture</em>.</p></div>
+    <div class="links-row"><a href="https://www.nycballet.com/discover/stories/studio-visit-marc-happel" target="_blank" rel="noopener" class="btn-link btn-web">👤 Bio (NYCB)</a><a href="https://www.nycballet.com/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ New York City Ballet</a></div>
+  </div>
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">15</span><span><span class="acl-name">Valentino Garavani</span><span class="acl-role">Vestuario / alta costura</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Leyenda de la alta costura italiana. Inauguró en 2012 la <em>Fall Fashion Gala</em> del NYCB, vistiendo a la compañía con su inconfundible refinamiento.</p></div>
+    <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Su colaboración con el NYCB sigue siendo el modelo de los cruces entre moda y ballet que el mundo imitó después.</p></div>
+    <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Su trabajo para el ballet fue elogiado por trasladar la exigencia de la costura a un cuerpo en movimiento, sin perder calidad ni detalle.</p></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Valentino_(fashion_designer)" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://www.nycballet.com/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ New York City Ballet</a></div>
+  </div>
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">16</span><span><span class="acl-name">Iris van Herpen</span><span class="acl-role">Vestuario / alta costura</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Diseñadora neerlandesa, pionera de la costura tecnológica y la impresión 3D. Sus vestidos parecen organismos vivos; llevó esa estética al NYCB y a proyectos de danza.</p></div>
+    <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Una de las invitadas más comentadas de la <em>Fall Fashion Gala</em> del NYCB, además de su trabajo de pasarela y de museo.</p></div>
+    <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Aclamada por una visión futurista que dialoga con el cuerpo en movimiento; su vestuario es, en sí mismo, escenografía.</p></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Iris_van_Herpen" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://www.nycballet.com/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ New York City Ballet</a></div>
+  </div>
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">17</span><span><span class="acl-name">Stella McCartney</span><span class="acl-role">Vestuario / alta costura</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Diseñadora británica que cruzó varias veces al ballet: vistió el <em>Ocean’s Kingdom</em> del NYCB (música de Paul McCartney) y produjo vestuario para el Royal Ballet.</p></div>
+    <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Sigue activa en la moda con incursiones puntuales en la danza y las artes escénicas.</p></div>
+    <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Su vestuario para ballet fue leído como un soplo de aire contemporáneo sobre la tradición, con la sostenibilidad como sello.</p></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Stella_McCartney" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://www.nycballet.com/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ New York City Ballet</a></div>
+  </div>
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">18</span><span><span class="acl-name">Christian Lacroix</span><span class="acl-role">Vestuario / alta costura</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Modisto francés con una extensa segunda carrera como diseñador de vestuario para ópera y ballet, de un sentido del color y el ornamento inconfundible.</p></div>
+    <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Su vestuario para danza y ópera se mantiene en repertorio en grandes casas europeas.</p></div>
+    <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Elogiado por una opulencia que nunca es gratuita: cada traje cuenta una época, un carácter, un mundo.</p></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Christian_Lacroix" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a></div>
+  </div>
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">19</span><span><span class="acl-name">Es Devlin</span><span class="acl-role">Escenografía contemporánea</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Escenógrafa y artista británica, célebre por sus esculturas escénicas cinéticas y luminosas. Trabaja en ópera, conciertos, instalaciones y, cada vez más, en cruces con la danza.</p></div>
+    <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Una de las creadoras de escena más influyentes del momento, con proyectos entre el teatro, el arte y la performance a escala internacional.</p></div>
+    <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Aclamada como una de las grandes renovadoras del espacio escénico contemporáneo, donde la escenografía se vuelve experiencia.</p></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Es_Devlin" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://esdevlin.com/" target="_blank" rel="noopener" class="btn-link btn-web">🌐 esdevlin.com</a></div>
+  </div>
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">20</span><span><span class="acl-name">Finn Ross</span><span class="acl-role">Diseño de proyección y video</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Diseñador británico de video y proyección, ganador del Tony, una de las figuras que llevaron el video escénico al primer plano de la danza y el teatro (trabajó, entre otros, con el National Ballet of Canada).</p></div>
+    <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">El diseño de proyección es hoy parte central del lenguaje del ballet narrativo; su trabajo aparece en producciones de gran formato.</p></div>
+    <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Reconocido por integrar la imagen en movimiento sin que devore la danza: tecnología al servicio de la dramaturgia.</p></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Finn_Ross" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a></div>
+  </div>
+</div>
+</section>
+
 <section id="pablo" class="pablo-section">
 
   <div class="pablo-hero">
@@ -2274,6 +2456,23 @@ document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
     });
   }, {passive:true});
   updateCurrent();
+})();
+</script>
+<script>
+/* ===== Desplegables del nav (click/táctil; hover por CSS) ===== */
+(function(){
+  var nav=document.getElementById('main-nav'); if(!nav)return;
+  function closeAll(){ nav.querySelectorAll('.nav-group.open').forEach(function(x){x.classList.remove('open');}); }
+  nav.querySelectorAll('.nav-gbtn').forEach(function(b){
+    b.addEventListener('click',function(e){
+      e.stopPropagation();
+      var g=b.parentNode, wasOpen=g.classList.contains('open');
+      closeAll();
+      if(!wasOpen) g.classList.add('open');
+    });
+  });
+  nav.querySelectorAll('.nav-dd a').forEach(function(a){ a.addEventListener('click',closeAll); });
+  document.addEventListener('click',closeAll);
 })();
 </script>
 </body>
