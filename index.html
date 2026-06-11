@@ -561,7 +561,7 @@ nav{transition:transform .3s ease}
         const dots=document.createElement('div');dots.className='cal-dots';
         [...new Set(evs.map(e=>e.c))].forEach(c=>{const s=document.createElement('span');s.style.background=COLOR[c];dots.appendChild(s);});
         cell.appendChild(dots);
-        cell.addEventListener('click',()=>select(d));
+        cell.addEventListener('click',(ev)=>{ev.stopPropagation();select(d);});
       }
       if(d===selected)cell.classList.add('sel');
       grid.appendChild(cell);
@@ -586,7 +586,7 @@ nav{transition:transform .3s ease}
     detail.innerHTML=html;
   }
   legend.querySelectorAll('.cal-chip').forEach(chip=>{
-    chip.addEventListener('click',()=>{const c=chip.dataset.cat;active[c]=!active[c];chip.classList.toggle('off',!active[c]);buildGrid();renderDetail(selected);});
+    chip.addEventListener('click',(ev)=>{ev.stopPropagation();const c=chip.dataset.cat;active[c]=!active[c];chip.classList.toggle('off',!active[c]);buildGrid();renderDetail(selected);});
   });
   buildGrid();
   const days=Object.keys(EV).map(Number).sort((a,b)=>a-b);
@@ -2472,7 +2472,7 @@ document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
         const dots=document.createElement('div');dots.className='cal-dots';
         [...new Set(evs.map(e=>e.c))].forEach(c=>{const s=document.createElement('span');s.style.background=COLOR[c];dots.appendChild(s);});
         cell.appendChild(dots);
-        cell.addEventListener('click',()=>select(d));
+        cell.addEventListener('click',(ev)=>{ev.stopPropagation();select(d);});
       }
       if(d===selected)cell.classList.add('sel');
       grid.appendChild(cell);
@@ -2497,7 +2497,7 @@ document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
     detail.innerHTML=html;
   }
   legend.querySelectorAll('.cal-chip').forEach(chip=>{
-    chip.addEventListener('click',()=>{const c=chip.dataset.cat;active[c]=!active[c];chip.classList.toggle('off',!active[c]);buildGrid();renderDetail(selected);});
+    chip.addEventListener('click',(ev)=>{ev.stopPropagation();const c=chip.dataset.cat;active[c]=!active[c];chip.classList.toggle('off',!active[c]);buildGrid();renderDetail(selected);});
   });
 
   buildGrid();
@@ -2649,6 +2649,8 @@ document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
     header.addEventListener('click', function(e){
       /* permitir clicks en enlaces dentro del header sin colapsar */
       if(e.target.closest('a')) return;
+      /* no colapsar si el click ocurre dentro del cuerpo (p. ej. días del calendario) */
+      if(e.target.closest('.sec-body')) return;
       toggle();
     });
     header.addEventListener('keydown', function(e){
