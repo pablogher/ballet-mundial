@@ -293,6 +293,7 @@ nav{transition:transform .3s ease}
 @media (min-width:761px){
   .nav-group{position:relative;display:flex}
   .nav-gbtn{background:none;border:none;color:#cdb98f;font-family:'Poppins',sans-serif;font-size:.78rem;letter-spacing:.02em;padding:14px 16px;cursor:pointer;display:inline-flex;align-items:center;gap:5px}
+  .nav-gbtn::after{content:'▾';font-size:.72rem;opacity:.85}
   .nav-gbtn:hover,.nav-group:hover .nav-gbtn,.nav-group.open .nav-gbtn{color:#fff;background:rgba(201,168,76,.12)}
   .nav-group:has(a.active) .nav-gbtn{color:var(--gold)}
   .nav-dd{position:absolute;top:100%;left:0;min-width:214px;background:var(--midnight);border:1px solid rgba(255,255,255,.08);border-top:2px solid var(--gold);box-shadow:0 12px 28px rgba(0,0,0,.45);flex-direction:column;display:none;z-index:300;padding:6px 0}
@@ -300,22 +301,30 @@ nav{transition:transform .3s ease}
   .nav-dd a{display:block;width:100%;white-space:nowrap}
 }
 @media (max-width:760px){
-  nav .nav-group{display:contents}
-  nav .nav-gbtn{display:none}
-  nav .nav-dd{display:contents}
+  /* En móvil conservamos los grupos: el botón es un encabezado y sus enlaces se despliegan */
+  nav .nav-group{display:block;width:100%}
+  nav .nav-gbtn{display:none;width:100%;text-align:left;box-sizing:border-box;background:rgba(201,168,76,.06);color:#e8cfa0;border:none;border-top:1px solid rgba(255,255,255,.05);padding:11px 14px;font-family:'Poppins',sans-serif;font-size:.74rem;letter-spacing:.03em;cursor:pointer}
+  nav.expanded .nav-gbtn{display:flex;align-items:center;justify-content:space-between}
+  nav .nav-gbtn::after{content:'▾';font-size:.7rem;transition:transform .2s ease;opacity:.8}
+  nav .nav-group.open .nav-gbtn::after{transform:rotate(180deg)}
+  nav .nav-group.open .nav-gbtn{color:#fff;background:rgba(201,168,76,.14)}
+  nav .nav-dd{display:block;width:100%}
+  /* los enlaces de un grupo permanecen ocultos hasta abrir ese grupo */
+  nav.expanded .nav-dd a{display:none}
+  nav.expanded .nav-group.open .nav-dd a{display:block;padding-left:30px;background:rgba(0,0,0,.18);font-size:.74rem}
 }
 </style>
 <nav id="main-nav">
   <a href="#highlights">✦ Destacados</a>
   <div class="nav-group">
-    <button type="button" class="nav-gbtn">📅 Calendario ▾</button>
+    <button type="button" class="nav-gbtn">📅 Calendario</button>
     <div class="nav-dd">
       <a href="#calendario">📅 Junio 2026</a>
       <a href="#calendario-julio">📅 Julio 2026</a>
     </div>
   </div>
   <div class="nav-group">
-    <button type="button" class="nav-gbtn">🌍 Regiones ▾</button>
+    <button type="button" class="nav-gbtn">🌍 Regiones</button>
     <div class="nav-dd">
       <a href="#europa">Europa</a>
       <a href="#norteamerica">Norteamérica</a>
@@ -327,13 +336,14 @@ nav{transition:transform .3s ease}
   <a href="#estudiantes" class="nav-est">🎓 Estudiantes</a>
   <a href="#audiciones" class="nav-aud">📋 Audiciones</a>
   <div class="nav-group">
-    <button type="button" class="nav-gbtn">🎭 Artistas y Medios ▾</button>
+    <button type="button" class="nav-gbtn">🎭 Artistas y Medios</button>
     <div class="nav-dd">
       <a href="#influencers" class="nav-inf">📸 Dancers on IG</a>
       <a href="#companias-ig" class="nav-coig">🏛️ IG de compañías</a>
       <a href="#critica" class="nav-coig">📰 Crítica</a>
       <a href="#aclamados" class="nav-coig">⭐ 20 Bailarines</a>
       <a href="#disenadores" class="nav-coig">🎨 Diseñadores</a>
+      <a href="#coreografos" class="nav-coig">🇦🇷 Coreógrafos en Argentina</a>
     </div>
   </div>
   <a href="#pablo" class="nav-pablo">¿Quién Soy?</a>
@@ -1973,6 +1983,82 @@ nav{transition:transform .3s ease}
   </div>
 </div>
 </section>
+
+<section class="reg" id="coreografos">
+<div class="reg-hdr">
+  <div class="reg-icon ri-coig">🇦🇷</div>
+  <h2 class="reg-title"><span>En cartel y por estrenar</span>Coreógrafos actuales en Argentina</h2>
+</div>
+<p class="acl-intro">Quiénes están firmando danza <strong>hoy</strong> en los escenarios argentinos: creadores —argentinos y extranjeros— con obra en cartel durante 2026 o a punto de estrenarse, entre el Teatro Colón, el Ballet Contemporáneo del Teatro San Martín y el Teatro del Bicentenario de San Juan. Cada ficha indica la obra, la sala y la fecha verificada. Es una foto de la temporada en curso, no un ranking: se irá actualizando a medida que avance el año.</p>
+<div class="acl-grid">
+
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">01</span><span><span class="acl-name">Christopher Wheeldon</span><span class="acl-role">Británico · estreno argentino</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Obra en cartel</p><p class="info-val"><em>Alice’s Adventures in Wonderland</em> — estreno argentino en el <strong>Teatro Colón</strong>, julio de 2026 (16 al 26 de julio). Producción del Ballet Real de Dinamarca, con la Filarmónica de Buenos Aires.</p></div>
+    <div class="acl-block"><p class="info-lbl">Quién es</p><p class="info-val">Ex primer bailarín del Royal Ballet y New York City Ballet, hoy uno de los coreógrafos narrativos más influyentes del mundo. Su <em>Alice</em> (2011, música de Joby Talbot) es el primer ballet creado para el Royal Ballet en cuatro décadas.</p></div>
+    <div class="links-row"><a href="https://teatrocolon.org.ar/produccion/alices-adventures-in-wonderland/" target="_blank" rel="noopener" class="btn-link btn-web">🎭 Alice (Teatro Colón)</a><a href="https://en.wikipedia.org/wiki/Christopher_Wheeldon" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a></div>
+  </div>
+
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">02</span><span><span class="acl-name">Goyo Montero</span><span class="acl-role">Español · estreno mundial</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Obra en cartel</p><p class="info-val"><em>Borges</em> — <strong>estreno mundial</strong> en el <strong>Teatro Colón</strong>, septiembre de 2026. Obra comisionada por el Colón en homenaje a Jorge Luis Borges, con música de <strong>Gustavo Santaolalla</strong> y Owen Belton.</p></div>
+    <div class="acl-block"><p class="info-lbl">Quién es</p><p class="info-val">Madrileño (1975), ganador del Prix de Lausanne. Director y coreógrafo de larga trayectoria internacional (Staatstheater Nürnberg, Acosta Danza, Context Festival de Diana Vishneva). Es uno de los pocos estrenos mundiales que el Colón comisiona a un coreógrafo vivo.</p></div>
+    <div class="links-row"><a href="https://teatrocolon.org.ar/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ Teatro Colón</a><a href="https://en.wikipedia.org/wiki/Goyo_Montero" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a></div>
+  </div>
+
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">03</span><span><span class="acl-name">Mauricio Wainrot</span><span class="acl-role">Argentino · referente</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Obra en cartel</p><p class="info-val"><em>Carmina Burana</em> (música de Carl Orff) — <strong>Teatro del Bicentenario de San Juan</strong>, Temporada 2026, con funciones en junio. Reposición a cargo de Victoria Balanza y Alexis Mirenda, históricos intérpretes de la obra.</p></div>
+    <div class="acl-block"><p class="info-lbl">Quién es</p><p class="info-val">Una de las figuras mayores de la danza argentina. Su <em>Carmina Burana</em>, creada para el Royal Ballet de Flandes, es una de sus obras más reconocidas internacionalmente. Ex director del Ballet Contemporáneo del Teatro San Martín y del Ballet del Teatro Colón.</p></div>
+    <div class="links-row"><a href="https://www.teatrodelbicentenariosanjuan.org/temporada2026/" target="_blank" rel="noopener" class="btn-link btn-web">🎭 Temporada 2026 (San Juan)</a><a href="https://es.wikipedia.org/wiki/Mauricio_Wainrot" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a></div>
+  </div>
+
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">04</span><span><span class="acl-name">Demis Volpi</span><span class="acl-role">Argentino · estreno argentino</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Obra en cartel</p><p class="info-val"><em>Aftermath</em> — estreno argentino dentro del <strong>Programa Mixto</strong> del <strong>Teatro Colón</strong> (mayo de 2026), junto a <em>Études</em> de Harald Lander y <em>Come in</em> de Aszure Barton.</p></div>
+    <div class="acl-block"><p class="info-lbl">Quién es</p><p class="info-val">Coreógrafo germano-argentino, formado en el Instituto Superior de Arte del Teatro Colón y en la John Cranko School de Stuttgart. Fue coreógrafo residente del Stuttgart Ballet —donde creó <em>Aftermath</em>— y dirigió el Ballett am Rhein (2020–2024) y el Hamburg Ballett (2024–2025). Su obra entra ahora al repertorio del Colón.</p></div>
+    <div class="links-row"><a href="https://teatrocolon.org.ar/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ Teatro Colón</a><a href="https://en.wikipedia.org/wiki/Demis_Volpi" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a></div>
+  </div>
+
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">05</span><span><span class="acl-name">Georgi Seva</span><span class="acl-role">Argentina · joven creadora</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Obra en cartel</p><p class="info-val"><em>Existo</em> — estreno dentro del programa <em>Identidades encontradas</em> del <strong>Ballet Contemporáneo del Teatro San Martín</strong> (Hall Alfredo Alcón, junio de 2026, con entrada libre).</p></div>
+    <div class="acl-block"><p class="info-lbl">Quién es</p><p class="info-val">Parte de una camada de jóvenes coreógrafas argentinas que trabajan desde la fusión, acercando el jazz, las danzas urbanas, el folklore y las danzas afro a la danza contemporánea.</p></div>
+    <div class="links-row"><a href="https://complejoteatral.gob.ar/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ Complejo Teatral de Bs. As.</a></div>
+  </div>
+
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">06</span><span><span class="acl-name">Maia Roldán</span><span class="acl-role">Argentina · joven creadora</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Obra en cartel</p><p class="info-val"><em>Masaca</em> — estreno dentro del programa <em>Identidades encontradas</em> del <strong>Ballet Contemporáneo del Teatro San Martín</strong> (Hall Alfredo Alcón, junio de 2026).</p></div>
+    <div class="acl-block"><p class="info-lbl">Quién es</p><p class="info-val">Coreógrafa joven cuyo trabajo, como el de Seva, parte del cruce entre la danza contemporánea y los lenguajes del jazz, lo urbano, el folklore y lo afro.</p></div>
+    <div class="links-row"><a href="https://complejoteatral.gob.ar/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ Complejo Teatral de Bs. As.</a></div>
+  </div>
+
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">07</span><span><span class="acl-name">Elizabeth de Chapeaurouge</span><span class="acl-role">Argentina · contemporánea</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Obra reciente</p><p class="info-val"><em>Cromático</em> — obra encargada por la dirección del <strong>Ballet Contemporáneo del Teatro San Martín</strong>, con música original de Nicolás Di Lorenzo, presentada en la temporada 2025 de la compañía y en repertorio.</p></div>
+    <div class="acl-block"><p class="info-lbl">Quién es</p><p class="info-val">Coreógrafa argentina convocada habitualmente por la compañía oficial del San Martín para crear nuevas piezas dentro de sus programas dobles.</p></div>
+    <div class="links-row"><a href="https://complejoteatral.gob.ar/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ Complejo Teatral de Bs. As.</a></div>
+  </div>
+
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">08</span><span><span class="acl-name">Raúl Candal</span><span class="acl-role">Argentino · clásico</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Obra en cartel</p><p class="info-val"><em>El lago de los cisnes</em> (sobre el original de Marius Petipa) — <strong>Teatro Colón</strong>, marzo de 2026. Es la misma versión que estrenó Julio Bocca en su despedida de 2007.</p></div>
+    <div class="acl-block"><p class="info-lbl">Quién es</p><p class="info-val">Bailarín, maestro y coreógrafo argentino, responsable de la versión de <em>El lago de los cisnes</em> que el Ballet Estable del Teatro Colón mantiene en su repertorio.</p></div>
+    <div class="links-row"><a href="https://teatrocolon.org.ar/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ Teatro Colón</a></div>
+  </div>
+
+  <div class="acl-card">
+    <div class="acl-hdr"><span class="acl-num">09</span><span><span class="acl-name">Andrea Chinetti &amp; Diego Poblete</span><span class="acl-role">Argentinos · dirección</span></span></div>
+    <div class="acl-block"><p class="info-lbl">Rol actual</p><p class="info-val">Directora y codirector del <strong>Ballet Contemporáneo del Teatro San Martín</strong>, la primera compañía oficial argentina dedicada a la danza moderna (fundada en 1977). Programan y reponen las temporadas que hoy sostienen buena parte de la creación contemporánea en Buenos Aires.</p></div>
+    <div class="acl-block"><p class="info-lbl">Por qué importan</p><p class="info-val">Desde la dirección habilitan la obra de coreógrafos jóvenes y consagrados —de Seva y Roldán a de Chapeaurouge— y custodian un repertorio que va de Wainrot y Stekelman a creadores internacionales.</p></div>
+    <div class="links-row"><a href="https://complejoteatral.gob.ar/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ Complejo Teatral de Bs. As.</a></div>
+  </div>
+
+</div>
+<p class="acl-intro" style="margin-top:30px;font-size:.92rem">Nota: <em>Come in</em> (Aszure Barton, repuesta por Taylor Labruzzo) también integra el Programa Mixto del Colón en mayo de 2026. Si conocés otros estrenos o reposiciones confirmados en salas argentinas, escribime y los sumo —siempre con fuente verificable.</p>
+</section>
+
 
 <section class="reg" id="disenadores">
 <div class="reg-hdr">
