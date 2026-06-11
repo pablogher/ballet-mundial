@@ -33,6 +33,29 @@
 }
 body{font-family:'Georgia','Times New Roman',serif;background:var(--cream);color:var(--charcoal);line-height:1.7}
 
+/* ===== SECCIONES COLAPSABLES ===== */
+.sec-toggle{cursor:pointer;position:relative}
+.sec-chevron{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;flex:0 0 auto;border-radius:50%;border:1px solid rgba(124,99,85,.35);background:rgba(255,255,255,.04);color:var(--gold);font-size:.95rem;line-height:1;transition:transform .28s ease,background .2s ease;margin-left:auto;align-self:flex-start;-webkit-user-select:none;user-select:none}
+.sec-toggle:hover .sec-chevron{background:rgba(201,168,76,.16)}
+section.collapsed .sec-chevron{transform:rotate(-90deg)}
+.sec-body{overflow:visible}
+section.collapsed .sec-body{display:none}
+/* el primer elemento del cuerpo no debe trepar bajo el encabezado (evita el corte de texto) */
+.sec-body>*:first-child{margin-top:0}
+.sec-body>.acl-intro:first-child{margin-top:4px}
+/* el header de regiones es flex: la flecha se ubica a la derecha */
+.reg-hdr.sec-toggle{display:flex;align-items:center;gap:14px}
+/* en .sec-inner (calendarios/destacados) ubicamos la flecha arriba a la derecha */
+.sec-inner{position:relative}
+.sec-inner .sec-chevron{position:absolute;top:0;right:0;margin-left:0}
+/* banner Argentina */
+.arg-banner.sec-toggle .sec-chevron{position:absolute;top:18px;right:18px;margin-left:0;border-color:rgba(255,255,255,.35);color:#fff;background:rgba(255,255,255,.10)}
+.arg-banner.sec-toggle{position:relative}
+@media (max-width:760px){
+  .sec-inner .sec-chevron{top:-2px}
+}
+
+
 /* HEADER */
 header{background:var(--midnight);color:var(--cream);text-align:center;padding:60px 24px 48px;position:relative;overflow:hidden}
 header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% -10%,rgba(201,168,76,.22) 0%,transparent 65%);pointer-events:none}
@@ -304,7 +327,7 @@ nav{transition:transform .3s ease}
   <a href="#estudiantes" class="nav-est">🎓 Estudiantes</a>
   <a href="#audiciones" class="nav-aud">📋 Audiciones</a>
   <div class="nav-group">
-    <button type="button" class="nav-gbtn">📸 Gente &amp; medios ▾</button>
+    <button type="button" class="nav-gbtn">🎭 Artistas y Medios ▾</button>
     <div class="nav-dd">
       <a href="#influencers" class="nav-inf">📸 Dancers on IG</a>
       <a href="#companias-ig" class="nav-coig">🏛️ IG de compañías</a>
@@ -1186,6 +1209,7 @@ nav{transition:transform .3s ease}
         <div><p class="info-lbl">Dirección</p><p class="info-val"><strong>Anabella Tuliano</strong> — fundadora (2011). Explora el movimiento fuera del eje, gravedad e inercia, con estética minimalista.</p></div>
         <div><p class="info-lbl">Obras</p><p class="info-val"><em>Domésticame</em> · <em>Cadabra</em> · <em>Lo que tenía que ser</em>. Declarada de interés por la Legislatura porteña.</p></div>
         <div><p class="info-lbl">Reconocimientos</p><p class="info-val">Festival Konex de Música Clásica 2025 · Nominaciones Teatro del Mundo · Invitada a galas internacionales en Paraguay, San Juan, Mendoza, Resistencia.</p></div>
+        <div><p class="info-lbl">Anima Animal — con Herman Cornejo</p><p class="info-val">Tuliano firmó la coreografía de <em>Anima Animal</em>, obra dirigida y protagonizada por <strong>Herman Cornejo</strong> (primera figura del American Ballet Theatre) e interpretada junto al Grupo Cadabra. Parte de <em>Caaporá</em>, un libreto argentino de 1915 (Ricardo Güiraldes y Alfredo González Garaño) que iba a montar Vaslav Nijinsky y quedó inconcluso, inspirado en la leyenda guaraní del pájaro Urutaú. Producción integral del <strong>Teatro del Bicentenario</strong> (San Juan), con estreno mundial en 2022; música original de Luis Maurette «Uji» y Noelia Escalzo. Tuvo su debut en EE.&nbsp;UU. en el Joyce Theater de Nueva York en febrero de 2025, marcando la primera presentación de la compañía en ese país.</p></div>
         <div class="links-row">
           <a href="https://www.instagram.com/grupocadabra/" target="_blank" class="btn-link btn-prog">📷 @grupocadabra</a>
         </div>
@@ -1729,7 +1753,7 @@ nav{transition:transform .3s ease}
   <a class="inf-card" href="https://www.instagram.com/__melissahamilton/" target="_blank" rel="noopener"><span class="inf-name">Melissa Hamilton</span><span class="inf-meta">The Royal Ballet · Reino Unido</span><span class="inf-handle">@__melissahamilton</span></a>
 </div>
 
-<h3 class="inf-sub">11 cuentas argentinas más activas esta semana</h3>
+<h3 class="inf-sub">13 cuentas argentinas más activas esta semana</h3>
 <p class="inf-subnote">Argentinos que brillan en las grandes compañías del mundo y en el Teatro Colón. Una lista breve y verificada que iré ampliando: si sos bailarín y querés sumarte —o sumar a un colega—, la sugerencia es bienvenida.</p>
 <div class="inf-grid">
   <a class="inf-card ar" href="https://www.instagram.com/marianelanunezofficial/" target="_blank" rel="noopener"><span class="inf-name">Marianela Núñez</span><span class="inf-meta">The Royal Ballet · Londres</span><span class="inf-handle">@marianelanunezofficial</span></a>
@@ -1743,6 +1767,8 @@ nav{transition:transform .3s ease}
   <a class="inf-card ar" href="https://www.instagram.com/jonatan.lujan.art/" target="_blank" rel="noopener"><span class="inf-name">Jonatan Luján</span><span class="inf-meta">Metropolitan Opera Ballet / NJ Ballet · EE.UU.</span><span class="inf-handle">@jonatan.lujan.art</span></a>
   <a class="inf-card ar" href="https://www.instagram.com/natiuska19/" target="_blank" rel="noopener"><span class="inf-name">Natalia Pelayo</span><span class="inf-meta">Ballet Estable del Teatro Colón · Bs. As.</span><span class="inf-handle">@natiuska19</span></a>
   <a class="inf-card ar" href="https://www.instagram.com/_miss_wil/" target="_blank" rel="noopener"><span class="inf-name">Wilma Giglio</span><span class="inf-meta">Royal Danish Ballet · Copenhague</span><span class="inf-handle">@_miss_wil</span></a>
+  <a class="inf-card ar" href="https://www.instagram.com/mariacelestelosa/" target="_blank" rel="noopener"><span class="inf-name">Celeste Losa</span><span class="inf-meta">Ballet Estable del Teatro Colón · Bs. As.</span><span class="inf-handle">@mariacelestelosa</span></a>
+  <a class="inf-card ar" href="https://www.instagram.com/lucaserniofficial/" target="_blank" rel="noopener"><span class="inf-name">Lucas Erni</span><span class="inf-meta">Ballet Estable del Teatro Colón · Bs. As.</span><span class="inf-handle">@lucaserniofficial</span></a>
 </div>
 
 </section>
@@ -2016,7 +2042,7 @@ nav{transition:transform .3s ease}
     <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Estadounidense (1987), director de iluminación del Boston Ballet. Diseñó más de treinta estrenos para el coreógrafo <strong>Justin Peck</strong> y trabaja con William Forsythe y compañías de todo el mundo.</p></div>
     <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Su luz se ve hoy en el NYCB, ABT, San Francisco Ballet, Dutch National Ballet y más; suele firmar los estrenos de Peck (como los que el NYCB lleva a Saratoga en julio de 2026).</p></div>
     <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Premio Knight of Illumination (2019) y nominación al Tony 2024 por <em>Illinoise</em>. La voz más visible de su generación en iluminación de ballet.</p></div>
-    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Brandon_Stirling_Baker" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://www.balletx.org/collaborators/brandon-stirling-baker/" target="_blank" rel="noopener" class="btn-link btn-web">👤 Bio (BalletX)</a></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Brandon_Stirling_Baker" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://www.balletx.org/collaborators/brandon-stirling-baker/" target="_blank" rel="noopener" class="btn-link btn-web">👤 Bio (BalletX)</a><a href="https://www.stirlingbaker.com/" target="_blank" rel="noopener" class="btn-link btn-web">🌐 stirlingbaker.com</a><a href="https://www.bostonballet.org/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ Boston Ballet (Lighting Director)</a></div>
   </div>
   <div class="acl-card">
     <div class="acl-hdr"><span class="acl-num">10</span><span><span class="acl-name">Natasha Katz</span><span class="acl-role">Iluminación</span></span></div>
@@ -2058,42 +2084,42 @@ nav{transition:transform .3s ease}
     <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Leyenda de la alta costura italiana. Inauguró en 2012 la <em>Fall Fashion Gala</em> del NYCB, vistiendo a la compañía con su inconfundible refinamiento.</p></div>
     <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Su colaboración con el NYCB sigue siendo el modelo de los cruces entre moda y ballet que el mundo imitó después.</p></div>
     <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Su trabajo para el ballet fue elogiado por trasladar la exigencia de la costura a un cuerpo en movimiento, sin perder calidad ni detalle.</p></div>
-    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Valentino_(fashion_designer)" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://www.nycballet.com/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ New York City Ballet</a></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Valentino_(fashion_designer)" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://www.valentino.com/" target="_blank" rel="noopener" class="btn-link btn-web">🌐 valentino.com</a><a href="https://www.nycballet.com/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ New York City Ballet</a></div>
   </div>
   <div class="acl-card">
     <div class="acl-hdr"><span class="acl-num">16</span><span><span class="acl-name">Iris van Herpen</span><span class="acl-role">Vestuario / alta costura</span></span></div>
     <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Diseñadora neerlandesa, pionera de la costura tecnológica y la impresión 3D. Sus vestidos parecen organismos vivos; llevó esa estética al NYCB y a proyectos de danza.</p></div>
     <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Una de las invitadas más comentadas de la <em>Fall Fashion Gala</em> del NYCB, además de su trabajo de pasarela y de museo.</p></div>
     <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Aclamada por una visión futurista que dialoga con el cuerpo en movimiento; su vestuario es, en sí mismo, escenografía.</p></div>
-    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Iris_van_Herpen" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://www.nycballet.com/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ New York City Ballet</a></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Iris_van_Herpen" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://www.irisvanherpen.com/" target="_blank" rel="noopener" class="btn-link btn-web">🌐 irisvanherpen.com</a><a href="https://www.instagram.com/irisvanherpen/" target="_blank" rel="noopener" class="btn-link btn-web">📷 @irisvanherpen</a></div>
   </div>
   <div class="acl-card">
     <div class="acl-hdr"><span class="acl-num">17</span><span><span class="acl-name">Stella McCartney</span><span class="acl-role">Vestuario / alta costura</span></span></div>
     <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Diseñadora británica que cruzó varias veces al ballet: vistió el <em>Ocean’s Kingdom</em> del NYCB (música de Paul McCartney) y produjo vestuario para el Royal Ballet.</p></div>
     <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Sigue activa en la moda con incursiones puntuales en la danza y las artes escénicas.</p></div>
     <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Su vestuario para ballet fue leído como un soplo de aire contemporáneo sobre la tradición, con la sostenibilidad como sello.</p></div>
-    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Stella_McCartney" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://www.nycballet.com/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ New York City Ballet</a></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Stella_McCartney" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://www.stellamccartney.com/" target="_blank" rel="noopener" class="btn-link btn-web">🌐 stellamccartney.com</a><a href="https://www.nycballet.com/discover/ballet-repertory/oceans-kingdom" target="_blank" rel="noopener" class="btn-link btn-web">🎭 Ocean’s Kingdom (NYCB)</a></div>
   </div>
   <div class="acl-card">
     <div class="acl-hdr"><span class="acl-num">18</span><span><span class="acl-name">Christian Lacroix</span><span class="acl-role">Vestuario / alta costura</span></span></div>
     <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Modisto francés con una extensa segunda carrera como diseñador de vestuario para ópera y ballet, de un sentido del color y el ornamento inconfundible.</p></div>
     <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Su vestuario para danza y ópera se mantiene en repertorio en grandes casas europeas.</p></div>
     <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Elogiado por una opulencia que nunca es gratuita: cada traje cuenta una época, un carácter, un mundo.</p></div>
-    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Christian_Lacroix" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Christian_Lacroix" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://www.christian-lacroix.com/" target="_blank" rel="noopener" class="btn-link btn-web">🌐 christian-lacroix.com</a><a href="https://www.operadeparis.fr/en/" target="_blank" rel="noopener" class="btn-link btn-web">🎭 Opéra national de Paris</a></div>
   </div>
   <div class="acl-card">
     <div class="acl-hdr"><span class="acl-num">19</span><span><span class="acl-name">Es Devlin</span><span class="acl-role">Escenografía contemporánea</span></span></div>
     <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Escenógrafa y artista británica, célebre por sus esculturas escénicas cinéticas y luminosas. Trabaja en ópera, conciertos, instalaciones y, cada vez más, en cruces con la danza.</p></div>
     <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Una de las creadoras de escena más influyentes del momento, con proyectos entre el teatro, el arte y la performance a escala internacional.</p></div>
     <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Aclamada como una de las grandes renovadoras del espacio escénico contemporáneo, donde la escenografía se vuelve experiencia.</p></div>
-    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Es_Devlin" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://esdevlin.com/" target="_blank" rel="noopener" class="btn-link btn-web">🌐 esdevlin.com</a></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Es_Devlin" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://esdevlin.com/" target="_blank" rel="noopener" class="btn-link btn-web">🌐 esdevlin.com</a><a href="https://www.instagram.com/esdevlin/" target="_blank" rel="noopener" class="btn-link btn-web">📷 @esdevlin</a><a href="https://designmuseum.org/exhibitions/es-devlin" target="_blank" rel="noopener" class="btn-link btn-web">🖼️ Retrospectiva — Design Museum (desde sep 2026)</a></div>
   </div>
   <div class="acl-card">
     <div class="acl-hdr"><span class="acl-num">20</span><span><span class="acl-name">Finn Ross</span><span class="acl-role">Diseño de proyección y video</span></span></div>
     <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Diseñador británico de video y proyección, ganador del Tony, una de las figuras que llevaron el video escénico al primer plano de la danza y el teatro (trabajó, entre otros, con el National Ballet of Canada).</p></div>
     <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">El diseño de proyección es hoy parte central del lenguaje del ballet narrativo; su trabajo aparece en producciones de gran formato.</p></div>
     <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Reconocido por integrar la imagen en movimiento sin que devore la danza: tecnología al servicio de la dramaturgia.</p></div>
-    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Finn_Ross" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Finn_Ross" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://fraystudio.com/team/finn-ross" target="_blank" rel="noopener" class="btn-link btn-web">🌐 FRAY Studio</a></div>
   </div>
 </div>
 </section>
@@ -2476,6 +2502,98 @@ document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
   });
   nav.querySelectorAll('.nav-dd a').forEach(function(a){ a.addEventListener('click',closeAll); });
   document.addEventListener('click',closeAll);
+})();
+</script>
+<script>
+/* ===== Secciones colapsables (acordeón) ===== */
+(function(){
+  var EXCLUDE = {'pablo':1}; /* ¿Quién Soy? queda fija */
+  var CHEVRON = '\u25BE'; /* ▾ */
+
+  function wrapAfter(headerEl){
+    /* envuelve todos los hermanos posteriores a headerEl en un .sec-body */
+    var parent = headerEl.parentNode;
+    var body = document.createElement('div');
+    body.className = 'sec-body';
+    var n = headerEl.nextSibling;
+    while(n){ var next = n.nextSibling; body.appendChild(n); n = next; }
+    parent.appendChild(body);
+    return body;
+  }
+
+  function setup(section){
+    var id = section.id;
+    if(!id || EXCLUDE[id]) return;
+    var header, body;
+
+    if(section.querySelector(':scope > .reg-hdr')){
+      header = section.querySelector(':scope > .reg-hdr');
+      body = wrapAfter(header);
+    } else if(section.querySelector(':scope > .sec-inner')){
+      var inner = section.querySelector(':scope > .sec-inner');
+      var heading = inner.querySelector('.sec-heading');
+      header = inner; /* el área clicable es todo el bloque de título */
+      body = wrapAfter(heading); /* el cuerpo es lo que sigue al h2 dentro de .sec-inner */
+    } else if(section.querySelector(':scope > .arg-banner')){
+      header = section.querySelector(':scope > .arg-banner');
+      body = wrapAfter(header);
+    } else {
+      return;
+    }
+
+    header.classList.add('sec-toggle');
+    var chev = document.createElement('span');
+    chev.className = 'sec-chevron';
+    chev.setAttribute('aria-hidden','true');
+    chev.textContent = CHEVRON;
+    header.appendChild(chev);
+
+    /* accesibilidad — por defecto las secciones inician contraídas */
+    header.setAttribute('role','button');
+    header.setAttribute('tabindex','0');
+    section.classList.add('collapsed');
+    header.setAttribute('aria-expanded','false');
+
+    function toggle(){
+      var willCollapse = !section.classList.contains('collapsed');
+      section.classList.toggle('collapsed');
+      header.setAttribute('aria-expanded', willCollapse ? 'false':'true');
+    }
+    header.addEventListener('click', function(e){
+      /* permitir clicks en enlaces dentro del header sin colapsar */
+      if(e.target.closest('a')) return;
+      toggle();
+    });
+    header.addEventListener('keydown', function(e){
+      if(e.key==='Enter' || e.key===' '){ e.preventDefault(); toggle(); }
+    });
+
+    section._expand = function(){
+      if(section.classList.contains('collapsed')){
+        section.classList.remove('collapsed');
+        header.setAttribute('aria-expanded','true');
+      }
+    };
+  }
+
+  var sections = document.querySelectorAll('section[id]');
+  sections.forEach(setup);
+
+  /* Al navegar a una sección (link del nav o hash), expandirla */
+  function expandById(id){
+    var s = document.getElementById(id);
+    if(s && typeof s._expand === 'function') s._expand();
+  }
+  document.querySelectorAll('nav a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(){
+      var id = a.getAttribute('href').slice(1);
+      expandById(id);
+    });
+  });
+  window.addEventListener('hashchange', function(){
+    expandById(location.hash.slice(1));
+  });
+  if(location.hash) expandById(location.hash.slice(1));
 })();
 </script>
 </body>
