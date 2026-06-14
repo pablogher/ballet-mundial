@@ -19,7 +19,7 @@
 <meta name="twitter:title" content="Reporte Mundial de Ballet">
 <meta name="twitter:description" content="Agenda de ballet en Argentina y el mundo: estrenos, funciones, audiciones, compañías y crítica.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Reporte Mundial de Ballet","url":"https://pablogher.github.io/ballet-mundial/","inLanguage":"es-AR","description":"Agenda y calendario de ballet en Argentina y el mundo.","author":{"@type":"Person","name":"Pablo Hernández","jobTitle":"Stage Manager del Ballet Estable del Teatro Colón","sameAs":["https://www.instagram.com/pablogher","https://www.linkedin.com/in/pablogher/"]}}</script>
-<title>Reporte Mundial de Ballet — 8 de junio de 2026</title>
+<title>Reporte Mundial de Ballet — 14 de junio de 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -90,6 +90,8 @@ nav a.nav-aud:hover,nav a.nav-aud.active{color:#fff;background:rgba(196,135,110,
 .badge{display:inline-block;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border-radius:100px;font-family:sans-serif;font-weight:600;width:fit-content}
 .bp{background:rgba(201,168,76,.15);color:#7a5c10}.bn{background:rgba(122,158,142,.15);color:#2e6e57}.br2{background:rgba(196,135,110,.15);color:#7a3820}
 .hl-title{font-size:1.05rem;font-weight:700}.hl-co{font-size:.82rem;color:var(--mocha)}.hl-desc{font-size:.86rem;color:#555;line-height:1.52}
+.hl-intro{font-size:.95rem;color:var(--mocha);line-height:1.7;max-width:760px;margin:-18px 0 26px;border-left:3px solid var(--gold);padding-left:16px}
+.hl-intro em{color:var(--charcoal);font-style:italic}
 
 /* CALENDARIO */
 .cal-section{background:var(--warm);border-bottom:1px solid rgba(201,168,76,.25);padding:48px 24px}
@@ -277,6 +279,40 @@ nav{transition:transform .3s ease}
   nav.expanded{max-height:100vh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
   nav.expanded #nav-mobile-bar{position:sticky;top:0;background:var(--midnight);z-index:2}
 }
+
+/* ===== MAESTRAS Y MAESTROS EN ARGENTINA (acordeón por ciudad) ===== */
+.mae-wrap{margin-top:50px;border-top:1px solid rgba(124,99,85,.2);padding-top:38px}
+.mae-wrap.first{border-top:none;margin-top:34px;padding-top:0}
+.mae-head{display:flex;align-items:center;gap:13px;margin-bottom:14px}
+.mae-icon{width:46px;height:46px;flex:0 0 auto;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;background:linear-gradient(135deg,#1a6bb5 0%,#75aadb 100%);color:#fff}
+.mae-kicker{font-family:'Poppins',sans-serif;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.mae-title{font-family:'Poppins',sans-serif;font-size:1.42rem;font-weight:600;color:var(--charcoal);line-height:1.2}
+.mae-intro{max-width:780px;color:var(--mocha);margin:8px 0 4px;font-size:1rem}
+.mae-intro strong{color:var(--charcoal)}
+.mae-note{max-width:780px;margin:16px 0 26px;padding:13px 17px;border-left:3px solid var(--gold);background:rgba(201,168,76,.08);border-radius:0 10px 10px 0;font-size:.92rem;color:var(--mocha);font-style:italic}
+.city-acc{border:1px solid rgba(124,99,85,.22);border-radius:12px;margin:11px 0;background:#fff;overflow:hidden;box-shadow:0 1px 3px var(--shadow)}
+.city-sum{cursor:pointer;padding:15px 19px;font-family:'Poppins',sans-serif;font-weight:600;color:var(--charcoal);display:flex;align-items:center;gap:12px;list-style:none;font-size:1.02rem}
+.city-sum::-webkit-details-marker{display:none}
+.city-sum::marker{content:''}
+.city-sum:hover{background:rgba(201,168,76,.06)}
+.city-sum .chev{width:26px;height:26px;flex:0 0 auto;border-radius:50%;border:1px solid rgba(124,99,85,.35);color:var(--gold);display:inline-flex;align-items:center;justify-content:center;font-size:.85rem;transition:transform .26s ease}
+.city-acc[open] .city-sum .chev{transform:rotate(90deg)}
+.city-prov{font-family:sans-serif;font-weight:400;font-size:.72rem;letter-spacing:.04em;color:var(--dusty);text-transform:uppercase;margin-left:2px}
+.city-count{margin-left:auto;font-family:sans-serif;font-size:.7rem;color:var(--mocha);background:rgba(124,99,85,.1);padding:3px 10px;border-radius:100px}
+.city-body{padding:4px 19px 20px}
+.mae-card{border-top:1px solid rgba(124,99,85,.14);padding:16px 0 4px}
+.mae-card:first-child{border-top:none;padding-top:6px}
+.mae-name{font-family:'Poppins',sans-serif;font-weight:600;color:var(--charcoal);font-size:1.04rem;margin-bottom:2px}
+.mae-inst{color:var(--mocha);font-size:.9rem;margin-bottom:9px}
+.mae-inst .estado{display:inline-block;font-family:sans-serif;font-size:.62rem;letter-spacing:.05em;text-transform:uppercase;color:#2e6e57;background:rgba(122,158,142,.18);padding:2px 8px;border-radius:100px;margin-left:6px;vertical-align:middle}
+.al-lbl{font-family:sans-serif;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin:6px 0 4px}
+.al-list{list-style:none;margin:0;padding:0}
+.al-list li{position:relative;padding-left:18px;margin-bottom:6px;font-size:.93rem;color:var(--charcoal);line-height:1.55}
+.al-list li::before{content:'✦';position:absolute;left:0;top:1px;color:var(--gold);font-size:.7rem}
+.al-list li b{font-weight:600}
+.mae-src{font-family:sans-serif;font-size:.72rem;color:var(--dusty);margin-top:8px;font-style:italic}
+@media(max-width:760px){.mae-title{font-size:1.2rem}.city-count{display:none}}
+
 </style>
 </head>
 <body>
@@ -285,8 +321,8 @@ nav{transition:transform .3s ease}
 <header>
   <span class="h-orn">✦  ✦  ✦</span>
   <h1>Reporte Mundial de <span>Ballet</span></h1>
-  <p class="h-sub">Temporadas activas · Semana del 8 de junio de 2026</p>
-  <span class="h-date">🗓 8 de junio de 2026</span>
+  <p class="h-sub">Temporadas activas · Semana del 8 al 14 de junio de 2026</p>
+  <span class="h-date">🗓 14 de junio de 2026</span>
 </header>
 
 <!-- ═══════════ NAV ═══════════ -->
@@ -356,16 +392,49 @@ nav{transition:transform .3s ease}
 <!-- ═══════════ DESTACADOS ═══════════ -->
 <section class="highlights" id="highlights">
 <div class="sec-inner">
-  <p class="sec-label">Especial de la semana</p>
-  <h2 class="sec-heading">Estrenos Mundiales · Nuevas Producciones · Crítica Destacada</h2>
+  <p class="sec-label">Especial de la semana · 8 al 14 de junio de 2026</p>
+  <h2 class="sec-heading">La semana en el ballet · Estrenos y crítica del mundo</h2>
+  <p class="hl-intro">Una vuelta por lo que dejó la semana en los principales escenarios: estrenos, debuts nacionales y la crítica internacional más reciente. Abre la ronda, no por casualidad, la <em>Alicia</em> de Wheeldon en La Scala —la misma producción que el Ballet Estable estrena en el Colón en julio.</p>
   <div class="hl-grid">
 
-    <div class="hl-card">
-      <span class="badge bp">🇦🇷 Estreno argentino · 16 al 26 de julio</span>
+    <div class="hl-card br">
+      <span class="badge br2">⭐ Crítica de la semana · 12 jun</span>
       <div class="hl-title">Alice's Adventures in Wonderland — Christopher Wheeldon</div>
-      <div class="hl-co">Ballet Estable del Teatro Colón · Buenos Aires</div>
-      <div class="hl-desc">Estreno argentino de la gran creación de Christopher Wheeldon (música de Joby Talbot), con la producción del Ballet Real Danés y el Ballet Real Sueco y dirección musical de David Briskin. Funciones del 16 al 26 de julio.</div>
-      <div class="links-row"><a href="https://teatrocolon.org.ar/produccion/alices-adventures-in-wonderland/" target="_blank" class="btn-link btn-prog">📖 La producción</a><a href="https://teatrocolon.org.ar/" target="_blank" class="btn-link btn-web">🌐 Teatro Colón</a></div>
+      <div class="hl-co">La Scala Theatre Ballet · Teatro alla Scala, Milán · debut italiano</div>
+      <div class="hl-desc">The Ballet Herald reseñó el debut italiano de la <em>Alicia</em> de Wheeldon —con funciones agotadas— justo cuando el Colón prepara su estreno argentino. La crítica destaca la fluidez con que la obra se mueve entre la Inglaterra victoriana, el delirio del País de las Maravillas y el mundo contemporáneo del que emerge el sueño de Alicia, sostenida por la partitura de Joby Talbot. La función fue de Camilla Cerulli (Alicia), con la Reina de Corazones de Alice Mariani llevándose la ovación más entusiasta de la noche.</div>
+      <div class="links-row"><a href="https://www.balletherald.com/la-scala-theatre-ballet-alices-adventures-in-wonderland-review-2026/" target="_blank" class="btn-link btn-prog">📰 Leer la crítica</a><a href="https://teatrocolon.org.ar/produccion/alices-adventures-in-wonderland/" target="_blank" class="btn-link btn-web">🎭 La misma obra en el Colón</a></div>
+    </div>
+
+    <div class="hl-card br">
+      <span class="badge br2">⭐ Estreno + crítica · 11 jun</span>
+      <div class="hl-title">So Are We: León &amp; Lightfoot — Shoot the Moon / Salle de danse</div>
+      <div class="hl-co">The Royal Ballet · Royal Opera House, Covent Garden, Londres</div>
+      <div class="hl-desc">Programa doble con dos obras de Sol León y Paul Lightfoot. Bachtrack lo calificó de "triunfo largamente esperado", elogiando la cantidad de ingenio, precisión e imaginación condensada en una hora. En escena, Lauren Cuthbertson, Vadim Muntagirov, Anna Rose O'Sullivan, Matthew Ball, Francesca Hayward y Marcelino Sambé, con Matthew Rowe en el podio.</div>
+      <div class="links-row"><a href="https://bachtrack.com/review-so-are-we-leon-lightfoot-the-royal-ballet-shoot-the-moon-salle-de-danse-royal-opera-house-london-june-2026" target="_blank" class="btn-link btn-prog">📰 Leer la crítica</a><a href="https://www.rbo.org.uk/" target="_blank" class="btn-link btn-web">🌐 Royal Ballet</a></div>
+    </div>
+
+    <div class="hl-card br">
+      <span class="badge br2">⭐ Estreno en NY + crítica</span>
+      <div class="hl-title">Mary, Queen of Scots — Sophie Laplane</div>
+      <div class="hl-co">Scottish Ballet · David H. Koch Theater, Lincoln Center, Nueva York · 4–7 jun</div>
+      <div class="hl-desc">Estreno neoyorquino del primer ballet narrativo de largo aliento de Sophie Laplane, codirigido con James Bonas. La obra reconstruye el vínculo entre María Estuardo e Isabel I a través de los recuerdos de una Isabel agonizante. La crítica subrayó la coreografía de los estados psicológicos y una apuesta de casting inclusivo: Roseanna Leney como María (rol creado para ella) y el soloist Harvey Littlefield como la joven Isabel.</div>
+      <div class="links-row"><a href="https://www.balletherald.com/scottish-ballet-mary-queen-of-scots-review-2026/" target="_blank" class="btn-link btn-prog">📰 Leer la crítica</a><a href="https://www.scottishballet.co.uk/" target="_blank" class="btn-link btn-web">🌐 Scottish Ballet</a></div>
+    </div>
+
+    <div class="hl-card br">
+      <span class="badge br2">⭐ Crítica · 9 jun</span>
+      <div class="hl-title">The Four Seasons Reimagined — cuatro coreógrafos</div>
+      <div class="hl-co">BalletX · Mann Center (al aire libre), Filadelfia</div>
+      <div class="hl-desc">Relectura de <em>Las cuatro estaciones</em> de Vivaldi con partitura original de Dan Deacon interpretada en vivo, una estación por coreógrafo, en el escenario al aire libre del Mann Center. La crítica de The Ballet Herald celebró cómo los bailarines hacen eco de una música que "se mueve como el clima", en una velada de verano filadelfiana.</div>
+      <div class="links-row"><a href="https://www.balletherald.com/balletx-the-four-seasons-reimagined-review-2026/" target="_blank" class="btn-link btn-prog">📰 Leer la crítica</a><a href="https://www.balletx.org/" target="_blank" class="btn-link btn-web">🌐 BalletX</a></div>
+    </div>
+
+    <div class="hl-card br">
+      <span class="badge br2">⭐ En cartel ahora · 13–21 jun</span>
+      <div class="hl-title">MADDADDAM — Wayne McGregor</div>
+      <div class="hl-co">National Ballet of Canada · Four Seasons Centre, Toronto</div>
+      <div class="hl-desc"><span class="stars">★★★★</span> El Globe and Mail la describió como una obra que deja "horrorizado, desconcertado y asombrado". Música de Max Richter, sobre la trilogía de Margaret Atwood. Sube a escena esta misma semana en Toronto.</div>
+      <div class="links-row"><a href="https://national.ballet.ca/productions/2526/maddaddam/" target="_blank" class="btn-link btn-prog">📖 La producción</a></div>
     </div>
 
     <div class="hl-card">
@@ -385,67 +454,35 @@ nav{transition:transform .3s ease}
     </div>
 
     <div class="hl-card">
-      <span class="badge bp">🌟 Estreno Mundial</span>
-      <div class="hl-title">Don Quixote — Nueva puesta en escena</div>
+      <span class="badge bp">🌟 Lo que viene · 19 jun</span>
+      <div class="hl-title">Hamlet — Leo Mujić</div>
+      <div class="hl-co">Queensland Ballet · Thomas Dixon Centre, Brisbane</div>
+      <div class="hl-desc">Premiere el 19 de junio. Música de Tchaikovsky y Saint-Saëns. Primera temporada bajo la dirección de Ivan Gil-Ortega.</div>
+      <div class="links-row"><a href="https://www.queenslandballet.com.au/performances/2026/hamlet" target="_blank" class="btn-link btn-prog">📖 Programa</a><a href="https://www.queenslandballet.com.au/" target="_blank" class="btn-link btn-web">🌐 Web</a></div>
+    </div>
+
+    <div class="hl-card">
+      <span class="badge bp">🌟 Lo que viene · 23 jun–2 jul</span>
+      <div class="hl-title">Copland Dance Episodes — Justin Peck</div>
+      <div class="hl-co">The Australian Ballet · Arts Centre Melbourne</div>
+      <div class="hl-desc">Primera vez fuera de Nueva York. Justin Peck, ganador del Tony Award. Bachtrack lo definió como "ballet moderno gozoso de un pionero coreográfico".</div>
+      <div class="links-row"><a href="https://australianballet.com.au/" target="_blank" class="btn-link btn-web">🌐 australianballet.com.au</a></div>
+    </div>
+
+    <div class="hl-card np">
+      <span class="badge bn">🌟 Lo que viene · 29 jun</span>
+      <div class="hl-title">Don Quixote — nueva puesta en escena</div>
       <div class="hl-co">American Ballet Theatre · Metropolitan Opera House, Nueva York</div>
-      <div class="hl-desc">Premiere el 29 de junio. Coreografía: Susan Jaffe y Susan Jones. Escenografía: Santo Loquasto. Catherine Hurlin (Kitri) · Isaac Hernández (Basilio). Natalia Osipova como invitada el 6 de julio.</div>
+      <div class="hl-desc">Premiere el 29 de junio. Coreografía de Susan Jaffe y Susan Jones; escenografía de Santo Loquasto. Catherine Hurlin (Kitri) e Isaac Hernández (Basilio); Natalia Osipova como invitada el 6 de julio.</div>
       <div class="links-row"><a href="https://www.abt.org/ballet/don-quixote/" target="_blank" class="btn-link btn-prog">📖 Programa ABT</a><a href="https://www.abt.org/" target="_blank" class="btn-link btn-web">🌐 abt.org</a></div>
     </div>
 
     <div class="hl-card">
-      <span class="badge bp">🌟 Estreno Mundial</span>
-      <div class="hl-title">SISU — Alice Topp</div>
-      <div class="hl-co">Houston Ballet · Wortham Theater Center, Houston</div>
-      <div class="hl-desc">Triple bill "An Evening with the Stars". Hasta el 7 de junio. También: Dances at a Gathering (Robbins) y Tapestry (Stanton Welch).</div>
-      <div class="links-row"><a href="https://www.houstonballet.org/" target="_blank" class="btn-link btn-web">🌐 houstonballet.org</a></div>
-    </div>
-
-    <div class="hl-card">
-      <span class="badge bp">🌟 Estreno Mundial</span>
-      <div class="hl-title">Kismet — Jera Wolfe</div>
-      <div class="hl-co">National Ballet of Canada · Four Seasons Centre, Toronto</div>
-      <div class="hl-desc">Coreógrafa Métis canadiense. Explora el destino a través de la naturaleza. 29 mayo–4 junio.</div>
-      <div class="links-row"><a href="https://national.ballet.ca/productions/2526/new-work-by-jera-wolfe/" target="_blank" class="btn-link btn-prog">📖 Sobre la obra</a></div>
-    </div>
-
-    <div class="hl-card np">
-      <span class="badge bn">🆕 Estreno australiano</span>
-      <div class="hl-title">Hamlet — Leo Mujić</div>
-      <div class="hl-co">Queensland Ballet · Thomas Dixon Centre, Brisbane</div>
-      <div class="hl-desc">Premiere el 19 de junio. Música de Tchaikovsky y Saint-Saëns. Primera dir. temporada de Ivan Gil-Ortega.</div>
-      <div class="links-row"><a href="https://www.queenslandballet.com.au/performances/2026/hamlet" target="_blank" class="btn-link btn-prog">📖 Programa</a><a href="https://www.queenslandballet.com.au/" target="_blank" class="btn-link btn-web">🌐 Web</a></div>
-    </div>
-
-    <div class="hl-card np">
-      <span class="badge bn">🆕 Premiere Viena</span>
-      <div class="hl-title">Rhapsody (Ashton) + Within the Golden Hour (Wheeldon)</div>
-      <div class="hl-co">Vienna State Ballet · Wiener Staatsoper · 29 junio</div>
-      <div class="hl-desc">Tributo a Sir Frederick Ashton. Gala Ballet 2026 con Diamonds (Balanchine). Dos estrenos en una sola noche de gala.</div>
-      <div class="links-row"><a href="https://www.wiener-staatsoper.at/en/calendar/detail/ballett-gala-2026/2026-06-29/" target="_blank" class="btn-link btn-prog">📖 Detalles gala</a></div>
-    </div>
-
-    <div class="hl-card br">
-      <span class="badge br2">⭐ Mejor crítica</span>
-      <div class="hl-title">MADDADDAM — Wayne McGregor</div>
-      <div class="hl-co">National Ballet of Canada · 13–21 junio</div>
-      <div class="hl-desc"><span class="stars">★★★★</span> Globe and Mail: "Te dejará horrorizado, desconcertado y asombrado." Música: Max Richter. Basada en la trilogía de Atwood.</div>
-      <div class="links-row"><a href="https://national.ballet.ca/productions/2526/maddaddam/" target="_blank" class="btn-link btn-prog">📖 Producción</a></div>
-    </div>
-
-    <div class="hl-card br">
-      <span class="badge br2">⭐ 4 estrellas Bachtrack</span>
-      <div class="hl-title">Copland Dance Episodes — Justin Peck</div>
-      <div class="hl-co">The Australian Ballet · Arts Centre Melbourne · 23 jun–2 jul</div>
-      <div class="hl-desc">Primera vez fuera de NYC. Justin Peck, ganador del Tony Award. Bachtrack: "Ballet moderno gozoso de un pionero coreográfico."</div>
-      <div class="links-row"><a href="https://australianballet.com.au/" target="_blank" class="btn-link btn-web">🌐 australianballet.com.au</a></div>
-    </div>
-
-    <div class="hl-card br">
-      <span class="badge br2">⭐ Estreno argentino notable</span>
-      <div class="hl-title">Alice's Adventures in Wonderland — C. Wheeldon</div>
-      <div class="hl-co">Ballet Estable del Teatro Colón · Buenos Aires · 16–30 jul</div>
-      <div class="hl-desc">Estreno argentino de la creación del Royal Danish Ballet/Royal Swedish Ballet. Música: Joby Talbot. Dir. musical: David Briskin. Julio Bocca dirige la compañía.</div>
-      <div class="links-row"><a href="https://teatrocolon.org.ar/produccion/alices-adventures-in-wonderland/" target="_blank" class="btn-link btn-prog">📖 Teatro Colón</a></div>
+      <span class="badge bp">🇦🇷 Próximo estreno · 16–26 jul</span>
+      <div class="hl-title">Alice's Adventures in Wonderland — Christopher Wheeldon</div>
+      <div class="hl-co">Ballet Estable del Teatro Colón · Buenos Aires</div>
+      <div class="hl-desc">Estreno argentino de la creación de Wheeldon (música de Joby Talbot), con la producción del Ballet Real Danés y el Ballet Real Sueco y dirección musical de David Briskin. Julio Bocca dirige la compañía. Funciones del 16 al 26 de julio.</div>
+      <div class="links-row"><a href="https://teatrocolon.org.ar/produccion/alices-adventures-in-wonderland/" target="_blank" class="btn-link btn-prog">📖 La producción</a><a href="https://teatrocolon.org.ar/" target="_blank" class="btn-link btn-web">🌐 Teatro Colón</a></div>
     </div>
 
   </div>
@@ -1479,9 +1516,224 @@ nav{transition:transform .3s ease}
 <section class="reg" id="estudiantes">
 <div class="reg-hdr">
   <div class="reg-icon ri-est">🎓</div>
-  <h2 class="reg-title"><span>Para estudiantes</span>Certámenes y Concursos Clase A</h2>
+  <h2 class="reg-title"><span>Para estudiantes</span>Maestros y certámenes</h2>
 </div>
-<p class="info-val" style="max-width:720px;margin:-14px 0 30px;color:var(--mocha)">Las principales competencias internacionales que abren puertas a becas, escuelas y compañías. Trampolín para la carrera profesional de las y los jóvenes bailarines.</p>
+<!-- ░░░ Maestras y Maestros en Argentina ░░░ -->
+<div class="mae-wrap first">
+  <div class="mae-head">
+    <div class="mae-icon">🗺️</div>
+    <div>
+      <div class="mae-kicker">Investigación en curso</div>
+      <h3 class="mae-title">Maestras y Maestros en Argentina</h3>
+    </div>
+  </div>
+
+  <p class="mae-intro">Antes que nada: esto es una <strong>investigación que estoy haciendo, ciudad por ciudad, de las maestras y los maestros de danza que hoy pueden mostrar a ex alumnos suyos trabajando en una compañía profesional</strong>. La idea es simple y muy concreta: que quien elige un maestro o una maestra para sus hijos sepa que ahí hay formadores que pueden demostrar, con casos reales, que sus alumnos tienen una posibilidad de salida laboral en la danza —que esto puede ser una profesión y no solamente un hobby.</p>
+
+  <div class="mae-note">Es un trabajo que recién estoy empezando y todavía me falta muchísima información. El mapa está incompleto a propósito: voy sumando ciudades y nombres a medida que puedo verificar cada caso con fuentes. Si conocés un maestro o una maestra que debería estar acá, lo sumo con gusto.</div>
+
+  <!-- Concordia -->
+  <details class="city-acc">
+    <summary class="city-sum"><span class="chev">▸</span> Concordia <span class="city-prov">Entre Ríos</span><span class="city-count">1 maestra</span></summary>
+    <div class="city-body">
+      <div class="mae-card">
+        <div class="mae-name">Máxima Barreto</div>
+        <div class="mae-inst">Almas Danzantes <span class="estado">En actividad</span></div>
+        <p class="al-lbl">Alumna en formación profesional</p>
+        <ul class="al-list">
+          <li><b>Regina Ríos</b> — a los 15 años (2025) fue una de las cinco seleccionadas en el país para una beca del American Ballet de Nueva York.</li>
+        </ul>
+        <p class="mae-src">Fuente: Despertar Entrerriano (nov. 2025).</p>
+      </div>
+    </div>
+  </details>
+
+  <!-- Córdoba capital -->
+  <details class="city-acc">
+    <summary class="city-sum"><span class="chev">▸</span> Córdoba <span class="city-prov">Córdoba · capital</span><span class="city-count">2 instituciones</span></summary>
+    <div class="city-body">
+      <div class="mae-card">
+        <div class="mae-name">María Esther Triviño</div>
+        <div class="mae-inst">Seminario de Danza Clásica Nora Irinova (Teatro del Libertador) <span class="estado">En actividad</span></div>
+        <p class="al-lbl">Alumnos que califican</p>
+        <ul class="al-list">
+          <li><b>Caterina Graziani</b> — vía GPAL, becas y pasos por Hamburgo, la Mosa Ballet School (Bélgica) y Miami.</li>
+          <li><b>Guillermo Franco Rolutti</b> — vía GPAL llegó a Hamburgo; finalista del Prix de Lausanne 2024.</li>
+        </ul>
+      </div>
+      <div class="mae-card">
+        <div class="mae-name">Cristina Gómez Comini</div>
+        <div class="mae-inst">Danza Viva — Centro de Estudios <span class="estado">En actividad</span></div>
+        <p class="al-lbl">Alumno que califica</p>
+        <ul class="al-list">
+          <li><b>Facundo Ferreyra</b> — del taller del Teatro San Martín a la escuela Martha Graham (Nueva York).</li>
+        </ul>
+      </div>
+    </div>
+  </details>
+
+  <!-- Mendoza -->
+  <details class="city-acc">
+    <summary class="city-sum"><span class="chev">▸</span> Mendoza <span class="city-prov">Mendoza</span><span class="city-count">2 instituciones</span></summary>
+    <div class="city-body">
+      <div class="mae-card">
+        <div class="mae-name">María Cristina Hidalgo</div>
+        <div class="mae-inst">Escuela de Ballet María Cristina Hidalgo <span class="estado">En actividad</span></div>
+        <p class="al-lbl">Alumna que califica</p>
+        <ul class="al-list">
+          <li><b>Inés Riveros</b> — beca al Year Round Program con Vassiliev (Nueva York); bailarina profesional.</li>
+        </ul>
+      </div>
+      <div class="mae-card">
+        <div class="mae-name">Escuela Carlos Varas Gazari</div>
+        <div class="mae-inst">Escuela estatal 4-149 <span class="estado">En actividad</span></div>
+        <p class="al-lbl">Alumna que califica</p>
+        <ul class="al-list">
+          <li><b>Asunción Domínguez</b> — beca Julio Bocca del CAD; continuó en una compañía de Nueva York.</li>
+        </ul>
+      </div>
+    </div>
+  </details>
+
+  <!-- Rosario -->
+  <details class="city-acc">
+    <summary class="city-sum"><span class="chev">▸</span> Rosario <span class="city-prov">Santa Fe</span><span class="city-count">1 maestra</span></summary>
+    <div class="city-body">
+      <div class="mae-card">
+        <div class="mae-name">Carina Odisio</div>
+        <div class="mae-inst">Koi Ballet <span class="estado">En actividad</span></div>
+        <p class="al-lbl">Alumnas que califican</p>
+        <ul class="al-list">
+          <li><b>Jazmín Arrieta</b> — finalista del YAGP; continuó en la Royal Ballet School (Londres).</li>
+          <li><b>Estefanía Ontanilla</b> — finalista del YAGP; beca a la Escuela de Ballet de Alberta; trayectoria hacia el Atlanta Ballet.</li>
+          <li><b>Lucía Cosme</b> — finalista del YAGP; beca a la Escuela de Ballet de Alberta (Canadá).</li>
+          <li><b>Martina Peccioloni</b> — trayectoria hacia el Atlanta Ballet.</li>
+        </ul>
+      </div>
+    </div>
+  </details>
+
+  <!-- Salta -->
+  <details class="city-acc">
+    <summary class="city-sum"><span class="chev">▸</span> Salta <span class="city-prov">Salta · capital</span><span class="city-count">1 maestra</span></summary>
+    <div class="city-body">
+      <div class="mae-card">
+        <div class="mae-name">Candela García Schwarcz</div>
+        <div class="mae-inst">Escuela de Ballet y Teatro Musical Candela García Schwarcz <span class="estado">En actividad</span></div>
+        <p class="al-lbl">Alumna que califica</p>
+        <ul class="al-list">
+          <li><b>Amira Saruf</b> — beca de la Fundación Julio Bocca e ingreso al ISA del Teatro Colón.</li>
+        </ul>
+        <p class="mae-src">La escuela declara además alumnos en el Teatro Colón y el Taller del San Martín, finalistas del YAGP y becas internacionales (nombres a confirmar).</p>
+      </div>
+    </div>
+  </details>
+
+  <!-- San Juan -->
+  <details class="city-acc">
+    <summary class="city-sum"><span class="chev">▸</span> San Juan <span class="city-prov">San Juan · capital</span><span class="city-count">1 escuela</span></summary>
+    <div class="city-body">
+      <div class="mae-card">
+        <div class="mae-name">Alejandra Lloveras y Celina Castro</div>
+        <div class="mae-inst">Studio Uno <span class="estado">En actividad</span></div>
+        <p class="al-lbl">Alumnas que califican</p>
+        <ul class="al-list">
+          <li><b>Giuliana Ciari</b> — finalista del YAGP (Italia); primera sanjuanina admitida en la escuela del American Ballet Theatre (Nueva York); ISA del Teatro Colón.</li>
+          <li><b>Bianca Balverde</b> — finalista de Danzamérica/YAGP; beca a la Escuela Pro Ballet Cinthia Labaronne (Suiza).</li>
+          <li><b>María Josefina Meli</b> — beca del American Award of Ballet (Nueva York).</li>
+        </ul>
+      </div>
+    </div>
+  </details>
+
+  <!-- San Miguel de Tucumán -->
+  <details class="city-acc">
+    <summary class="city-sum"><span class="chev">▸</span> San Miguel de Tucumán <span class="city-prov">Tucumán</span><span class="city-count">2 maestras</span></summary>
+    <div class="city-body">
+      <div class="mae-card">
+        <div class="mae-name">Adriana Soria</div>
+        <div class="mae-inst">Escuela de Ballet Adriana Soria (método Vaganova) <span class="estado">En actividad</span></div>
+        <p class="al-lbl">Alumno que califica</p>
+        <ul class="al-list">
+          <li><b>Agustín Reyes</b> — beca a la Joffrey Ballet School (Nueva York); finalista de la preselección del Prix de Lausanne 2017.</li>
+        </ul>
+      </div>
+      <div class="mae-card">
+        <div class="mae-name">Gabriela Esquivel <span style="font-weight:400;color:var(--mocha);font-size:.85rem">(clásico) · Belén Caro (contemporáneo)</span></div>
+        <div class="mae-inst">Gabriela Esquivel Ballet Studio <span class="estado">En actividad</span></div>
+        <p class="al-lbl">Alumna que califica</p>
+        <ul class="al-list">
+          <li><b>Camila Díaz</b> — finalista del YAGP 2024 y 2025; beca al Nervi Festival (Italia).</li>
+        </ul>
+      </div>
+    </div>
+  </details>
+
+  <!-- Santa Fe capital -->
+  <details class="city-acc">
+    <summary class="city-sum"><span class="chev">▸</span> Santa Fe <span class="city-prov">Santa Fe · capital</span><span class="city-count">1 institución</span></summary>
+    <div class="city-body">
+      <div class="mae-card">
+        <div class="mae-name">Seminario Provincial de Ballet</div>
+        <div class="mae-inst">Fundado por María Elizabeth Sture · dirección actual de Andrea Guglielminetti (Centro Cultural Provincial) <span class="estado">En actividad</span></div>
+        <p class="al-lbl">Alumnos/as que califican</p>
+        <ul class="al-list">
+          <li><b>Matías Oberlin</b> — Ballet de Hamburgo; hoy bailarín principal del Ballet am Rhein (Düsseldorf).</li>
+          <li><b>Antonella Martinelli</b> — National Ballet of Canada (Toronto).</li>
+          <li><b>Regina Bertuzzi</b> — Royal Winnipeg Ballet School (Canadá).</li>
+          <li><b>Lucía García Puente</b> — escuela de Alvin Ailey (Nueva York).</li>
+          <li><b>Luciana Barrirero</b> y <b>Larisa Hominal</b> — Ballet Estable del Teatro Colón.</li>
+          <li><b>Julieta Paul</b> — primera bailarina del Ballet del Teatro Argentino de La Plata.</li>
+        </ul>
+      </div>
+    </div>
+  </details>
+
+  <!-- Santiago del Estero -->
+  <details class="city-acc">
+    <summary class="city-sum"><span class="chev">▸</span> Santiago del Estero <span class="city-prov">Santiago del Estero</span><span class="city-count">1 maestra</span></summary>
+    <div class="city-body">
+      <div class="mae-card">
+        <div class="mae-name">Waleska Fochesato</div>
+        <div class="mae-inst">Santiago Ballet (escuela de la familia Fochesato) <span class="estado">En actividad</span></div>
+        <p class="al-lbl">Alumna en formación profesional</p>
+        <ul class="al-list">
+          <li><b>Catalina Strelczuk</b> — cursa su último año en el Instituto Superior de Arte del Teatro Colón.</li>
+        </ul>
+      </div>
+    </div>
+  </details>
+
+  <!-- Villa Carlos Paz -->
+  <details class="city-acc">
+    <summary class="city-sum"><span class="chev">▸</span> Villa Carlos Paz <span class="city-prov">Córdoba</span><span class="city-count">1 maestra</span></summary>
+    <div class="city-body">
+      <div class="mae-card">
+        <div class="mae-name">Sandra Racedo</div>
+        <div class="mae-inst">Estudio de Ballet Sandra Racedo <span class="estado">En actividad</span></div>
+        <p class="al-lbl">Alumnos que califican</p>
+        <ul class="al-list">
+          <li><b>Abril Marcucci</b> — final del YAGP (Nueva York, 2019); becas en Canadá, Basilea y Opus Ballet (Italia); hoy en la escuela de la Ópera de París.</li>
+          <li><b>Benjamín Lameiro</b> — beca de estudio del Miami City Ballet.</li>
+        </ul>
+      </div>
+    </div>
+  </details>
+
+</div>
+<!-- ░░░ fin Maestras y Maestros ░░░ -->
+
+<div class="mae-wrap">
+  <div class="mae-head">
+    <div class="mae-icon" style="background:linear-gradient(135deg,#0a2a5c 0%,#b01020 100%)">🏆</div>
+    <div>
+      <div class="mae-kicker">Oportunidades reales</div>
+      <h3 class="mae-title">Certámenes y Concursos que otorgan becas o trabajos</h3>
+    </div>
+  </div>
+  <p class="mae-intro">Acá no se publican certámenes en los que solo se compite por un primer, segundo o tercer puesto. El criterio es otro: figuran únicamente los certámenes y concursos que pueden abrir <strong>oportunidades concretas de crecimiento laboral y artístico</strong> para los estudiantes —los que otorgan becas, pasantías, ingreso a escuelas o contratos con compañías, y que ponen a los y las jóvenes frente a directores y maestros que buscan talento.</p>
+</div>
+
 <div class="co-grid">
 
   <!-- Prix de Lausanne -->
@@ -1594,6 +1846,9 @@ nav{transition:transform .3s ease}
   </div>
 
 </div>
+
+
+
 </section>
 
 <!-- ═══════════ AUDICIONES ═══════════ -->
