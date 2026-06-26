@@ -92,6 +92,11 @@ nav a.nav-aud:hover,nav a.nav-aud.active{color:#fff;background:rgba(196,135,110,
 .hl-title{font-size:1.05rem;font-weight:700}.hl-co{font-size:.82rem;color:var(--mocha)}.hl-desc{font-size:.86rem;color:#555;line-height:1.52}
 .hl-intro{font-size:.95rem;color:var(--mocha);line-height:1.7;max-width:760px;margin:-18px 0 26px;border-left:3px solid var(--gold);padding-left:16px}
 .hl-intro em{color:var(--charcoal);font-style:italic}
+.hl-xref{font-size:.82rem;color:var(--mocha);line-height:1.55;margin-top:2px}
+.hl-xref a{color:#6a4e0a;text-decoration:none;border-bottom:1px solid rgba(201,168,76,.5);transition:border-color .2s}
+.hl-xref a:hover{border-color:var(--gold)}
+.hl-note{font-size:.72rem;color:var(--dusty);font-style:italic;margin-top:8px;line-height:1.45}
+.xref-flash{outline:2px solid var(--gold);outline-offset:4px;border-radius:12px}
 
 /* CALENDARIO */
 .cal-section{background:var(--warm);border-bottom:1px solid rgba(201,168,76,.25);padding:48px 24px}
@@ -368,7 +373,10 @@ nav{transition:transform .3s ease}
       <div class="hl-title">Alice's Adventures in Wonderland — Christopher Wheeldon</div>
       <div class="hl-co">La Scala Theatre Ballet · Teatro alla Scala, Milán · debut italiano</div>
       <div class="hl-desc">The Ballet Herald reseñó el debut italiano de la <em>Alicia</em> de Wheeldon —con funciones agotadas— justo cuando el Colón prepara su estreno argentino. La crítica destaca la fluidez con que la obra se mueve entre la Inglaterra victoriana, el delirio del País de las Maravillas y el mundo contemporáneo del que emerge el sueño de Alicia, sostenida por la partitura de Joby Talbot. La función fue de Camilla Cerulli (Alicia), con la Reina de Corazones de Alice Mariani llevándose la ovación más entusiasta de la noche.</div>
-      <div class="links-row"><a href="https://www.balletherald.com/la-scala-theatre-ballet-alices-adventures-in-wonderland-review-2026/" target="_blank" class="btn-link btn-prog">📰 Leer la crítica</a><a href="https://teatrocolon.org.ar/produccion/alices-adventures-in-wonderland/" target="_blank" class="btn-link btn-web">🎭 La misma obra en el Colón</a></div>
+      <div class="hl-desc"><strong>Para tener en cuenta: próximo estreno del Ballet Estable del Teatro Colón</strong> (16 al 26 de julio de 2026).</div>
+      <div class="hl-xref">Equipo de esta producción, también en esta página: <a href="#card-wheeldon">Christopher Wheeldon</a> · <a href="#card-crowley">Bob Crowley</a> · <a href="#card-katz">Natasha Katz</a> · <a href="#card-briskin">David Briskin</a>.</div>
+      <div class="links-row"><a href="https://www.balletherald.com/la-scala-theatre-ballet-alices-adventures-in-wonderland-review-2026/" target="_blank" class="btn-link btn-prog">📰 Leer la crítica</a><a href="https://www.youtube.com/watch?v=imBAEUBq3Q8" target="_blank" class="btn-link btn-yt">▶ Tráiler (Royal Opera House)</a><a href="https://teatrocolon.org.ar/produccion/alices-adventures-in-wonderland/" target="_blank" class="btn-link btn-web">🎭 La misma obra en el Colón</a></div>
+      <p class="hl-note">El tráiler corresponde a la producción original del Royal Opera House (The Royal Ballet), que es la misma puesta de Christopher Wheeldon que el Colón estrena en julio (no a la función de La Scala).</p>
     </div>
 
     <div class="hl-card">
@@ -1984,7 +1992,7 @@ nav{transition:transform .3s ease}
 <p class="acl-intro">Quiénes están firmando danza <strong>hoy</strong> en los escenarios argentinos: creadores —argentinos y extranjeros— con obra en cartel durante 2026 o a punto de estrenarse, entre el Teatro Colón, el Ballet Contemporáneo del Teatro San Martín y el Teatro del Bicentenario de San Juan. Cada ficha indica la obra, la sala y la fecha verificada. Es una foto de la temporada en curso, no un ranking: se irá actualizando a medida que avance el año.</p>
 <div class="acl-grid">
 
-  <div class="acl-card">
+  <div class="acl-card" id="card-wheeldon">
     <div class="acl-hdr"><span class="acl-num">01</span><span><span class="acl-name">Christopher Wheeldon</span><span class="acl-role">Británico · estreno argentino</span></span></div>
     <div class="acl-block"><p class="info-lbl">Obra en cartel</p><p class="info-val"><em>Alice’s Adventures in Wonderland</em> — estreno argentino en el <strong>Teatro Colón</strong>, julio de 2026 (16 al 26 de julio). Producción del Ballet Real de Dinamarca, con la Filarmónica de Buenos Aires.</p></div>
     <div class="acl-block"><p class="info-lbl">Quién es</p><p class="info-val">Ex primer bailarín del Royal Ballet y New York City Ballet, hoy uno de los coreógrafos narrativos más influyentes del mundo. Su <em>Alice</em> (2011, música de Joby Talbot) es el primer ballet creado para el Royal Ballet en cuatro décadas.</p></div>
@@ -2097,7 +2105,7 @@ nav{transition:transform .3s ease}
     <div class="links-row"><a href="https://www.sfballet.org/the-company/leadership/martin-west/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ San Francisco Ballet</a></div>
   </div>
 
-  <div class="acl-card">
+  <div class="acl-card" id="card-briskin">
     <div class="acl-hdr"><span class="acl-num">06</span><span><span class="acl-name">David Briskin</span><span class="acl-role">EE. UU./Canadá · National Ballet of Canada</span></span></div>
     <div class="acl-block"><p class="info-lbl">Trayectoria</p><p class="info-val">Director musical y principal del <strong>National Ballet of Canada</strong> desde 2006. Trabajó siete años con el American Ballet Theatre y como director estacional del New York City Ballet.</p></div>
     <div class="acl-block"><p class="info-lbl">Repertorio</p><p class="info-val">Condujo estrenos mundiales como el <em>Romeo and Juliet</em> de Ratmansky y obras de Wheeldon. Invitado del Royal Ballet, el Royal Danish Ballet y el Hamburg Ballett.</p></div>
@@ -2185,7 +2193,7 @@ nav{transition:transform .3s ease}
 </div>
 <p class="acl-intro">Los grandes nombres detrás de lo que se ve en el escenario: <strong>escenógrafos</strong>, <strong>iluminadores</strong> y <strong>diseñadores de vestuario</strong> —tres oficios distintos— entre los más aclamados por la crítica. La selección se apoya en datos verificables (premios como el Benois de la Danse, los Tony, los Olivier o el Knight of Illumination, y cargos en grandes compañías). Una advertencia honesta: la agenda mes a mes de un diseñador es difícil de fijar (su trabajo está “en repertorio” durante meses), así que en cada ficha figura su actividad más actual y verificable. Un cruce cercano: Bob Crowley (escenografía/vestuario) y Natasha Katz (iluminación) firman <em>Alice</em>, la producción que el Colón estrena en julio. Es, como toda lista de este tipo, discutible.</p>
 <div class="acl-grid">
-  <div class="acl-card">
+  <div class="acl-card" id="card-crowley">
     <div class="acl-hdr"><span class="acl-num">01</span><span><span class="acl-name">Bob Crowley</span><span class="acl-role">Escenografía y vestuario</span></span></div>
     <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Irlandés (Cork, 1952), formado en la Bristol Old Vic. Uno de los diseñadores teatrales más premiados del mundo (varios Tony y Olivier). En ballet firmó la escenografía y el vestuario de dos creaciones de Christopher Wheeldon: <em>Alice’s Adventures in Wonderland</em> y <em>The Winter’s Tale</em>.</p></div>
     <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Su <em>Alice</em> —naipes, jardines y delirio victoriano— es justamente la producción que el Ballet Estable del Teatro Colón estrena en julio de 2026, además de seguir en repertorio en el Royal Ballet y el National Ballet of Canada.</p></div>
@@ -2248,12 +2256,12 @@ nav{transition:transform .3s ease}
     <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Premio Knight of Illumination (2019) y nominación al Tony 2024 por <em>Illinoise</em>. La voz más visible de su generación en iluminación de ballet.</p></div>
     <div class="links-row"><a href="https://en.wikipedia.org/wiki/Brandon_Stirling_Baker" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://www.balletx.org/collaborators/brandon-stirling-baker/" target="_blank" rel="noopener" class="btn-link btn-web">👤 Bio (BalletX)</a><a href="https://www.stirlingbaker.com/" target="_blank" rel="noopener" class="btn-link btn-web">🌐 stirlingbaker.com</a><a href="https://www.bostonballet.org/" target="_blank" rel="noopener" class="btn-link btn-web">🏛️ Boston Ballet (Lighting Director)</a></div>
   </div>
-  <div class="acl-card">
+  <div class="acl-card" id="card-katz">
     <div class="acl-hdr"><span class="acl-num">10</span><span><span class="acl-name">Natasha Katz</span><span class="acl-role">Iluminación</span></span></div>
     <div class="acl-block"><p class="info-lbl">Biografía</p><p class="info-val">Estadounidense, iluminadora con múltiples premios Tony. En ballet firmó la luz de <em>Alice’s Adventures in Wonderland</em> y <em>The Winter’s Tale</em> de Christopher Wheeldon.</p></div>
     <div class="acl-block"><p class="info-lbl">Actividad</p><p class="info-val">Alterna Broadway con la danza; su iluminación de <em>Alice</em> acompaña la producción que el Teatro Colón estrena en julio de 2026.</p></div>
     <div class="acl-block"><p class="info-lbl">La crítica</p><p class="info-val">Admirada por su manejo del color y de la atmósfera, capaz de transformar el espacio escénico de un cuadro a otro.</p></div>
-    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Natasha_Katz" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://teatrocolon.org.ar/produccion/alices-adventures-in-wonderland/" target="_blank" rel="noopener" class="btn-link btn-web">🎭 Alice (Teatro Colón)</a></div>
+    <div class="links-row"><a href="https://en.wikipedia.org/wiki/Natasha_Katz" target="_blank" rel="noopener" class="btn-link btn-web">📖 Wikipedia</a><a href="https://www.operabase.com/natasha-katz-a28758/es" target="_blank" rel="noopener" class="btn-link btn-web">🎼 Operabase</a><a href="https://teatrocolon.org.ar/produccion/alices-adventures-in-wonderland/" target="_blank" rel="noopener" class="btn-link btn-web">🎭 Alice (Teatro Colón)</a></div>
   </div>
   <div class="acl-card">
     <div class="acl-hdr"><span class="acl-num">11</span><span><span class="acl-name">Lucy Carter</span><span class="acl-role">Iluminación</span></span></div>
@@ -3156,6 +3164,32 @@ document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
     expandById(location.hash.slice(1));
   });
   if(location.hash) expandById(location.hash.slice(1));
+})();
+</script>
+<script>
+/* Enlaces internos a fichas dentro de secciones colapsables (#card-*) */
+(function(){
+  function reveal(id){
+    var el=document.getElementById(id); if(!el) return;
+    var sec=el.closest('section[id]');
+    if(sec){ sec.classList.remove('collapsed');
+      var hdr=sec.querySelector('.sec-toggle'); if(hdr) hdr.setAttribute('aria-expanded','true'); }
+    el.classList.add('xref-flash');
+    setTimeout(function(){ el.classList.remove('xref-flash'); },1700);
+    try{ el.scrollIntoView({behavior:'smooth',block:'center'}); }catch(e){ el.scrollIntoView(); }
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href^="#card-"]'); if(!a) return;
+    e.preventDefault();
+    var id=a.getAttribute('href').slice(1);
+    history.replaceState(null,'','#'+id);
+    reveal(id);
+  });
+  window.addEventListener('load',function(){
+    if(location.hash && location.hash.indexOf('#card-')===0){
+      setTimeout(function(){ reveal(location.hash.slice(1)); },350);
+    }
+  });
 })();
 </script>
 </body>
